@@ -1,1 +1,1 @@
-# Django-TPO-Final-Grupo-6
+# Django Proyecto Final | Grupo-6

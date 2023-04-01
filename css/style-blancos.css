@@ -1,0 +1,1032 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*--------- Maquetado Grid ---------------------*/
+.header {grid-area: header;}
+.banner {grid-area: banner;}
+.main {grid-area: main;}
+.footer {grid-area: footer;}
+
+#btn-menu {
+	display: none;
+}
+
+header label {
+	display: none;
+	width: 50px;
+	height: 60px;
+	padding: 00px;
+    margin-bottom: 59px
+}
+
+
+.contenedor {
+    display: grid;
+    gap: 7px;
+    grid-template-areas: 'header header header'
+                        'banner banner banner'
+                            'main main main'
+                        'footer footer footer';
+}
+
+.header {
+    width: 100%;
+    background-color: #222;
+    border-bottom: solid 3px #a7976d;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.div-menu {
+    display: flex;
+    width: 73%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.html-menu:hover {
+    border-bottom: solid 1.3px #9f8544;
+}
+
+.div-menu > div > a {
+    color: #F9F9F9;
+    text-decoration: none;
+    font-size: large;
+    
+}
+
+.div-menu > div > a:hover {
+    color: #7b8213;
+    transition: all 0.3s;
+}
+
+.UvasLogo {
+    width: 3rem;
+}
+
+.UvasLogo:hover {
+    background-color: #a7976d;
+    border-top-left-radius:  3rem;
+    transition: all 0.5s;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.banner-nav {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 75%;
+    border-bottom: solid 1px #7b8213;
+}
+
+.div-Copas-Especias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.Copas-Especias {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+}
+
+.banner-nav-section {
+    padding: 8px;
+    width: 50%;
+    height: 25px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #CFD4BE;
+    border-end-start-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: -0.03rem;
+    
+}
+.banner-nav-section a {
+    color: #795300;
+    text-decoration: none;
+    font-size: large;
+}
+
+.banner-nav-section a:hover {
+    color: #0A3D00;
+    transition: all 0.2s;
+}
+
+.Top {
+    text-decoration: none;
+    color: #0A3D00;
+}
+
+/*---- MAIN --------------------------------*/
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(12, auto);
+    border-top: solid 1px #7b8213;
+    font-size: 18px;
+    margin-top: 1rem;
+}
+.section-main {
+    color: rgb(71, 67, 67);
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3%;
+}
+.section-main > h1 {
+    padding-bottom: 10px;
+} 
+
+/*Iconos de Copa Temperatura y Mapa -----------------------*/
+.Copa {
+    width: 4rem;
+}
+
+.Copa:hover {
+    transform: scale(1.2);
+}
+
+.iconTemp {
+    width: 1.2rem;
+    padding: 30% 0%;
+}
+
+.iconTemp:hover {
+    transform: scale(1.2);
+}
+
+.iconMap {
+    width: 3rem;
+}
+
+.iconMap:hover {
+    transform: scale(1.2);
+}
+
+.hoja {
+    width: 2rem;
+}
+
+.hoja:hover {
+    background-color: #a7976d;
+    border-top-left-radius: 1.5rem;
+    transition: all 0.5s;
+}
+
+.art-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video2 {
+    width: 740px;
+    height: 400px;
+    border-radius: 9px;
+}
+
+/*-- Zuccardi ---------------------------------------------------*/
+.Titulo-Zuccardi {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    display: flex;
+    color: rgb(71, 67, 67);
+    flex-direction: column;
+    align-items: center;
+    border-top: solid 1px #7b8213;
+}
+
+.box-Zuccardi1 {
+    grid-column: 1;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-Zuccardi {
+    height: 35vw;
+}
+
+.iconosZuccardi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-Zuccardi2 {
+    grid-column: 2 / -1;
+    grid-row: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #666;
+    padding-top: 2rem;
+}
+
+.text-Zuccardi {
+    background-color: #7b8213bc;
+    padding: 7px;
+    color: #fff;
+    width: 45vw;
+    font-size: large;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    margin-top: -6rem;
+    margin-right: 7rem;
+    border-radius: 7px;
+}
+
+.img-back-Zuccardi {
+    width: 50vw;
+    height: 30vw;
+    border-radius: 10px;
+    background-image: url(/img/Header\ Barricas.jpg);
+    background-size: 145%;
+    animation: Zuccardi-Barricas 10s infinite linear alternate;
+    margin-bottom: 45px;
+}
+@keyframes Zuccardi-Barricas {
+    from {background-position: bottom left;}
+    to {background-position: top right;}
+}
+
+.hoja-Zuccardi {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom: solid 1px #7b8213;
+}
+
+/*-- Valbona --------------------------------------------------*/
+.Titulo-Valbona {
+    grid-column: 1 / -1; 
+    grid-row: 5 / 6;
+    display: flex;
+    color: rgb(71, 67, 67);
+    text-align: center;
+    justify-content: center;
+    border-top: solid 1px #7b8213;
+    margin-top: 2rem;
+}
+
+.box-Valbona1 {
+    grid-column: 1 / 3;
+    grid-row: 6 / 7;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #666;
+}
+
+.img-back-Valbona {
+    width: 50vw;
+    height: 30vw;
+    border-radius: 10px;
+    background-image: url(/img/valbon\ augusto\ pulenta.jpg);
+    background-size: 145%;
+    animation: Valbon-Viña 10s infinite linear alternate;
+}      
+@keyframes Valbon-Viña {
+    from {background-position: top left;}
+    to {background-position: bottom right;}
+}
+
+.text-Valbona {
+    background-color: #7b8213bc;
+    padding: 7px;
+    color: #fff;
+    width: 45vw;
+    font-size: large;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: -4rem;
+    margin-left: 7rem;
+    border-radius: 7px;
+}
+
+.box-Valbona2 {
+    grid-column: 3;
+    grid-row: 6 / 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.img-Valbona {
+    height: 35vw;
+}
+
+.iconosValbona {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hoja-Valbona {
+    grid-column: 1 / -1;
+    grid-row: 7 / 8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom: solid 1px #7b8213;
+}
+/* Luigi Bosca ---------------------------------------------------*/
+.Titulo-Bosca{
+    grid-column: 1 / -1;
+    grid-row: 8 / 9;
+    display: flex;
+    color: rgb(71, 67, 67);
+    text-align: center;
+    justify-content: center;
+    border-top: solid 1px #7b8213;
+    margin-top: 2rem;
+}
+
+.box-Bosca1 {
+    grid-column: 1;
+    grid-row: 9 / 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-Bosca {
+    height: 35vw;
+}
+
+.iconosBosca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-Bosca2 {
+    grid-column: 2 / -1;
+    grid-row: 9 / 10;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #666;
+}
+
+.Img-Texto-Bosca {
+    width: 47vw;
+    border-radius: 10px;
+    display: flex;
+}
+.img-back-Bosca {
+    width: 50vw;
+    height: 30vw;
+    border-radius: 10px;
+    background-image: url(/img/background1.png);
+    background-size: 145%;
+    animation: Bosca-Viña 10s infinite linear alternate;
+}
+
+@keyframes Bosca-Viña {
+    from {background-position: top;}
+    to {background-position: bottom;}
+}
+
+.text-Bosca {
+    background-color: #7b8213bc;
+    padding: 7px;
+    color: #fff;
+    width: 45vw;
+    font-size: large;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    margin-top: -3rem;
+    margin-right: 7rem;
+    border-radius: 7px;
+}
+
+.hoja-Bosca {
+    grid-column: 1 / -1;
+    grid-row: 10 / 11;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom: solid 1px #7b8213;
+}
+
+
+/* Footer ---------------------------------------------------*/
+.footer {
+    display: flex;
+    padding: 5rem 0;
+    text-align: center;
+    margin-bottom: 2%;
+    padding-top: 2%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-redes {
+    display: flex;
+    width: 100%;
+    background-color: #222;
+    border-top: solid 4px #a7976d;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-redes > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #a7976d;
+}
+
+.div-redes > a:hover {
+    transform: scale(1.1);
+}
+
+.logo-instagram,
+.logo-github,
+.logo-twitter,
+.logo-facebook {
+    width: 30%;
+    height: 30%;
+}
+
+.logo-instagram:hover {
+    transform: scale(1.1);
+}
+
+.logo-github:hover {
+    transform: scale(1.1);
+}
+
+.logo-twitter:hover {
+    transform: scale(1.1);
+}
+
+.logo-facebook:hover {
+    transform: scale(1.1);
+}
+
+.div-redes > div > a {
+    display: flex;
+    text-decoration: none;
+
+    font-size: large;
+}
+
+.derechos {
+    display: flex;
+    justify-content: center;
+    color: #222;
+    margin-top: 1rem;
+    margin-bottom: -7rem;
+}
+
+/*+++++++++++++++++++++++++++++++++ RESPONSI TABLET 768 +++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media only screen and (max-width: 768px) {
+    .header {
+        background: rgba(66, 66, 66, 0.9);
+        position: fixed;
+    }   
+    .header > label {
+        display: block;
+        position: fixed;
+        background: rgba(66, 66, 66, 0.9);
+        border-bottom: solid 5px #a7976d;
+        width: 100%;
+    }
+    #fotoBtn{
+        width: 50px;
+        height: 56px;
+    }
+    
+    header .div-menu {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        background: rgba(66, 66, 66, 0.9);
+        margin-top: 60px;
+        margin-left: -200%;
+        align-items: top;
+        padding-bottom: 9rem;
+    }
+
+    #btn-menu:checked ~ .header > .div-menu {
+        margin-left: -00%;
+        transition: 0.9s;
+    }
+    .menu a:hover {
+        color:#a7976d;
+        transform: scale(1.5);
+        transition: all 0.5s;  
+    }
+    .contenedor {
+        display: grid;
+        gap: 7px;
+        grid-template-areas: 'header header'
+                            'banner banner'
+                                'main main'
+                            'footer footer';
+    }
+
+    .banner {
+        margin-top: 2.4rem;
+    }
+
+    .banner-nav-section {
+        padding: 8px;
+        width: 77%;
+        height: 25px;
+    }
+
+/*---- MAIN RESPONSI TABLET 768 --------------------------------*/
+    .main {
+        display: grid;
+        grid-template-columns: repeat(2, 384px);
+        grid-template-rows: repeat(14, auto);
+    }
+
+    .section-main {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        margin-top: 4rem;
+    }
+
+    .section-main > h1 {
+        padding-bottom: 10px;
+        margin-top: -3rem;
+    }
+
+    .video2 {
+        width: 550px;
+        height: 250px;
+    }
+
+/*-- Zuccardi RESPONSIV TABLET 768 ---------------------------------------------------*/
+    .Titulo-Zuccardi {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        margin-bottom: 10px;
+    }
+
+    .box-Zuccardi1 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .img-Zuccardi {
+        height: 65vw;
+        padding-left: 0rem;
+    }
+
+    .iconosZuccardi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-Zuccardi2 {
+        grid-column: 2 / -1;
+        grid-row: 3 / 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 0rem;
+        margin-right: 1rem;
+    }
+
+    .text-Zuccardi {
+        padding: 7px;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-content: center;
+        margin: 0;
+    }
+
+    .img-back-Zuccardi {
+        width: 368px;
+        height: 249px;
+        align-content: center;
+        margin-bottom: 7px;
+    }
+
+    .hoja-Zuccardi {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+/*---- Valbona RESPONSIV TABLET 768 ---------------------------------------------------*/
+    .Titulo-Valbona {
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+        margin-bottom: 10px;
+        margin-top: 1rem;
+    }
+
+    .box-Valbona1 {
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 0rem;
+        margin-left: 1rem;
+    }
+
+    .img-back-Valbona {
+        width: 368px;
+        height: 249px;
+        margin-bottom: 7px;
+    }
+
+    .text-Valbona {
+        padding: 7px;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-content: center;
+        margin: 0;
+    }
+
+    .box-Valbona2 {
+        grid-column: 2 / -1;
+        grid-row: 6 / 7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0rem;
+        padding-top: 0rem;
+    }
+
+    .img-Valbona {
+        height: 65vw;
+        padding: 0;
+    }
+
+    .iconosValbona {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hoja-Valbona {
+        grid-column: 1 / -1;
+        grid-row: 7 / 8;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+/*--- Bosca RESPONSIV TABLET 768 ---------------------------------------------------*/
+    .Titulo-Bosca {
+        grid-column: 1 / -1;
+        grid-row: 8 / 9;
+        margin-bottom: 10px;
+        margin-top: 1rem;
+    }
+
+    .box-Bosca1 {
+        grid-column: 1 / 2;
+        grid-row: 9 / 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-Bosca {
+        height: 65vw;
+    }
+
+    .iconosBosca {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-Bosca2 {
+        grid-column: 2 / -1;
+        grid-row: 9 / 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 0rem;
+        margin-top: 0rem;
+        margin-right: 1rem;
+    }
+
+    .img-back-Bosca {
+        width: 368px;
+        height: 249px;
+        padding: 0;
+        margin-bottom: 7px;
+    }
+
+    .text-Bosca {
+        padding: 7px;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-content: center;
+        margin: 0;
+    }
+
+    .hoja-Bosca {
+        grid-column: 1 / -1;
+        grid-row: 10 / 11;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+}
+
+/*+++++++++++++++++++++++++++++++++ RESPONSI MOVIL 414 +++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media only screen and (max-width: 414px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .contenedor {
+        display: grid;
+        gap: 7px;
+        grid-template-areas: 'header'
+                            'banner'
+                            'main'
+                            'footer';
+    }
+    
+    .div-menu > div {
+        margin: 5px;
+    }
+    
+    .banner {
+        margin-top: 1rem;
+        width: 414px;
+    }
+    
+    .banner-nav-section {
+        display: none;
+    }
+
+/*-----MAIN RESPONSIVE MOVIL 414 -----------------------*/
+    .main {
+        display: grid;
+        grid-template-columns: repeat(1, 207px);
+        grid-template-rows: repeat(24, auto);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-main {
+        grid-column: 1;
+        grid-row: 1 / 2;
+        text-align: center;
+    }
+
+    .section-main > h1 {
+        text-align: center;
+    }
+
+/*---- ICONOS RESPONSIVE MOVIL 414 ----------------------*/
+
+    .Copa {
+        width: 3rem;
+    }
+
+    .iconTemp {
+        width: 1rem;
+        padding: 30% 0%;
+    }
+
+    .iconMap {
+        width: 2rem;
+    }
+
+    .hoja {
+        display: none;
+    }
+
+    .video2 {
+        width: 375px;
+        height: 190px;
+        margin-bottom: 2rem;
+    }
+
+/*---- Zuccardi RESPONSIVE MOVIL 414 -----------------------*/
+    .Titulo-Zuccardi {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        text-align: center;
+    }
+    
+    .box-Zuccardi1 {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        align-items: center;
+    }
+    
+    .img-Zuccardi {
+        height: 85vw;
+        padding-left: 0rem;
+        padding-right: 3.5rem;
+    }
+    
+    .box-Zuccardi2 {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+        width: 100%;
+        padding-top: 0rem;
+    }
+    
+    .text-Zuccardi {
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+        width: 100%;
+        margin: 0;
+        border-radius: 0px;
+    }
+    
+    .img-back-Zuccardi {
+        width: 100%;
+        height: 50vw;
+        border-radius: 0px;
+        margin-bottom: 0px;
+    }
+
+    .hoja-Zuccardi {
+        display: none;
+    }
+
+/*----- Valbona RESPONSIVO MOVIL 414 ----------------------------------------*/
+
+    .Titulo-Valbona {
+        grid-column: 1 / -1;
+        grid-row: 6 / 7;
+        display: flex;
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .box-Valbona2 {
+        grid-column: 1 / -1;
+        grid-row: 7 / 8;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-top: 7px;
+        padding-bottom: 7px;
+        border-bottom: solid 1px #819f44d6;
+    }
+
+    .img-Valbona {
+        height: 85vw;
+    }
+
+    .box-Valbona1 {
+        grid-column: 1 / -1;
+        grid-row: 8 / 9;
+        display: flex;
+        align-content: center;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .img-back-Valbona {
+        width: 100%;
+        height: 50vw;
+        border-radius: 0px;
+    }
+
+    .text-Valbona {
+        grid-column: 1 / -1;
+        grid-row: 9 / 10;
+        width: 100%;
+        margin: 0;
+        border-radius: 0px;
+        margin-top: -7px;
+    }
+
+    .hoja-Valbona {
+        display: none;
+    }
+/*--- Luigi Bosca RESPONSIVE MOVIL 414 ----------------------------------------*/
+    .Titulo-Bosca {
+    grid-column: 1 / -1;
+    grid-row: 10 / 11;
+    display: flex;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 7px;
+    }
+
+    .box-Bosca1 {
+        grid-column: 1 / -1;
+        grid-row: 11 / 12;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-Bosca {
+        height: 85vw;
+    }
+
+    .box-Bosca2 {
+        grid-column: 2 / -1;
+        grid-row: 12 / 13;
+        width: 100%;
+        padding-top: 0rem;
+    }
+
+    .Img-Texto-Bosca {
+        width: 100%;
+        border-radius: 0px;
+        margin: 0;
+    }
+
+    .img-back-Bosca {
+        width: 100%;
+        height: 50vw;
+        border-radius: 0px;
+    }
+
+    .text-Bosca {
+        grid-column: 1 / -1;
+        grid-row: 13 / 14;
+        width: 100%;
+        margin: 0;
+        border-radius: 0px;
+        margin-top: -7px;
+        margin-bottom: 3rem;
+    }
+
+    .hoja-Bosca {
+        display: none;
+    }
+
+}

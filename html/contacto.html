@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/moviles.css">
+    <link rel="stylesheet" href="/css/style-contacto.css">
+    <link rel="shortcut icon" href="/favicon/grapes.ico" type="image/x-icon">
+
+    <title>Contacto</title>
+</head>
+<body>
+<!--Barra de menu Inicio------------------------------------------------------>
+<header>
+    <input type="checkbox" id="btn-menu">
+    <div class="header">
+        <label for="btn-menu"><img src="/img/Copa Blanca.png" alt="" width="30px" height="30px" id="fotoBtn"></label>
+        <div class="div-menu">
+            <div class="Logo">
+                <a href="/index.html"><img src="/img/Grapes White II.png" alt="Uvas" class="UvasLogo"></a>
+            </div>
+            <div class="html-menu"><a href="/html/tintos.html">Tintos</a></div>
+            <div class="html-menu"><a href="/html/blancos.html">Blancos</a></div>
+            <div class="html-menu"><a href="/html/espumantes.html">Espumantes</a></div>
+            <div class="html-menu"><a href="/html/contacto.html">Contacto</a></div>
+        </div>
+    </div>
+</header>
+    <div class="contenedor">
+<!--Banner-------------------------------------------------------------------->
+        <main class="main">
+            <section class="contacto">
+                <h1>Contactános</h1>
+                <p>Dejanos tus sugerencias o consultas a través del formulario, y te contactaremos a la brevedad.</p>
+                <p>Salud !!! 🍷</p>
+            </section> 
+            <div class="formulario">
+                <form name="comprobacion">
+                    <legend></legend>
+                    <label for="apellido" class="datos-form">Apellido: </label>
+                    <p><input type="text" size=auto id="apellido" name="apellido" placeholder="Ingrese su Apellido ..."></p>
+                    <label for="nombre" class="datos-form">Nombre completo: </label>            
+                    <p><input type="text" size=auto id="nombre" name="nombre" placeholder="Ingrese su Nombre ..."></p>
+                    <label for="email" class="datos-form">Ingrese un Mail de contacto</label>
+                    <p><input type="text" name="email" placeholder="Ingrese un Mail"></p>
+                    <label for="telefono" class="datos-form">Ingrese Telefono de Contacto </label>
+                    <p><input type="text" size="15" maxlength="8" id="tel" name="tel" placeholder="Ingrese su Telefono con codigo de area"></p>
+                    <label for="motivoconsulta" class="datos-form">Motivo de la Consulta</label>                    
+                    <select name="consulta" id="#mconsulta">
+                        <option value="0">Seleccione</option>   
+                        <option value="1">Informacion General</option>   
+                        <option value="2">Visita a las Bodegas</option>   
+                        <option value="3">Hospedaje y Servicios</option>   
+                        <option value="4">Otro</option>   
+                    </select>
+                    <label for="conmentarios" class="datos-form">Deje sus comentarios:</label><br> 
+                    <textarea cols="40" rows="5" name="comentario" placeholder="Escriba su comentario"></textarea>
+                    <section class="enviar">
+                        <input type="button" id="b1" value="Enviar datos" onclick="checkEnviar()">
+                        <input type="reset" value="Borrar datos">    
+                    </section>
+                </form>
+            </div>   
+        </main>
+        <footer class="footer">
+            <div class="div-redes">
+                <a href="https://www.instagram.com" target="_blank"><img src="/img/Instagram II.png" alt="Instagram" class="logo-instagram">Instagram</a><br>
+                <a href="https://github.com/StevenSun7/Espumantes-Vinos.git" target="_blank"><img src="/img/GitHub IV.png" alt="GitHub" class="logo-github">GitHub</a><br>
+                <a href="https://twitter.com/i/flow/login" target="_blank"><img src="/img/Twitter II.png" alt="Twitter" class="logo-twitter">Twitter</a><br>
+                <a href="https://www.facebook.com" target="_blank"><img src="/img/Facebook I.png" alt="Facebook" class="logo-facebook">Facebook</a>
+            </div>
+            <br>
+            <div class="div-derechos"><p class="derechos">BEBER CON MODERACION | Prohibida la venta a menores de 18 años | Copyright © Septiembre 2022 | Todos los derechos reservados. | V4.0</p></div>
+        </footer>
+    </div>
+    <script src="/js/Corrobora.js"></script>
+</body>
+</html>

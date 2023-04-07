@@ -157,19 +157,6 @@ header label {
 
     70%, 100% {background-image: url(/img/Botella\ en\ mesa.jpg);}
 }
-/*----- Api Clima -----------------------------------*/
-.div-api {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#map {
-    display: flex;
-    justify-items: center;
-    height: 300px;
-    width: 70%;
-}
 
 /*--- Contenido -------------------------------------*/
 

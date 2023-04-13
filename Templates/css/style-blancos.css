@@ -267,7 +267,7 @@ header label {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/img/Header\ Barricas.jpg);
+    background-image: url(/Templates/img/Header\ Barricas.jpg);
     background-size: 145%;
     animation: Zuccardi-Barricas 10s infinite linear alternate;
     margin-bottom: 45px;
@@ -314,7 +314,7 @@ header label {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/img/valbon\ augusto\ pulenta.jpg);
+    background-image: url(/Templates/img/valbon\ augusto\ pulenta.jpg);
     background-size: 145%;
     animation: Valbon-Viña 10s infinite linear alternate;
 }      
@@ -416,7 +416,7 @@ header label {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/img/background1.png);
+    background-image: url(/Templates/img/background1.png);
     background-size: 145%;
     animation: Bosca-Viña 10s infinite linear alternate;
 }

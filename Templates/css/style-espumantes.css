@@ -87,7 +87,7 @@ header label {
     display: flex;
     padding-top: 13rem;
     width: 100%;
-    background-image: url(/videos/Burbujas.mov);
+    background-image: url(/Templates/videos/Burbujas.mov);
     border-bottom: solid 1px #a7976d;
     justify-content: center;
 }
@@ -249,7 +249,7 @@ header label {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/img/Parral.jpg);
+    background-image: url(/Templates/img/Parral.jpg);
     background-size: 145%;
     animation: Trapiche-parral 10s infinite linear alternate;
     margin-bottom: 45px;
@@ -296,7 +296,7 @@ header label {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/img/luigi-bosca-viña.png);
+    background-image: url(/Templates/img/luigi-bosca-viña.png);
     background-size: 145%;
     animation: Bosca-viñedo 10s infinite linear alternate;
 }      
@@ -399,7 +399,7 @@ header label {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/img/Cava\ Botellas.jpg);
+    background-image: url(/Templates/img/Cava\ Botellas.jpg);
     background-size: 145%;
     animation: Chandon-Bodega 10s infinite linear alternate;
 }
@@ -461,7 +461,7 @@ header label {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/img/Bodega\ Nieto\ Senetiner\ I.jpg);
+    background-image: url(/Templates/img/Bodega\ Nieto\ Senetiner\ I.jpg);
     background-size: 145%;
     animation: Bodega-Senetiner 10s infinite linear alternate;
 }

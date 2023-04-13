@@ -115,11 +115,11 @@ header label {
 }
 
 @keyframes Galeria1 {
-    0%, 30% {background-image: url(/img/la-bodega-home.jpg);}
+    0%, 30% {background-image: url(/Templates/img/la-bodega-home.jpg);}
 
-    31%, 69% {background-image: url(/img/Toneles\ Cadus.jpg);}
+    31%, 69% {background-image: url(/Templates/img/Toneles\ Cadus.jpg);}
 
-    70%, 100% { background-image: url(/img/Bodega\ Nieto\ Senetiner.jpg);}
+    70%, 100% { background-image: url(/Templates/img/Bodega\ Nieto\ Senetiner.jpg);}
 }
 
 .div-img2 {
@@ -134,11 +134,11 @@ header label {
 
 @keyframes Galeria2 {
 
-    0%, 30% {background-image: url(/img/Bodega\ Nieto\ Senetiner\ Galería.jpg);}
+    0%, 30% {background-image: url(/Templates/img/Bodega\ Nieto\ Senetiner\ Galería.jpg);}
 
-    31%, 69% {background-image: url(/img/Quesos\ y\ copa\ de\ tinto.jpg);}
+    31%, 69% {background-image: url(/Templates/img/Quesos\ y\ copa\ de\ tinto.jpg);}
 
-    70%, 100% {background-image: url(/img/Bodega\ Nieto\ Senetiner\ II.jpg);}
+    70%, 100% {background-image: url(/Templates/img/Bodega\ Nieto\ Senetiner\ II.jpg);}
 }
 
 .div-img3 {
@@ -151,11 +151,11 @@ header label {
 
 @keyframes Galeria3 {
 
-    0%, 30% {background-image: url(/img/slide-bodega-head2.jpg);}
+    0%, 30% {background-image: url(/Templates/img/slide-bodega-head2.jpg);}
 
-    31%, 69% {background-image: url(/img/Viña.jpg);}
+    31%, 69% {background-image: url(/Templates/img/Viña.jpg);}
 
-    70%, 100% {background-image: url(/img/Botella\ en\ mesa.jpg);}
+    70%, 100% {background-image: url(/Templates/img/Botella\ en\ mesa.jpg);}
 }
 
 /*--- Contenido -------------------------------------*/
@@ -332,11 +332,11 @@ header label {
     }
 
     @keyframes Galeria1 {
-        0%, 30% {background-image: url(/img/la-bodega-home.jpg);}
+        0%, 30% {background-image: url(/Templates/img/la-bodega-home.jpg);}
 
-        31%, 69% {background-image: url(/img/Toneles\ Cadus.jpg);}
+        31%, 69% {background-image: url(/Templates/img/Toneles\ Cadus.jpg);}
 
-        70%, 100% { background-image: url(/img/Botella\ en\ mesa.jpg);}
+        70%, 100% { background-image: url(/Templates/img/Botella\ en\ mesa.jpg);}
     }
 
     .texto {

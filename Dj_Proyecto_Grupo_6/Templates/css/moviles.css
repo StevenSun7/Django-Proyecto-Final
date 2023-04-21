@@ -1,0 +1,79 @@
+@media only screen and (max-width:768px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+/* modificacion para visualizar menu     */
+    .header {
+        background: rgba(66, 66, 66, 0.9);
+        position: fixed;
+    }   
+    .header > label {
+        display: block;
+        position: fixed;
+        background: rgba(66, 66, 66, 0.9);
+        border-bottom: solid 5px #a7976d;
+        width: 10%;
+    }
+    #fotoBtn {
+        width: 50px;
+        height: 54px;
+    }
+
+    #fotoBtn:hover {
+        transform: scale(1.1);
+    }
+
+    header .div-menu {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        background: rgba(50, 50, 50, 0.9);
+        height: 100vh;
+        margin-top: 60px;
+        margin-left: -200%;
+        flex-direction: column;
+        justify-items: center;
+    }
+    .html-menu {
+        font-family: cursive;
+    }
+
+    .html-menu > a {
+        font-size: 35%;
+    }
+
+    #btn-menu:checked ~ .header > .div-menu {
+        margin-left: -00%;
+        transition: 0.9s;
+    }
+    .menu a:hover {
+        color:#a7976d;
+        transform: scale(1.5);
+        transition: all 0.5s;  
+    }
+}
+
+/* Para celulares  */
+@media only screen and (max-width: 414px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        max-width: 414px;
+        max-height: auto;
+    }
+    .contacto {
+        padding-top: 2px;
+        text-align: justify;
+        font-family: cursive;
+        color: rgb(153, 41, 29);
+        font-size: 16px;
+    }
+    .formulario{
+        width: 300px;
+    }   
+    footer .div-redes{
+        height: 5rem;
+    }    
+}

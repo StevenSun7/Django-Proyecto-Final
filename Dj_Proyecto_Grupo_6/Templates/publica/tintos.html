@@ -1,85 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static '/publica/css/moviles.css' %}">
+        <link rel="stylesheet" href="{% static '/publica/css/style-tintos.css' %}">
+        <link rel="shortcut icon" href="{% static '/publica/favicon/grapes.ico' %}" type="image/x-icon">
+        <title>Tintos Recomendados</title>
+    </head>
 
-<div class="contenedor">
-    <div class="banner">
-        <div class="banner-nav">
-            <div class="img-banner"><img src="/Templates/img/Vinos Tintos especias en la copas.png" alt="Copas con especias"></div>
-            <div class="banner-nav-section">
-                <a href="#Los Dragones">Los Dragones</a>
-                <a href="#Catena Zapata">Catena Zapata</a>
-                <a href="#San Huberto">San Huberto</a>
+    <body>
+<!-- Menu -->
+    <header>
+        <input type="checkbox" id="btn-menu">
+        <div class="header">
+            <label for="btn-menu"><img src="{% static 'publica/img/Copa con Red.png' %}" alt="" width="30px" height="30px" id="fotoBtn"></label>
+            <div class="div-menu">
+                <div class="Logo">
+                    <a href="{% url 'inicio' %}"><img src="{% static 'publica/img/Grapes Red.png' %}" alt="Uvas" class="UvasLogo"></a>
+                </div>
+                <div class="html-menu"><a href="{% url 'tintos' %}">Tintos</a></div>
+                <div class="html-menu"><a href="/html/blancos.html">Blancos</a></div>
+                <div class="html-menu"><a href="/html/espumantes.html">Espumantes</a></div>
+                <div class="html-menu"><a href="/html/contacto.html">Contacto</a></div>
             </div>
         </div>
-    </div>
-    <main class="main">
-        <section class="section-main">
-            <h1>El Tinto y su magia.</h1>
-            <p> El vino es un estimulo para pasarla bien (siempre con moderación). No hace falta ser un entendido para disfrutralo. 
-            Lo más comun es en una reunion con amigos dar los primeros pasos, y probar nuestros primeros sorbos.</p>
-            <p>Una buena forma de empezar es combinarlo con los alimentos. Casi una regla es consumir vino  tinto con carnes.</p>
-            <p>En esta sección encontrarás tres varietales que consideramos interesantes para todos aquellos que quieran disfrutar de momentos 
-            inolvidables acompañados de sabores, y aromas.</p>
+    </header>
+        <div class="contenedor">
+        <div class="banner">
+            <div class="banner-nav">
+                <div class="img-banner"><img src="{% static 'publica/img/Vinos Tintos especias en la copas.png' %}" alt="Copas con especias"></div>
+                <div class="banner-nav-section">
+                    <a href="#Los Dragones">Los Dragones</a>
+                    <a href="#Catena Zapata">Catena Zapata</a>
+                    <a href="#San Huberto">San Huberto</a>
+                </div>
+            </div>
+        </div>
+        <main class="main">
+            <section class="section-main">
+                <h1>El Tinto y su magia.</h1>
+                <p> El vino es un estimulo para pasarla bien (siempre con moderación). No hace falta ser un entendido para disfrutralo. 
+                Lo más comun es en una reunion con amigos dar los primeros pasos, y probar nuestros primeros sorbos.</p>
+                <p>Una buena forma de empezar es combinarlo con los alimentos. Casi una regla es consumir vino  tinto con carnes.</p>
+                <p>En esta sección encontrarás tres varietales que consideramos interesantes para todos aquellos que quieran disfrutar de momentos 
+                inolvidables acompañados de sabores, y aromas.</p>
+                <br>
+                
+                <div class="Video">
+                    <h3>Tips para servir el vino</h3>
+                    <iframe class="Video-Tinto" src="https://www.youtube.com/embed/HijytzIXBf4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+<!-- Dragones -->
+            <div class="Titulo-Dragones"><h1 class="Notas-Dragones">"Los Dragones" - Bodega Los Dragones</h1></div>
+            <div class="box-Dragones1"><a name="Los Dragones"></a>
+                <img src="{% static 'publica/img/Syrah Dragones.jpg' %}" alt="Los Dragones"  class="img-Dragones">
+                <div class="iconosDragones">
+                    <img src="{% static 'publica/img//wine-glass.svg' %}" alt="Copa" class="Copa">
+                    <img src="{% static 'publica/img//Termometro.png' %}" alt="Temperatura" class="iconTemp">
+                    <a href="https://goo.gl/maps/PR2CkmEZvkrSU7TJ9" target="_blank"><img src="/img/Mapa II.png" alt="Map" class="iconMap"></a>
+                </div>
+            </div>
+            <div class="box-Dragones2">
+                <div class="img-back-Dragones"></div>
+                <div class="text-Dragones">
+                    <h3>Notas de degustación:</h3>
+                    <p>De la Región de San Juan traemos este este varietal Syrah. 100% agroecológico. Aroma mineral de flores y fruta fresca, amable pero vibrante.</p>
+                </div>
+            </div>
+            <div class="hoja-Dragones"><a href='#Top' class="Top"><img src="{% static 'publica/img/origin.svg' %}" alt="Hoja" class="hoja"></a>
+            </div>
+<!--- Catena -->
+            <div class="Titulo-Catena"><h1>"Catena Zapata Malbec" - Bodega Catena Zapata</h1></div>
+            <div class="box-Catena1"><a name="Catena Zapata"></a>
+                <div class="img-back-Catena"></div>
+                <div class="text-Catena">
+                    <h3>Notas de degustación:</h3>
+                    <p>Este Malbec presenta un profundo e intenso color violeta. Su aroma remite a cassis, moca, clavo de olor y marcadas notas terrosas. Elaborado en la region de Mendoza, es el compañero ideal para platos con carnes rojas.</p>
+                </div>
+            </div>
+            <div class="hoja-Catena"><a href='#Top' class="Top"><img src="{% static 'publica/img//origin.svg' %}" alt="Hoja" class="hoja"></a></div>
+            <div class="box-Catena2">
+                <div class="iconosCatena">
+                    <img src="{% static 'publica/img//wine-glass.svg' %}" alt="Copa" class="Copa">
+                    <img src="{% static 'publica/img//Termometro.png' %}" alt="Temperatura" class="iconTemp">
+                    <a href="https://goo.gl/maps/gZ2kKacec97sNiLv7" target="_blank"><img src="/img/Mapa II.png" alt="Map" class="iconMap"></a>
+                </div>
+                <img src="{% static 'publica/img/Malbec Catena.jpg' %}" alt="Luigi Bosca Extra Brut" class="img-Catena">
+            </div>
+<!-- San Huberto -->
+            <div class="Titulo-Huberto"><h1>"Nina" de Bodega San Huberto</h1></div>
+            <div class="box-Huberto1"><a name="San Huberto"></a>
+                <img src="{% static 'publica/img/Nina.jpg' %}" alt="Nina San Huberto" class="img-Huberto">
+                <div class="iconosHuberto">
+                    <img src="{% static 'publica/img//wine-glass.svg' %}" alt="Copa" class="Copa">
+                    <img src="{% static 'publica/img//Termometro.png' %}" alt="Temperatura" class="iconTemp">
+                    <a href="https://goo.gl/maps/H63c1XuojHq4vFt17" target="_blank"><img src="/img/Mapa II.png" alt="Map" class="iconMap"></a>
+                </div>
+            </div>
+            <div class="box-Huberto2">
+                <div class="img-back-Huberto"></div>
+                <div class="text-Huberto">
+                    <h3>Notas de degustación:</h3>
+                    <p>De gran riqueza aromática con frutos rojos y arandanos. Mineral, en pleno equilibrio. Notas de chocolate y vainilla. Desde la region de La Rioja. La famosa critica de vino Jancis Robinson, destaco este varietal Petit Verdot incluso por encima de muchas bodegas de Burdeos. Se recomienda consumirlo con comidas tales como carnes rojas, quesos curados y guisos de ave.</p>
+                </div>
+            </div>
+            <div class="hoja-Huberto"><a href='#Top' class="Top"><img src="{% static 'publica/img//origin.svg' %}" alt="Hoja" class="hoja"></a>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="div-redes">
+                <a href="https://www.instagram.com" target="_blank"><img src="{% static 'publica/img/Instagram II.png' %}" alt="Instagram" class="logo-instagram">Instagram</a><br>
+                <a href="https://github.com/StevenSun7/Espumantes-Vinos.git" target="_blank"><img src="{% static 'publica/img/GitHub IV.png' %}" alt="GitHub" class="logo-github">GitHub</a><br>
+                <a href="https://twitter.com/i/flow/login" target="_blank"><img src="{% static 'publica/img/Twitter II.png' %}" alt="Twitter" class="logo-twitter">Twitter</a><br>
+                <a href="https://www.facebook.com" target="_blank"><img src="{% static 'publica/img/Facebook I.png' %}" alt="Facebook" class="logo-facebook">Facebook</a>
+            </div>
             <br>
-            
-            <div class="Video">
-                <h3>Tips para servir el vino</h3>
-                <iframe class="Video-Tinto" src="https://www.youtube.com/embed/HijytzIXBf4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </section>
-        <!-- Dragones -->
-        <div class="Titulo-Dragones"><h1 class="Notas-Dragones">"Los Dragones" - Bodega Los Dragones</h1></div>
-        <div class="box-Dragones1"><a name="Los Dragones"></a>
-            <img src="/Templates/img/Syrah Dragones.jpg" alt="Los Dragones"  class="img-Dragones">
-            <div class="iconosDragones">
-                <img src="/Templates/img/wine-glass.svg" alt="Copa" class="Copa">
-                <img src="/Templates/img/Termometro.png" alt="Temperatura" class="iconTemp">
-                <a href="https://goo.gl/maps/PR2CkmEZvkrSU7TJ9" target="_blank"><img src="/Templates/img/Mapa II.png" alt="Map" class="iconMap"></a>
-            </div>
-        </div>
-        <div class="box-Dragones2">
-            <div class="img-back-Dragones"></div>
-            <div class="text-Dragones">
-                <h3>Notas de degustación:</h3>
-                <p>De la Región de San Juan traemos este este varietal Syrah. 100% agroecológico. Aroma mineral de flores y fruta fresca, amable pero vibrante.</p>
-            </div>
-        </div>
-        <div class="hoja-Dragones"><a href='#Top' class="Top"><img src="/Templates/img/origin.svg" alt="Hoja" class="hoja"></a>
-        </div>
-        <!--- Catena -->
-        <div class="Titulo-Catena"><h1>"Catena Zapata Malbec" - Bodega Catena Zapata</h1></div>
-        <div class="box-Catena1"><a name="Catena Zapata"></a>
-            <div class="img-back-Catena"></div>
-            <div class="text-Catena">
-                <h3>Notas de degustación:</h3>
-                <p>Este Malbec presenta un profundo e intenso color violeta. Su aroma remite a cassis, moca, clavo de olor y marcadas notas terrosas. Elaborado en la region de Mendoza, es el compañero ideal para platos con carnes rojas.</p>
-            </div>
-        </div>
-        <div class="hoja-Catena"><a href='#Top' class="Top"><img src="/Templates/img/origin.svg" alt="Hoja" class="hoja"></a></div>
-        <div class="box-Catena2">
-            <div class="iconosCatena">
-                <img src="/Templates/img/wine-glass.svg" alt="Copa" class="Copa">
-                <img src="/Templates/img/Termometro.png" alt="Temperatura" class="iconTemp">
-                <a href="https://goo.gl/maps/gZ2kKacec97sNiLv7" target="_blank"><img src="/Templates/img/Mapa II.png" alt="Map" class="iconMap"></a>
-            </div>
-            <img src="/Templates/img/Malbec Catena.jpg" alt="Luigi Bosca Extra Brut" class="img-Catena">
-        </div>
-        <!--- San Huberto -->
-        <div class="Titulo-Huberto"><h1>"Nina" de Bodega San Huberto</h1></div>
-        <div class="box-Huberto1"><a name="San Huberto"></a>
-            <img src="/Templates/img/Nina.jpg" alt="Nina San Huberto" class="img-Huberto">
-            <div class="iconosHuberto">
-                <img src="/Templates/img/wine-glass.svg" alt="Copa" class="Copa">
-                <img src="/Templates/img/Termometro.png" alt="Temperatura" class="iconTemp">
-                <a href="https://goo.gl/maps/H63c1XuojHq4vFt17" target="_blank"><img src="/Templates/img/Mapa II.png" alt="Map" class="iconMap"></a>
-            </div>
-        </div>
-        <div class="box-Huberto2">
-            <div class="img-back-Huberto"></div>
-            <div class="text-Huberto">
-                <h3>Notas de degustación:</h3>
-                <p>De gran riqueza aromática con frutos rojos y arandanos. Mineral, en pleno equilibrio. Notas de chocolate y vainilla. Desde la region de La Rioja. La famosa critica de vino Jancis Robinson, destaco este varietal Petit Verdot incluso por encima de muchas bodegas de Burdeos. Se recomienda consumirlo con comidas tales como carnes rojas, quesos curados y guisos de ave.</p>
-            </div>
-        </div>
-        <div class="hoja-Huberto"><a href='#Top' class="Top"><img src="/Templates/img/origin.svg" alt="Hoja" class="hoja"></a>
-        </div>
-    </main>
-</div>
+            <div class="div-derechos"><p class="derechos">BEBER CON MODERACION | Prohibida la venta a menores de 18 años | Copyright © Septiembre 2022 | Todos los derechos reservados. | V4.0</p></div>
+        </footer>
+    </div>
+    </body>
+</html>

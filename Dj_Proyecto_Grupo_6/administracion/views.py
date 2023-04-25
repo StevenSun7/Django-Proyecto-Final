@@ -4,7 +4,15 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse(f"""<h1>Proyecto Django Grupo 6</h1>""")
+    if(request.GET.get('param')):
+        param_uno = request.GET.get('param')
+    else:
+        param_uno='defecto'
+    param_dos = request.GET.get('param2')
+    context = {'param_uno':param_uno, 'param_dos':param_dos,}
 
-def saludar(request, nombre):
-    return HttpResponse(f"""<h1>Welcome {nombre} 🍷</h1>""")
+    return render(request,'publica/index.html', context)
+
+def tintos(request):
+    return render(request,'publica/tintos.html')
+

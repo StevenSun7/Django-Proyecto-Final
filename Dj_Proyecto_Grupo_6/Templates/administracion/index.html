@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/publica/css/style-inicio.css' %}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Templates/css/moviles.css">
-    <link rel="shortcut icon" href="/Templates/favicon/grapes.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/Templates/css/style-inicio.css">
+    <link rel="stylesheet" href="{% static '/publica/css/moviles.css' %}">
+    <link rel="shortcut icon" href="{% static '/publica/favicon/grapes.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static '/publica/css/style-inicio.css' %}">
     <title>Vinos y Espumantes Recomendados</title>
 </head>
+
 <body>
-<!--Menu de Inicio ------------------------------------------------------>
+<!-- Menu de Inicio -->
 <header>
     <input type="checkbox" id="btn-menu">
     <div class="header">
-        <label for="btn-menu"><img src="/Templates/img/Copa con Morado.png" alt="" width="30px" height="30px" id="fotoBtn"></label>
+        <label for="btn-menu"><img src="{% static 'publica/img/Copa con Morado.png' %}" alt="" width="30px" height="30px" id="fotoBtn"></label>
         <div class="div-menu">
             <div class="Logo">
-                <a href="/Templates/index.html"><img src="/Templates/img/Grapes I.png" alt="Uvas" class="UvasLogo"></a>
+                <a href="{% url 'inicio' %}"><img src="{% static 'publica/img/Grapes I.png' %}" alt="Uvas" class="UvasLogo"></a>
             </div>
-            <div class="html-menu"><a href="/Templates/html/tintos.html">Tintos</a></div>
-            <div class="html-menu"><a href="/Templates/html/blancos.html">Blancos</a></div>
-            <div class="html-menu"><a href="/Templates/html/espumantes.html">Espumantes</a></div>
-            <div class="html-menu"><a href="/Templates/html/contacto.html">Contacto</a></div>
-        </div>
-    </div>
+            <div class="html-menu"><a href="{% url 'tintos' %}">Tintos</a></div>
+            <div class="html-menu"><a href="#">Blancos</a></div>
+            <div class="html-menu"><a href="#">Espumantes</a></div>
+            <div class="html-menu"><a href="#">Contacto</a></div>
+        </div>    </div>
 </header>
 
 <div class="contenedor">
         <main class="main">
-            <div class="img-barricas"><img src="/Templates/img/Barricas Salentein.jpg" alt="Barricas"></div>
+            <div class="img-barricas"><img src="{% static 'publica/img/Barricas Salentein.jpg' %}" alt="Barricas"></div>
             <div class="galeria">
                 <div class="div-img1"></div>
                 <div class="div-img2"></div>
@@ -45,18 +47,13 @@
                 <h3>El vino en la Edad Moderna</h3>
                 <p class="historia">Los colonizadores españoles llevaban la vid al Nuevo Mundo y empleaban las materias primas de allí traídas (café, cacao, etc) para comerciar con ellas (en Burdeos, el vino se cambiaba por café, por ejemplo). Mientras, el Renacimiento avanzaba y acababa con el oscurantismo medieval en todos los sentidos. Se abre una nueva etapa en la historia del vino, con el perfeccionamiento en los siglos XVII y XVIII de las técnicas de vinificación. En este periodo, los vinos de Borgoña, Burdeos y Champaña (Francia) adquieren parte de su posterior fama mundial, gracias, en gran medida, a los comerciantes del norte de Europa. Comienzan a utilizarse las botellas de vidrio para conservar el vino y se inventa el tapón de corcho. También en este momento, el monje Dom Pérignon descubre cómo elaborar el vino espumoso en la región de Champagne.</p>
             </div><br>
-            
-        </main>
-        <footer class="footer">
-            <div class="div-redes">
-                <a href="https://www.instagram.com" target="_blank"><img src="/Templates/img/Instagram II.png" alt="Instagram" class="logo-instagram">Instagram</a><br>
-                <a href="https://github.com/StevenSun7/Espumantes-Vinos.git" target="_blank"><img src="/Templates/img/GitHub IV.png" alt="GitHub" class="logo-github">GitHub</a><br>
-                <a href="https://twitter.com/i/flow/login" target="_blank"><img src="/Templates/img/Twitter II.png" alt="Twitter" class="logo-twitter">Twitter</a><br>
-                <a href="https://www.facebook.com" target="_blank"><img src="/Templates/img/Facebook I.png" alt="Facebook" class="logo-facebook">Facebook</a>
+            <div class="div-api">
+                <p>Visitanos cuando quieras. Te esperamos para más recomendaciones.</p>
+                <p>CABA. CP 1408</p><br>
+            <div id="map"></div>
             </div>
-            <br>
-            <div class="div-derechos"><p class="derechos">BEBER CON MODERACION | Prohibida la venta a menores de 18 años | Copyright © Septiembre 2022 | Todos los derechos reservados. | V4.0</p></div>
-        </footer>
+        </main>
+        {% include './footer.html' %}
     </div>
 </body>
 </html>

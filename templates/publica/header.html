@@ -1,3 +1,16 @@
+{% load static %}
 <header>
-    <h4>Soy un header</h4>
+    <input type="checkbox" id="btn-menu">
+    <div class="header">
+        <label for="btn-menu"><img src="" alt="" width="30px" height="30px" id="fotoBtn"></label>
+        <div class="div-menu">
+            <div class="Logo">
+                <a href="{% url 'inicio' %}"><img src="" alt="Uvas" class="UvasLogo"></a>
+            </div>
+            <div class="html-menu"><a href="{% url 'tintos' %}">Tintos</a></div>
+            <div class="html-menu"><a href="/html/blancos.html">Blancos</a></div>
+            <div class="html-menu"><a href="/html/espumantes.html">Espumantes</a></div>
+            <div class="html-menu"><a href="/html/contacto.html">Contacto</a></div>
+        </div>
+    </div>
 </header>

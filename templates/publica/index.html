@@ -41,11 +41,11 @@
             <div class="texto">
                 <h2>Breve Historia del Vino</h2>
                 {% include './header.html' %}
-                  p>{{param_uno}}</p>
+                <p>{{param_uno}}</p>
                 <p>{{param_dos|default:"no hay nada"|capfirst}}</p>
                 <p>{{hoy|date:"d-m-Y H:m:s"}}</p>
                 
-                {% if cursos|length > 0 %}
+                {% if cursos|length 0 %}
                 <ul>
                     {% for curso in cursos %}
                         <li>

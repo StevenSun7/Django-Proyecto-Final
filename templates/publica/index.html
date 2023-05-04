@@ -23,9 +23,9 @@
                 <a href="{% url 'inicio' %}"><img src="{% static 'publica/img/Grapes I.png' %}" alt="Uvas" class="UvasLogo"></a>
             </div>
             <div class="html-menu"><a href="{% url 'tintos' %}">Tintos</a></div>
-            <div class="html-menu"><a href="/html/blancos.html">Blancos</a></div>
-            <div class="html-menu"><a href="/html/espumantes.html">Espumantes</a></div>
-            <div class="html-menu"><a href="/html/contacto.html">Contacto</a></div>
+            <div class="html-menu"><a href="{% url 'blancos' %}">Blancos</a></div>
+            <div class="html-menu"><a href="{% url 'espumantes' %}">Espumantes</a></div>
+            <div class="html-menu"><a href="{% url 'contacto' %}">Contacto</a></div>
         </div>
     </div>
 </header>
@@ -40,8 +40,13 @@
             </div>
             <div class="texto">
                 <h2>Breve Historia del Vino</h2>
+<<<<<<< HEAD
                 {% include './header.html' %}
                 <p>{{param_uno}}</p>
+=======
+                {% comment "soy un comentario" %} {% include './header.html' %}
+                  p>{{param_uno}}</p>
+>>>>>>> 3b6a71b952f30bf8256d6ba67b5a4625d0245a21
                 <p>{{param_dos|default:"no hay nada"|capfirst}}</p>
                 <p>{{hoy|date:"d-m-Y H:m:s"}}</p>
                 
@@ -59,9 +64,9 @@
                     <P>No hay cursos disponibles ahora</P>
                     {% endif %}
 
-                {% comment "soy un comentario" %}{% endcomment %}
+               
 
-                {% include './footer.html' %}
+                {% include './footer.html' %}{% endcomment %}
 
                 <p class="historia">El vino si bien no se conoce de manera exacta donde se originó, está ligado estrechamente con la sedentarización del hombre. La evidencia mas antigua de su producción es una vasija encontrada que data, según los estudios del año 5400 A.C., en la zona de los Montes Zagros (actual Irak e Irán). Sin embargo, hay evidencia de su producción en todas las civilizaciones antiguas más destacadas, griegos, romanos, chinos, egipcios, etc. Para su producción se utiliza la vid (vitis vinifera) gracias a su adaptabilidad climática fue expandiéndose por toda Europa Occidental.</p>
                 <h3>El vino en el Imperio Romano</h3>

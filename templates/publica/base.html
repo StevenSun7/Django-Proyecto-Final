@@ -5,50 +5,19 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{% static '/publica/css/moviles.css' %}">
-        <link rel="stylesheet" href="{% static '/publica/css/style-tintos.css' %}">
-        <link rel="shortcut icon" href="{% static '/publica/favicon/grapes.ico' %}" type="image/x-icon">
-        <title>{% block titulo %} {% endblock titulo %} </title>
-
-    
-        <link rel="stylesheet" href="{% static '/publica/css/style.css'%}?v={% now 'U' %}">    
-    
-        {% block css %}{% endblock css %}
+        
+    {% block css %}{% endblock css %}
     </head>
 
     <body>
-<!--+++++++ Menu +++++++++++++++++++++++++++++++++++++++++++++++++++-->
-<header>
-        <input type="checkbox" id="btn-menu">
-        <div class="header">
-            <label for="btn-menu"><img src="{% static 'publica/img/Copa con Red.png' %}" alt="" width="30px" height="30px" id="fotoBtn"></label>
-            <div class="div-menu">
-                <div class="Logo">
-                    <a href="{% url 'inicio' %}"><img src="{% static 'publica/img/Grapes Red.png' %}" alt="Uvas" class="UvasLogo"></a>
-                </div>
-                <div class="html-menu"><a href="{% url 'tintos' %}">Tintos</a></div>
-                <div class="html-menu"><a href="/html/blancos.html">Blancos</a></div>
-                <div class="html-menu"><a href="/html/espumantes.html">Espumantes</a></div>
-                <div class="html-menu"><a href="/html/contacto.html">Contacto</a></div>
-            </div>
-        </div>
-    </header>
-        <div class="contenedor"
-         <div class="banner">
-            <div class="banner-nav">
-                <div class="img-banner"><img src="{% static 'publica/img/Vinos Tintos especias en la copas.png' %}" alt="Copas con especias"></div>
-                <div class="banner-nav-section">
-                    <a href="#Los Dragones">Los Dragones</a>
-                    <a href="#Catena Zapata">Catena Zapata</a>
-                    <a href="#San Huberto">San Huberto</a>
-                </div>
-            </div>
-        </div>
-        <main class="main">
-            {% block contenido %}{% endblock contenido %}
-        </main>
+
+
+    {% include './header.html' %}
+   
+    {% block contenido %}{% endblock contenido %}
         
     {% include './footer.html' %}
+    
     {%block javascript%}{%endblock javascript%}
     </body>
 </html>

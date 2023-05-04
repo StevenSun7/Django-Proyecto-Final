@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 {% extends './base.html' %}
-{% block titulo %} QUIENES SOMOS {% endblock titulo %} 
+{% block titulo %} Tintos {% endblock titulo %} 
 {% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static '/publica/css/moviles.css' %}">
+<link rel="stylesheet" href="{% static '/publica/css/style-tintos.css' %}">
+<link rel="shortcut icon" href="{% static '/publica/favicon/grapes.ico' %}" type="image/x-icon">
+<link rel="stylesheet" href="{% static '/publica/css/style.css'%}?v={% now 'U' %}">    
+{% endblock css %}
 {% block contenido %}
+<div class="contenedor"
+<div class="banner">
+   <div class="banner-nav">
+       <div class="img-banner"><img src="{% static 'publica/img/Vinos Tintos especias en la copas.png' %}" alt="Copas con especias"></div>
+       <div class="banner-nav-section">
+           <a href="#Los Dragones">Los Dragones</a>
+           <a href="#Catena Zapata">Catena Zapata</a>
+           <a href="#San Huberto">San Huberto</a>
+       </div>
+   </div>
+</div>
 <main class="main">
     <section class="section-main">
-        <h1>El Tinto y su magia.</h1>
+        <h1>El Ti y su magia.</h1>
         <p> El vino es un estimulo para pasarla bien (siempre con moderación). No hace falta ser un entendido para disfrutralo. 
         Lo más comun es en una reunion con amigos dar los primeros pasos, y probar nuestros primeros sorbos.</p>
         <p>Una buena forma de empezar es combinarlo con los alimentos. Casi una regla es consumir vino  tinto con carnes.</p>

@@ -43,13 +43,6 @@ def index(request):
 
     return render(request,'publica/index.html',context)
 
-def quienes_somos(request):
-    template = loader.get_template('publica/quienes_somos.html')
-    context = {'titulo': 'Quienes somos'}
-    return HttpResponse(template.render(context,request))
-    #return render(request,'publica/quienes_somos.html')
-    #return HttpResponse(f"""
-    #    <h1>Proyecto Django - Quienes somos</h1>""")
 def tintos(request):
     return render(request,'publica/tintos.html')
 
@@ -59,6 +52,13 @@ def blancos(request):
 def espumantes(request):
     return render(request,'publica/espumantes.html')
 
+def quienes_somos(request):
+    template = loader.get_template('publica/quienes_somos.html')
+    context = {'titulo': 'Quienes somos'}
+    return HttpResponse(template.render(context,request))
+    #return render(request,'publica/quienes_somos.html')
+    #return HttpResponse(f"""
+    #    <h1>Proyecto Django - Quienes somos</h1>""")
 
 
 def saludar (request,nombre):

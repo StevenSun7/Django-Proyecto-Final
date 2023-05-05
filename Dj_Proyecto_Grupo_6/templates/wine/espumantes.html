@@ -1,4 +1,14 @@
-
+<!DOCTYPE html>
+{% extends './base.html' %}
+{% block titulo %} blancos {% endblock titulo %} 
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static '/wine/css/moviles.css' %}">
+<link rel="stylesheet" href="{% static '/wine/css/style-espumantes.css' %}">
+<link rel="shortcut icon" href="{% static '/wine/favicon/grapes.ico' %}" type="image/x-icon">
+<link rel="stylesheet" href="{% static '/wine/css/style.css'%}?v={% now 'U' %}">    
+{% endblock css %}
+{% block contenido %}
 <div class="contenedor">
     <div class="banner-burbujas">
         <div class="video-burbujas" id="Top">
@@ -25,11 +35,11 @@
         <!-- Trapiche -->
         <div class="Titulo-Trapiche"><h1 class="Notas-Trapiche">"Extra Brut" - Bodega Trapiche</h1></div>
         <div class="box-Trapiche1"><a name="Trapiche"></a>
-            <img src="/Templates/img/Trapiche Extra Brut.png" alt="Trapiche Extra Brut"  class="img-Trapiche">
+            <img src="/templates/img/Trapiche Extra Brut.png" alt="Trapiche Extra Brut"  class="img-Trapiche">
             <div class="iconosTrapiche">
-                <img src="/Templates/img/wine-glass.svg" alt="Copa" class="Copa">
-                <img src="/Templates/img/Termometro.png" alt="Temperatura" class="iconTemp">
-                <a href="https://goo.gl/maps/oTpMuwSirtw2dzW18" target="_blank"><img src="/Templates/img/Mapa II.png" alt="Map" class="iconMap"></a>
+                <img src="/templates/img/wine-glass.svg" alt="Copa" class="Copa">
+                <img src="/templates/img/Termometro.png" alt="Temperatura" class="iconTemp">
+                <a href="https://goo.gl/maps/oTpMuwSirtw2dzW18" target="_blank"><img src="/templates/img/Mapa II.png" alt="Map" class="iconMap"></a>
             </div>
         </div>
         <div class="box-Trapiche2">
@@ -39,7 +49,7 @@
                 <p>Intenso color amarillo verdoso. Aromas típicos del Chardonnay como la manzana y el ananá combinados con aquellos que provienen de las levaduras a través del contacto “sur lies”, como por ejemplo pan tostado. Fresco, de gran cuerpo y sabor persistente, gracias al aporte del Sémillon y el toque de Malbec.</p>
             </div>
         </div>
-        <div class="hoja-Trapiche"><a href='#Top' class="Top"><img src="/Templates/img/origin.svg" alt="Hoja" class="hoja"></a>
+        <div class="hoja-Trapiche"><a href='#Top' class="Top"><img src="/templates/img/origin.svg" alt="Hoja" class="hoja"></a>
         </div>
         <!-- Luitgi Bosca -->
         <div class="Titulo-Luigi"><h1>"Bohème Brut Nature" - Bodega Luigi Bosca</h1></div>
@@ -50,23 +60,23 @@
                 <p> Luigi Bosca Bohème Brut Nature es un espumoso de color dorado brillante. Sus aromas son delicados y elegantes, con notas que recuerdan a frutas blancas, frutos secos y pan tostado. En boca es vivaz y refrescante, de paladar franco y equilibrado, con burbujas finas y persistentes. Es de carácter complejo, con buena estructura y fineza en su paso por boca; un vino sofisticado concebido para celebrar momentos únicos.</p>
             </div>
         </div>
-        <div class="hoja-Luigi"><a href='#Top' class="Top"><img src="/Templates/img/origin.svg" alt="Hoja" class="hoja"></a></div>
+        <div class="hoja-Luigi"><a href='#Top' class="Top"><img src="/templates/img/origin.svg" alt="Hoja" class="hoja"></a></div>
         <div class="box-LuigiBosca2">
             <div class="iconosLuigi">
-                <img src="/Templates/img/wine-glass.svg" alt="Copa" class="Copa">
-                <img src="/Templates/img/Termometro.png" alt="Temperatura" class="iconTemp">
-                <a href="https://goo.gl/maps/szfEcW8kLSZPDLAC9" target="_blank"><img src="/Templates/img/Mapa II.png" alt="Map" class="iconMap"></a>
+                <img src="/templates/img/wine-glass.svg" alt="Copa" class="Copa">
+                <img src="/templates/img/Termometro.png" alt="Temperatura" class="iconTemp">
+                <a href="https://goo.gl/maps/szfEcW8kLSZPDLAC9" target="_blank"><img src="/templates/img/Mapa II.png" alt="Map" class="iconMap"></a>
             </div>
-            <img src="/Templates/img/boheme-1.png" alt="Luigi Bosca Extra Brut" class="img-LuigiBosca">
+            <img src="/templates/img/boheme-1.png" alt="Luigi Bosca Extra Brut" class="img-LuigiBosca">
         </div>
         <!-- Chandon -->
         <div class="Titulo-Chandon"><h1>"Extra Brut" - Bodega Chandon</h1></div>
         <div class="box-Chandon1"><a name="Chandon"></a>
-            <img src="/Templates/img/Chandon Extra Brut.png" alt="Chandon Extra Brut" class="img-Chandon">
+            <img src="/templates/img/Chandon Extra Brut.png" alt="Chandon Extra Brut" class="img-Chandon">
             <div class="iconosChandon">
-                <img src="/Templates/img/wine-glass.svg" alt="Copa" class="Copa">
-                <img src="/Templates/img/Termometro.png" alt="Temperatura" class="iconTemp">
-                <a href="https://goo.gl/maps/Jqv7kPmFyJismubz5" target="_blank"><img src="/Templates/img/Mapa II.png" alt="Map" class="iconMap"></a>
+                <img src="/templates/img/wine-glass.svg" alt="Copa" class="Copa">
+                <img src="/templates/img/Termometro.png" alt="Temperatura" class="iconTemp">
+                <a href="https://goo.gl/maps/Jqv7kPmFyJismubz5" target="_blank"><img src="/templates/img/Mapa II.png" alt="Map" class="iconMap"></a>
             </div>
         </div>
         <div class="box-Chandon2">
@@ -76,7 +86,7 @@
                 <p> El gran clásico de Chandon. Las mejores uvas Chardonnay y Pinot Noir provienen de nuestras fincas. El Yaima y Caicayén (Valle de Uco) emplazadas entre los 1000 y 1200 msnm. Con sus suelos franco arenoso a limoso y marcada presencia de piedra caliza, nos permiten crear un espumoso fresco, frutado, elegante, cremoso y equilibrado. La cordillera de los Andes, actúa como barrera de los vientos húmedos provenientes del océano Pacífico, lo que convierte a Mendoza en un desierto en altura con clima continental. Las condiciones climáticas de estos terroirs y lagran amplitud térmica permiten que las uvas maduren lentamente al tiempo que conservan toda su acidez natural.</p>
             </div>
         </div>
-        <div class="hoja-Chandon"><a href='#Top' class="Top"><img src="/Templates/img/origin.svg" alt="Hoja" class="hoja"></a>
+        <div class="hoja-Chandon"><a href='#Top' class="Top"><img src="/templates/img/origin.svg" alt="Hoja" class="hoja"></a>
         </div>
         
         <!-- NIetro Senetiner -->
@@ -88,14 +98,15 @@
                 <p> De ligero tono asalmonado, con burbujas pequeñas, que terminan en una corona fina y delicada de color blanca. De aromas complejos y frutados, con notas de frambuesa, praliné y pan tostado, fiel a la excelencia del Pinot Noir. En boca se presenta intenso, fresco y con equilibrada acidez, confirmando las notas frutadas y su elegante personalidad. </p>
             </div>
         </div>
-        <div class="hoja-Nieto"><a href='#Top' class="Top"><img src="/Templates/img/origin.svg" alt="Hoja" class="hoja"></a></div>
+        <div class="hoja-Nieto"><a href='#Top' class="Top"><img src="/templates/img/origin.svg" alt="Hoja" class="hoja"></a></div>
         <div class="box-NietoSenetiner2">
             <div class="iconosNieto">
-                <img src="/Templates/img/wine-glass.svg" alt="Copa" class="Copa">
-                <img src="/Templates/img/Termometro.png" alt="Temperatura" class="iconTemp">
-                <a href="https://goo.gl/maps/JDavTK99dAxAEhUFA" target="_blank"><img src="/Templates/img/Mapa II.png" alt="Map" class="iconMap"></a>
+                <img src="/templates/img/wine-glass.svg" alt="Copa" class="Copa">
+                <img src="/templates/img/Termometro.png" alt="Temperatura" class="iconTemp">
+                <a href="https://goo.gl/maps/JDavTK99dAxAEhUFA" target="_blank"><img src="/templates/img/Mapa II.png" alt="Map" class="iconMap"></a>
             </div>
-            <img src="/Templates/img/Nieto Senetiner Brut Natura.png" alt="Nieto Senetiner Brut Nature" class="img-NietoSenetiner">
+            <img src="/templates/img/Nieto Senetiner Brut Natura.png" alt="Nieto Senetiner Brut Nature" class="img-NietoSenetiner">
         </div>
     </main>
 </div>
+{% endblock contenido %}

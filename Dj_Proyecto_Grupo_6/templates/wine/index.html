@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     {% load static %}
-    <link rel="stylesheet" href="{% static '/publica/css/style-inicio.css' %}">
+    <link rel="stylesheet" href="{% static '/wine/css/style-inicio.css' %}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static '/publica/css/moviles.css' %}">
-    <link rel="shortcut icon" href="{% static '/publica/favicon/grapes.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static '/publica/css/style-inicio.css' %}">
+    <link rel="stylesheet" href="{% static '/wine/css/moviles.css' %}">
+    <link rel="shortcut icon" href="{% static '/wine/favicon/grapes.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static '/wine/css/style-inicio.css' %}">
     <title>Vinos y Espumantes Recomendados</title>
 </head>
 
@@ -17,21 +17,22 @@
 <header>
     <input type="checkbox" id="btn-menu">
     <div class="header">
-        <label for="btn-menu"><img src="{% static 'publica/img/Copa con Morado.png' %}" alt="" width="30px" height="30px" id="fotoBtn"></label>
+        <label for="btn-menu"><img src="{% static 'wine/img/Copa con Morado.png' %}" alt="" width="30px" height="30px" id="fotoBtn"></label>
         <div class="div-menu">
             <div class="Logo">
-                <a href="{% url 'inicio' %}"><img src="{% static 'publica/img/Grapes I.png' %}" alt="Uvas" class="UvasLogo"></a>
+                <a href="{% url 'inicio' %}"><img src="{% static 'wine/img/Grapes I.png' %}" alt="Uvas" class="UvasLogo"></a>
             </div>
             <div class="html-menu"><a href="{% url 'tintos' %}">Tintos</a></div>
-            <div class="html-menu"><a href="#">Blancos</a></div>
-            <div class="html-menu"><a href="#">Espumantes</a></div>
-            <div class="html-menu"><a href="#">Contacto</a></div>
-        </div>    </div>
+            <div class="html-menu"><a href="{% url 'blancos' %}">Blancos</a></div>
+            <div class="html-menu"><a href="{% url 'espumantes' %}">Espumantes</a></div>
+            <div class="html-menu"><a href="{% url 'contacto' %}">Contacto</a></div>
+        </div>
+    </div>
 </header>
 
 <div class="contenedor">
         <main class="main">
-            <div class="img-barricas"><img src="{% static 'publica/img/Barricas Salentein.jpg' %}" alt="Barricas"></div>
+            <div class="img-barricas"><img src="{% static 'wine/img/Barricas Salentein.jpg' %}" alt="Barricas"></div>
             <div class="galeria">
                 <div class="div-img1"></div>
                 <div class="div-img2"></div>
@@ -46,11 +47,6 @@
                 <p class="historia">Durante la Edad Media, las tierras (y con ellas los cultivos de vid) pasan a ser propiedad de la Iglesia y los reyes. Así, la elaboración del vino queda circunscrita a monasterios y castillos. En este periodo se hace extensivo el uso de las barricas de madera para almacenar el vino y, de forma casual, aparecen las primeras bodegas. En este periodo se entiende por bodega el lugar para guardar las barricas de vino, valiosa mercancía que había que proteger de los saqueos, por lo que se guardaban en los sótanos de monasterios y castillos. En la Península Ibérica, los Reyes Católicos iban reconquistando territorio a los musulmanes, terrenos en los que se replantaban vides. Tras la Reconquista, se plantan vides en el Camino de Santiago, en las zonas de Rioja y Ribera del Duero. A partir del siglo XII comienzan a plantarse viñedos en Cataluña y en la zona de Jerez. Durante el siglo XV se lleva el vino a las Islas Canarias, datándose el cultivo de la primera vid en el año 1497.</p>
                 <h3>El vino en la Edad Moderna</h3>
                 <p class="historia">Los colonizadores españoles llevaban la vid al Nuevo Mundo y empleaban las materias primas de allí traídas (café, cacao, etc) para comerciar con ellas (en Burdeos, el vino se cambiaba por café, por ejemplo). Mientras, el Renacimiento avanzaba y acababa con el oscurantismo medieval en todos los sentidos. Se abre una nueva etapa en la historia del vino, con el perfeccionamiento en los siglos XVII y XVIII de las técnicas de vinificación. En este periodo, los vinos de Borgoña, Burdeos y Champaña (Francia) adquieren parte de su posterior fama mundial, gracias, en gran medida, a los comerciantes del norte de Europa. Comienzan a utilizarse las botellas de vidrio para conservar el vino y se inventa el tapón de corcho. También en este momento, el monje Dom Pérignon descubre cómo elaborar el vino espumoso en la región de Champagne.</p>
-            </div><br>
-            <div class="div-api">
-                <p>Visitanos cuando quieras. Te esperamos para más recomendaciones.</p>
-                <p>CABA. CP 1408</p><br>
-            <div id="map"></div>
             </div>
         </main>
         {% include './footer.html' %}

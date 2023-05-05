@@ -7,32 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static '/wine/css/moviles.css' %}">
-    <link rel="shortcut icon" href="{% static '/wine/favicon/grapes.ico' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static '/wine/css/style-inicio.css' %}">
+    <link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">
     <title>Vinos y Espumantes Recomendados</title>
 </head>
 
 <body>
 <!-- Menu de Inicio -->
-<header>
-    <input type="checkbox" id="btn-menu">
-    <div class="header">
-        <label for="btn-menu"><img src="{% static 'wine/img/Copa con Morado.png' %}" alt="" width="30px" height="30px" id="fotoBtn"></label>
-        <div class="div-menu">
-            <div class="Logo">
-                <a href="{% url 'inicio' %}"><img src="{% static 'wine/img/Grapes I.png' %}" alt="Uvas" class="UvasLogo"></a>
-            </div>
-            <div class="html-menu"><a href="{% url 'tintos' %}">Tintos</a></div>
-            <div class="html-menu"><a href="{% url 'blancos' %}">Blancos</a></div>
-            <div class="html-menu"><a href="{% url 'espumantes' %}">Espumantes</a></div>
-            <div class="html-menu"><a href="{% url 'contacto' %}">Contacto</a></div>
-        </div>
-    </div>
-</header>
+{% include './header-index.html' %}
 
 <div class="contenedor">
         <main class="main">
-            <div class="img-barricas"><img src="{% static 'wine/img/Barricas Salentein.jpg' %}" alt="Barricas"></div>
+            <div class="img-barricas"><img src="{% static '/img/BarricasSalentein.jpg' %}" alt="Barricas"></div>
             <div class="galeria">
                 <div class="div-img1"></div>
                 <div class="div-img2"></div>

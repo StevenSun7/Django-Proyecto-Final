@@ -5,10 +5,10 @@
 {% block css %}
 <link rel="stylesheet" href="{% static '/wine/css/moviles.css' %}">
 <link rel="stylesheet" href="{% static '/wine/css/style-contacto.css' %}">
-<link rel="shortcut icon" href="{% static '/wine/favicon/grapes.ico' %}" type="image/x-icon">
-<link rel="stylesheet" href="{% static '/wine/css/style.css'%}?v={% now 'U' %}">    
+<link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">  
 {% endblock css %}
 {% block contenido %}
+{% include './header-contacto.html' %}
 <main class="main">
     <section class="contacto">
         <h1>Contactános</h1>

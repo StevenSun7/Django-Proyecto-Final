@@ -8,6 +8,7 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 /*--------- Maquetado Grid ---------------------*/
 .header {grid-area: header;}
 .banner {grid-area: banner;}
@@ -15,14 +16,14 @@ body {
 .footer {grid-area: footer;}
 
 #btn-menu {
-	display: none;
+    display: none;
 }
 
 header label {
-	display: none;
-	width: 50px;
-	height: 60px;
-	padding: 00px;
+    display: none;
+    width: 50px;
+    height: 60px;
+    padding: 00px;
     margin-bottom: 59px
 }
 
@@ -60,11 +61,11 @@ header label {
     color: #F9F9F9;
     text-decoration: none;
     font-size: large;
-    
+
 }
 
 .div-menu > div > a:hover {
-    color: #7b8213;
+    color: #792610;
     transition: all 0.3s;
 }
 
@@ -74,7 +75,7 @@ header label {
 
 .UvasLogo:hover {
     background-color: #a7976d;
-    border-top-left-radius:  3rem;
+    border-top-left-radius: 3rem;
     transition: all 0.5s;
 }
 
@@ -83,29 +84,12 @@ header label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    width: 100%;
 }
 
-.banner-nav {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    width: 75%;
-    border-bottom: solid 1px #7b8213;
-}
-
-.div-Copas-Especias {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
-}
-
-.Copas-Especias {
-    display: flex;
-    justify-content: center;
-    width: 75%;
+.img-banner {
+    width: 100%;
+    border-bottom: solid 1px rgba(59, 6, 24, 0.845);
 }
 
 .banner-nav-section {
@@ -116,26 +100,26 @@ header label {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #CFD4BE;
+    background-color: rgba(59, 6, 24, 0.845);
     border-end-start-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin-top: -0.03rem;
-    
+    margin-top: -1px;
+
 }
+
 .banner-nav-section a {
-    color: #795300;
+    color: #F9F9F9;
     text-decoration: none;
     font-size: large;
 }
 
 .banner-nav-section a:hover {
-    color: #0A3D00;
+    color: #a7976d;
     transition: all 0.2s;
 }
 
 .Top {
     text-decoration: none;
-    color: #0A3D00;
 }
 
 /*---- MAIN --------------------------------*/
@@ -143,22 +127,35 @@ header label {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(12, auto);
-    border-top: solid 1px #7b8213;
+    border-top: solid 1px rgba(59, 6, 24, 0.845);
     font-size: 18px;
-    margin-top: 1rem;
 }
+
 .section-main {
     color: rgb(71, 67, 67);
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin: 3%;
+    padding-top: -15rem;
 }
-.section-main > h1 {
+
+.section-main > h1, h3 {
     padding-bottom: 10px;
-} 
+}
+
+.Video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Video-Tinto {
+    width: 740px;
+    height: 400px;
+    border-radius: 9px;
+}
 
 /*Iconos de Copa Temperatura y Mapa -----------------------*/
 .Copa {
@@ -196,48 +193,38 @@ header label {
     transition: all 0.5s;
 }
 
-.art-video {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.video2 {
-    width: 740px;
-    height: 400px;
-    border-radius: 9px;
-}
-
-/*-- Zuccardi ---------------------------------------------------*/
-.Titulo-Zuccardi {
+/*--- Dragones ---------------------------------------------------*/
+.Titulo-Dragones {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     display: flex;
     color: rgb(71, 67, 67);
     flex-direction: column;
     align-items: center;
-    border-top: solid 1px #7b8213;
+    border-top: solid 1px rgba(110, 36, 62, 0.671);
 }
 
-.box-Zuccardi1 {
-    grid-column: 1;
+.box-Dragones1 {
+    grid-column: 1 / 2;
     grid-row: 3 / 4;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.img-Zuccardi {
+.img-Dragones {
     height: 35vw;
+    padding-left: 3rem;
 }
 
-.iconosZuccardi {
+.iconosDragones {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* margin-left: -1rem; */
 }
 
-.box-Zuccardi2 {
+.box-Dragones2 {
     grid-column: 2 / -1;
     grid-row: 3 / 4;
     display: flex;
@@ -248,8 +235,8 @@ header label {
     padding-top: 2rem;
 }
 
-.text-Zuccardi {
-    background-color: #7b8213bc;
+.text-Dragones {
+    background-color: rgba(110, 36, 62, 0.671);
     padding: 7px;
     color: #fff;
     width: 45vw;
@@ -263,42 +250,43 @@ header label {
     border-radius: 7px;
 }
 
-.img-back-Zuccardi {
+.img-back-Dragones {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/Templates/img/Header\ Barricas.jpg);
+    background-image: url(/static/img/ViñedosDragones.jpg);
     background-size: 145%;
-    animation: Zuccardi-Barricas 10s infinite linear alternate;
+    animation: san-juan-vinedos 10s infinite linear alternate;
     margin-bottom: 45px;
 }
-@keyframes Zuccardi-Barricas {
+
+@keyframes san-juan-vinedos {
     from {background-position: bottom left;}
     to {background-position: top right;}
 }
 
-.hoja-Zuccardi {
+.hoja-Dragones {
     grid-column: 1 / -1;
     grid-row: 4 / 5;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    border-bottom: solid 1px #7b8213;
+    border-bottom: solid 1px rgba(110, 36, 62, 0.671);
 }
 
-/*-- Valbona --------------------------------------------------*/
-.Titulo-Valbona {
-    grid-column: 1 / -1; 
+/*-- Catena Zapata ---------------------------------------------------*/
+.Titulo-Catena {
+    grid-column: 1 / -1;
     grid-row: 5 / 6;
     display: flex;
     color: rgb(71, 67, 67);
     text-align: center;
     justify-content: center;
-    border-top: solid 1px #7b8213;
-    margin-top: 2rem;
+    border-top: solid 1px rgba(110, 36, 62, 0.671);
+    margin-top: 1rem;
 }
 
-.box-Valbona1 {
+.box-Catena1 {
     grid-column: 1 / 3;
     grid-row: 6 / 7;
     display: flex;
@@ -308,23 +296,25 @@ header label {
     justify-content: center;
     flex-direction: column;
     color: #666;
+    margin-left: -6rem;
 }
 
-.img-back-Valbona {
+.img-back-Catena {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/Templates/img/valbon\ augusto\ pulenta.jpg);
+    background-image: url(/static/img/ViñedosMendoza.jpg);
     background-size: 145%;
-    animation: Valbon-Viña 10s infinite linear alternate;
-}      
-@keyframes Valbon-Viña {
+    animation: MendozaViñedos 10s infinite linear alternate;
+}
+
+@keyframes MendozaViñedos {
     from {background-position: top left;}
     to {background-position: bottom right;}
 }
 
-.text-Valbona {
-    background-color: #7b8213bc;
+.text-Catena {
+    background-color: rgba(110, 36, 62, 0.671);
     padding: 7px;
     color: #fff;
     width: 45vw;
@@ -338,64 +328,66 @@ header label {
     border-radius: 7px;
 }
 
-.box-Valbona2 {
-    grid-column: 3;
+.box-Catena2 {
+    grid-column: 3 / -1;
     grid-row: 6 / 7;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 3rem;
+    padding-right: 8rem;
 }
 
-.img-Valbona {
+.img-Catena {
     height: 35vw;
 }
 
-.iconosValbona {
+.iconosCatena {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.hoja-Valbona {
+.hoja-Catena {
     grid-column: 1 / -1;
     grid-row: 7 / 8;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    border-bottom: solid 1px #7b8213;
+    border-bottom: solid 1px #a7976d;
 }
-/* Luigi Bosca ---------------------------------------------------*/
-.Titulo-Bosca{
+
+/*-- San Huberto ---------------------------------------------------*/
+.Titulo-Huberto {
     grid-column: 1 / -1;
     grid-row: 8 / 9;
     display: flex;
     color: rgb(71, 67, 67);
     text-align: center;
     justify-content: center;
-    border-top: solid 1px #7b8213;
+    border-top: solid 1px rgba(110, 36, 62, 0.671);
     margin-top: 2rem;
 }
 
-.box-Bosca1 {
-    grid-column: 1;
+.box-Huberto1 {
+    grid-column: 1 / 2;
     grid-row: 9 / 10;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.img-Bosca {
+.img-Huberto {
     height: 35vw;
 }
 
-.iconosBosca {
+.iconosHuberto {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: -7.5rem;
 }
 
-.box-Bosca2 {
+.box-Huberto2 {
     grid-column: 2 / -1;
     grid-row: 9 / 10;
     display: flex;
@@ -407,27 +399,28 @@ header label {
     color: #666;
 }
 
-.Img-Texto-Bosca {
+.Img-Texto-Huberto {
     width: 47vw;
     border-radius: 10px;
     display: flex;
 }
-.img-back-Bosca {
+
+.img-back-Huberto {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/Templates/img/background1.png);
+    background-image: url(/static/img/ViñedosNevados.jpg);
     background-size: 145%;
-    animation: Bosca-Viña 10s infinite linear alternate;
+    animation: bodegasanhuberto 10s infinite linear alternate;
 }
 
-@keyframes Bosca-Viña {
+@keyframes bodegasanhuberto {
     from {background-position: top;}
     to {background-position: bottom;}
 }
 
-.text-Bosca {
-    background-color: #7b8213bc;
+.text-Huberto {
+    background-color: rgba(110, 36, 62, 0.671);
     padding: 7px;
     color: #fff;
     width: 45vw;
@@ -436,20 +429,19 @@ header label {
     text-align: center;
     flex-direction: column;
     align-content: center;
-    margin-top: -3rem;
+    margin-top: -6rem;
     margin-right: 7rem;
     border-radius: 7px;
 }
 
-.hoja-Bosca {
+.hoja-Huberto {
     grid-column: 1 / -1;
     grid-row: 10 / 11;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    border-bottom: solid 1px #7b8213;
+    border-bottom: solid 1px rgba(110, 36, 62, 0.671);
 }
-
 
 /* Footer ---------------------------------------------------*/
 .footer {
@@ -512,7 +504,6 @@ header label {
 .div-redes > div > a {
     display: flex;
     text-decoration: none;
-
     font-size: large;
 }
 
@@ -530,7 +521,8 @@ header label {
     .header {
         background: rgba(66, 66, 66, 0.9);
         position: fixed;
-    }   
+    }
+
     .header > label {
         display: block;
         position: fixed;
@@ -538,11 +530,11 @@ header label {
         border-bottom: solid 5px #a7976d;
         width: 100%;
     }
-    #fotoBtn{
+    #fotoBtn {
         width: 50px;
         height: 56px;
     }
-    
+
     header .div-menu {
         width: 100%;
         display: flex;
@@ -553,46 +545,60 @@ header label {
         align-items: top;
         padding-bottom: 9rem;
     }
-
     #btn-menu:checked ~ .header > .div-menu {
         margin-left: -00%;
         transition: 0.9s;
     }
+
     .menu a:hover {
-        color:#a7976d;
+        color: #a7976d;
         transform: scale(1.5);
-        transition: all 0.5s;  
+        transition: all 0.5s;
     }
+
     .contenedor {
         display: grid;
         gap: 7px;
         grid-template-areas: 'header header'
                             'banner banner'
-                                'main main'
+                            'main main'
                             'footer footer';
     }
 
     .banner {
-        margin-top: 2.4rem;
+        justify-items: center;
+        width: 100%;
+    }
+
+    .img-banner img {
+        width: 100%;
+        display: flex;
+        align-content: center;
+        margin-top: 1rem;
     }
 
     .banner-nav-section {
         padding: 8px;
-        width: 77%;
+        width: 75%;
         height: 25px;
     }
 
-/*---- MAIN RESPONSI TABLET 768 --------------------------------*/
+    .Video-Tinto {
+        width: 550px;
+        height: 250px;
+    }
+
+    /*---- MAIN RESPONSI TABLET 768 --------------------------------*/
     .main {
         display: grid;
         grid-template-columns: repeat(2, 384px);
         grid-template-rows: repeat(14, auto);
+        padding-top: 2rem;
     }
 
     .section-main {
         grid-column: 1 / -1;
         grid-row: 1 / 2;
-        margin-top: 4rem;
     }
 
     .section-main > h1 {
@@ -600,19 +606,14 @@ header label {
         margin-top: -3rem;
     }
 
-    .video2 {
-        width: 550px;
-        height: 250px;
-    }
-
-/*-- Zuccardi RESPONSIV TABLET 768 ---------------------------------------------------*/
-    .Titulo-Zuccardi {
+    /*-- Dragones RESPONSIV TABLET 768 ---------------------------------------------------*/
+    .Titulo-Dragones {
         grid-column: 1 / -1;
         grid-row: 2 / 3;
         margin-bottom: 10px;
     }
 
-    .box-Zuccardi1 {
+    .box-Dragones1 {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
         display: flex;
@@ -620,18 +621,18 @@ header label {
         align-content: center;
     }
 
-    .img-Zuccardi {
+    .img-Dragones {
         height: 65vw;
         padding-left: 0rem;
     }
 
-    .iconosZuccardi {
+    .iconosDragones {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .box-Zuccardi2 {
+    .box-Dragones2 {
         grid-column: 2 / -1;
         grid-row: 3 / 4;
         display: flex;
@@ -642,7 +643,7 @@ header label {
         margin-right: 1rem;
     }
 
-    .text-Zuccardi {
+    .text-Dragones {
         padding: 7px;
         width: 100%;
         display: flex;
@@ -652,14 +653,14 @@ header label {
         margin: 0;
     }
 
-    .img-back-Zuccardi {
+    .img-back-Dragones {
         width: 368px;
         height: 249px;
         align-content: center;
         margin-bottom: 7px;
     }
 
-    .hoja-Zuccardi {
+    .hoja-Dragones {
         grid-column: 1 / -1;
         grid-row: 4 / 5;
         display: flex;
@@ -667,15 +668,15 @@ header label {
         align-items: flex-end;
     }
 
-/*---- Valbona RESPONSIV TABLET 768 ---------------------------------------------------*/
-    .Titulo-Valbona {
+    /*---- Catena Zapata RESPONSIV TABLET 768 ---------------------------------------------------*/
+    .Titulo-Catena {
         grid-column: 1 / -1;
         grid-row: 5 / 6;
         margin-bottom: 10px;
         margin-top: 1rem;
     }
 
-    .box-Valbona1 {
+    .box-Catena1 {
         grid-column: 1 / 2;
         grid-row: 6 / 7;
         display: flex;
@@ -686,13 +687,13 @@ header label {
         margin-left: 1rem;
     }
 
-    .img-back-Valbona {
+    .img-back-Catena {
         width: 368px;
         height: 249px;
         margin-bottom: 7px;
     }
 
-    .text-Valbona {
+    .text-Catena {
         padding: 7px;
         width: 100%;
         display: flex;
@@ -702,7 +703,7 @@ header label {
         margin: 0;
     }
 
-    .box-Valbona2 {
+    .box-Catena2 {
         grid-column: 2 / -1;
         grid-row: 6 / 7;
         display: flex;
@@ -710,20 +711,21 @@ header label {
         align-items: center;
         margin-top: 0rem;
         padding-top: 0rem;
+        margin-right: -7rem;
     }
 
-    .img-Valbona {
+    .img-Catena {
         height: 65vw;
         padding: 0;
     }
 
-    .iconosValbona {
+    .iconosCatena {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .hoja-Valbona {
+    .hoja-Catena {
         grid-column: 1 / -1;
         grid-row: 7 / 8;
         display: flex;
@@ -731,33 +733,34 @@ header label {
         align-items: flex-end;
     }
 
-/*--- Bosca RESPONSIV TABLET 768 ---------------------------------------------------*/
-    .Titulo-Bosca {
+    /*--- Huberto RESPONSIV TABLET 768 ---------------------------------------------------*/
+    .Titulo-Huberto {
         grid-column: 1 / -1;
         grid-row: 8 / 9;
         margin-bottom: 10px;
         margin-top: 1rem;
     }
 
-    .box-Bosca1 {
+    .box-Huberto1 {
         grid-column: 1 / 2;
         grid-row: 9 / 10;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: -7rem;
     }
 
-    .img-Bosca {
+    .img-Huberto {
         height: 65vw;
     }
 
-    .iconosBosca {
+    .iconosHuberto {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .box-Bosca2 {
+    .box-Huberto2 {
         grid-column: 2 / -1;
         grid-row: 9 / 10;
         display: flex;
@@ -769,14 +772,14 @@ header label {
         margin-right: 1rem;
     }
 
-    .img-back-Bosca {
+    .img-back-Huberto {
         width: 368px;
         height: 249px;
         padding: 0;
         margin-bottom: 7px;
     }
 
-    .text-Bosca {
+    .text-Huberto {
         padding: 7px;
         width: 100%;
         display: flex;
@@ -786,7 +789,7 @@ header label {
         margin: 0;
     }
 
-    .hoja-Bosca {
+    .hoja-Huberto {
         grid-column: 1 / -1;
         grid-row: 10 / 11;
         display: flex;
@@ -798,8 +801,8 @@ header label {
 
 /*+++++++++++++++++++++++++++++++++ RESPONSI MOVIL 414 +++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-@media only screen and (max-width: 414px){
-    *{
+@media only screen and (max-width: 414px) {
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -813,40 +816,49 @@ header label {
                             'main'
                             'footer';
     }
-    
+
     .div-menu > div {
         margin: 5px;
     }
-    
+
     .banner {
-        margin-top: 1rem;
+        margin-top: 2.3rem;
         width: 414px;
     }
-    
+
     .banner-nav-section {
         display: none;
     }
 
-/*-----MAIN RESPONSIVE MOVIL 414 -----------------------*/
+    .Video-Tinto {
+        width: 375px;
+        height: 190px;
+        margin-bottom: 2rem;
+    }
+
+    /*-----MAIN RESPONSIVE MOVIL 414 -----------------------*/
     .main {
         display: grid;
-        grid-template-columns: repeat(1, 207px);
-        grid-template-rows: repeat(24, auto);
+        grid-template-columns: repeat(1, 414px);
+        grid-template-rows: repeat(12, auto);
         display: flex;
         flex-direction: column;
+        margin: auto;
+        margin-top: 7px;
     }
 
     .section-main {
         grid-column: 1;
         grid-row: 1 / 2;
         text-align: center;
+        margin-top: 2rem;
     }
 
     .section-main > h1 {
         text-align: center;
     }
 
-/*---- ICONOS RESPONSIVE MOVIL 414 ----------------------*/
+    /*---- ICONOS RESPONSIVE MOVIL 414 ----------------------*/
 
     .Copa {
         width: 3rem;
@@ -865,70 +877,69 @@ header label {
         display: none;
     }
 
-    .video2 {
-        width: 375px;
-        height: 190px;
-        margin-bottom: 2rem;
-    }
-
-/*---- Zuccardi RESPONSIVE MOVIL 414 -----------------------*/
-    .Titulo-Zuccardi {
+    /*---- DRAGONES RESPONSIVE MOVIL 414 -----------------------*/
+    .Titulo-Dragones {
         grid-column: 1 / -1;
         grid-row: 2 / 3;
         text-align: center;
     }
-    
-    .box-Zuccardi1 {
+
+    .box-Dragones1 {
         grid-column: 1 / -1;
         grid-row: 3 / 4;
         align-items: center;
+        padding-right: 1rem;
     }
-    
-    .img-Zuccardi {
+
+    .iconosDragones {
+        margin-left: 3px;
+    }
+
+    .img-Dragones {
         height: 85vw;
         padding-left: 0rem;
-        padding-right: 3.5rem;
     }
-    
-    .box-Zuccardi2 {
+
+    .box-Dragones2 {
         grid-column: 1 / -1;
         grid-row: 4 / 5;
         width: 100%;
         padding-top: 0rem;
     }
-    
-    .text-Zuccardi {
+
+    .text-Dragones {
         grid-column: 1 / -1;
         grid-row: 5 / 6;
         width: 100%;
         margin: 0;
         border-radius: 0px;
     }
-    
-    .img-back-Zuccardi {
+
+    .img-back-Dragones {
         width: 100%;
         height: 50vw;
         border-radius: 0px;
         margin-bottom: 0px;
     }
 
-    .hoja-Zuccardi {
+    .hoja-Dragones {
         display: none;
     }
 
-/*----- Valbona RESPONSIVO MOVIL 414 ----------------------------------------*/
+    /*----- Catena RESPONSIVO MOVIL 414 ----------------------------------------*/
 
-    .Titulo-Valbona {
+    .Titulo-Catena {
         grid-column: 1 / -1;
         grid-row: 6 / 7;
         display: flex;
         width: 100%;
         text-align: center;
         margin-top: 2rem;
+        padding-top: 5px;
         margin-bottom: 10px;
     }
 
-    .box-Valbona2 {
+    .box-Catena2 {
         grid-column: 1 / -1;
         grid-row: 7 / 8;
         display: flex;
@@ -936,16 +947,15 @@ header label {
         justify-content: center;
         align-content: center;
         align-items: center;
-        margin-top: 7px;
-        padding-bottom: 7px;
-        border-bottom: solid 1px #819f44d6;
+        border-bottom: solid 1px rgba(110, 36, 62, 0.671);
+        padding-left: 7rem;
     }
 
-    .img-Valbona {
+    .img-Catena {
         height: 85vw;
     }
 
-    .box-Valbona1 {
+    .box-Catena1 {
         grid-column: 1 / -1;
         grid-row: 8 / 9;
         display: flex;
@@ -956,76 +966,82 @@ header label {
         margin: 0;
     }
 
-    .img-back-Valbona {
+    .img-back-Catena {
         width: 100%;
         height: 50vw;
         border-radius: 0px;
     }
 
-    .text-Valbona {
+    .text-Catena {
         grid-column: 1 / -1;
         grid-row: 9 / 10;
         width: 100%;
         margin: 0;
+        margin-top: -0.5rem;
         border-radius: 0px;
-        margin-top: -7px;
     }
 
-    .hoja-Valbona {
+    .hoja-Catena {
         display: none;
     }
-/*--- Luigi Bosca RESPONSIVE MOVIL 414 ----------------------------------------*/
-    .Titulo-Bosca {
-    grid-column: 1 / -1;
-    grid-row: 10 / 11;
-    display: flex;
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 7px;
+
+    /*--- Huberto RESPONSIVE MOVIL 414 ----------------------------------------*/
+    .Titulo-Huberto {
+        grid-column: 1 / -1;
+        grid-row: 10 / 11;
+        display: flex;
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1rem;
     }
 
-    .box-Bosca1 {
+    .box-Huberto1 {
         grid-column: 1 / -1;
         grid-row: 11 / 12;
         display: flex;
         justify-content: center;
         align-items: center;
+        /* margin-left: 1px; */
     }
 
-    .img-Bosca {
+    .iconosHuberto {
+        margin-left: -5rem;
+    }
+
+    .img-Huberto {
         height: 85vw;
+        margin-left: 6rem;
     }
 
-    .box-Bosca2 {
+    .box-Huberto2 {
         grid-column: 2 / -1;
         grid-row: 12 / 13;
         width: 100%;
         padding-top: 0rem;
     }
 
-    .Img-Texto-Bosca {
+    .Img-Texto-Huberto {
         width: 100%;
         border-radius: 0px;
         margin: 0;
     }
 
-    .img-back-Bosca {
+    .img-back-Huberto {
         width: 100%;
         height: 50vw;
         border-radius: 0px;
     }
 
-    .text-Bosca {
+    .text-Huberto {
         grid-column: 1 / -1;
         grid-row: 13 / 14;
         width: 100%;
         margin: 0;
         border-radius: 0px;
         margin-top: -7px;
-        margin-bottom: 3rem;
     }
 
-    .hoja-Bosca {
+    .hoja-Huberto {
         display: none;
     }
 

@@ -1,0 +1,44 @@
+
+<div class="contenedor">
+<!--Banner-->
+    <main class="main">
+        <section class="contacto">
+            <h1>Contactános</h1>
+            <p>Dejanos tus sugerencias o consultas a través del formulario, y te contactaremos a la brevedad.</p>
+            <p>Salud !!! 🍷</p>
+        </section> 
+        <div class="formulario">
+            <form name="comprobacion">
+                <legend></legend>
+                <label for="apellido" class="datos-form">Apellido: </label>
+                <input type="text" class="campos-form" size=auto id="apellido" name="apellido" required placeholder="Ingrese su Apellido ...">
+
+                <label for="nombre" class="datos-form">Nombre:</label>            
+                <input type="text" class="campos-form" size=auto id="nombre" name="nombre" required placeholder="Ingrese su Nombre ...">
+
+                <label for="email" class="datos-form">Mail de contacto:</label>
+                <input type="email" class="campos-form" name="email" required placeholder="email@dominio.com">
+
+                <label for="telefono" class="datos-form">Ingrese Telefono de Contacto:</label>
+                <input type="tel" class="campos-form" size="15" maxlength="14" id="tel" name="tel" required placeholder="+(xx) xx xxx xxxx">
+
+                <label for="motivoconsulta" class="datos-form">Motivo de la Consulta:</label>                    
+                <select class="select" name="consulta" id="mconsulta">
+                    <option value="0">Seleccione</option>   
+                    <option value="1">Precios</option>   
+                    <option value="2">Vinos y Espumantes disponibles</option>   
+                    <option value="3">Informacion General</option>   
+                    <option value="4">Solicitar contacto directo</option>   
+                </select>
+
+                <label for="conmentarios" class="datos-form">Deje sus comentarios:</label>
+                <textarea cols="40" rows="10" name="comentario" placeholder="Escriba su comentario"></textarea>
+
+                <section class="enviar">
+                    <input class="botones" type="submit" id="b1" value="Enviar datos" onclick="checkEnviar()">
+                    <input class="botones" type="reset" value="Borrar datos">    
+                </section>
+            </form>
+        </div>   
+    </main>
+<script src="/js/Corrobora.js"></script>

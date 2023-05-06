@@ -43,8 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'publica',
     'administracion',
+    'wine',
+   
     
 ]
 
@@ -82,10 +83,15 @@ WSGI_APPLICATION = 'vino_g6.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+DATABASES =  {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'cac23318',
+        'USER': 'mejor0108',
+        'PASSWORD': 'Nasa##manZana@!',
+        'HOST' : '200.58.98.229',
+        'PORT': '5432',
+        
     }
 }
 

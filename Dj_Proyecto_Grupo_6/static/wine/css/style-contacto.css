@@ -100,6 +100,7 @@ header label {
     font-family: cursive;
     color: rgb(153, 41, 29);
     font-size: 20px;
+    margin-top: 2rem;
 }
 .formulario{
     border-radius: 15px;

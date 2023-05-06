@@ -1,0 +1,9 @@
+asgiref==3.6.0
+Django==3.2.18
+django-environ==0.10.0
+Pillow==9.5.0
+pip==22.3.1
+psycopg2-binary==2.9.6
+pytz==2023.3
+setuptools==65.5.0
+sqlparse==0.4.3

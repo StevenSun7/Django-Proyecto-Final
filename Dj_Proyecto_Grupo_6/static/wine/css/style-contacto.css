@@ -49,7 +49,6 @@ header label {
 	height: 60px;
 	padding: 00px;
     margin-bottom: 59px
-    /* border: 1px solid white; */
 }
 
 .div-menu {
@@ -97,7 +96,7 @@ header label {
 .contacto {
     padding-top: 20px;
     text-align: center;
-    font-family: cursive;
+    /* font-family: cursive; */
     color: rgb(153, 41, 29);
     font-size: 20px;
     margin-top: 2rem;
@@ -116,11 +115,11 @@ header label {
     width: 500px;
 }   
 label {
-    font-family: cursive;
+    /* font-family: cursive; */
     font-size: 20px;
     font-weight: 300;
     color: rgb(153, 41, 29);
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 .campos-form {
@@ -129,7 +128,7 @@ label {
     border: 1px solid #a7976d;
     border-radius: 5px;
     text-align: center;
-    font-size: 13px;
+    font-size: 18px;
 }
 
 .formulario {

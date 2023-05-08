@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "200.58.98.229",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "database": "cac23318",
+            "name": "cac23318",
+            "username": "mejor0108"
+        }
+    ]
+}

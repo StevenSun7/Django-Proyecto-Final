@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% extends './base.html' %}
+{% block titulo %} Tintos {% endblock titulo %} 
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static '/wine/css/moviles.css' %}">
+<link rel="stylesheet" href="{% static '/wine/css/style-tintos.css' %}">
+<link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">
+{% endblock css %}
+{% block contenido %}
+{% include './header-tintos.html' %}
+<div class="contenedor">
+    <div class="banner">
+        <div class="banner-nav">
+            <div class="img-banner"><img src="{% static '/img/VinosTintosEspeciasCopas.png' %}" alt="Copas con especias"></div>
+            <div class="banner-nav-section">
+                <a href="#Los Dragones">Los Dragones</a>
+                <a href="#Catena Zapata">Catena Zapata</a>
+                <a href="#San Huberto">San Huberto</a>
+            </div>
+        </div>
+    </div>
+    <main class="main">
+        <section class="section-main">
+            <h1>El tinto y su magia.</h1>
+            <p> El vino es un estimulo para pasarla bien (siempre con moderación). No hace falta ser un entendido para disfrutralo. 
+            Lo más comun es en una reunion con amigos dar los primeros pasos, y probar nuestros primeros sorbos.</p>
+            <p>Una buena forma de empezar es combinarlo con los alimentos. Casi una regla es consumir vino  tinto con carnes.</p>
+            <p>En esta sección encontrarás tres varietales que consideramos interesantes para todos aquellos que quieran disfrutar de momentos 
+            inolvidables acompañados de sabores, y aromas.</p>
+            <br>
+            
+            <div class="Video">
+                <h3>Tips para servir el vino</h3>
+                <iframe class="Video-Tinto" src="https://www.youtube.com/embed/_RZg5uCLt3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Descripci&oacute;n</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for valor in precios %}
+                    <tr>
+                        <td>{{ valor.bodega }}</td>
+                        <td>{{ valor.nombre }}</td>
+                        <td>{{ valor.precio}}</td>
+
+                    </tr>
+    
+                    {% endfor%}
+
+                </tbody>
+
+
+            </table>
+            
+
+        </section>
+        
+    </main>
+</div>
+
+{% endblock contenido %}

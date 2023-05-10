@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from datetime import datetime
+from .models import Producto, Precio
 
 # Create your views here.
 def index(request):
@@ -29,3 +30,11 @@ def espumantes(request):
 
 def contacto(request):
     return render(request,'wine/contacto.html')
+
+def tintos2(request):
+    lista_precios = Precio.objects.select_related('id_producto').all()
+    print(lista_precios.Precio)
+    return render(request,'wine/tintos2.html', {'precios':lista_precios})
+
+
+

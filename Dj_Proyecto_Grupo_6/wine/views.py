@@ -33,7 +33,7 @@ def contacto(request):
 
 def tintos2(request):
     lista_precios = Precio.objects.select_related('id_producto').all()
-    print(lista_precios.Precio)
+    
     return render(request,'wine/tintos2.html', {'precios':lista_precios})
 
 

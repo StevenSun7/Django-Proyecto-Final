@@ -47,8 +47,8 @@
                 <tbody>
                     {% for valor in precios %}
                     <tr>
-                        <td>{{ valor.bodega }}</td>
-                        <td>{{ valor.nombre }}</td>
+                        <td>{{ valor.id_producto.bodega }}</td>
+                        <td>{{ valor.id_producto.nombre }}</td>
                         <td>{{ valor.precio}}</td>
 
                     </tr>

@@ -17,6 +17,8 @@ class Producto(models.Model):
     conservacion = models.CharField(max_length=250)
     bodega = models.CharField(max_length=100, default='')
     
+    def __str__(self):
+        return self.nombre
 
         
     
@@ -28,4 +30,6 @@ class Precio(models.Model):
     precio = models.FloatField()
     desc_xcaja = models.FloatField()
     promo = models.FloatField()
+    def __str__(self):
+        return str(self.precio)
     

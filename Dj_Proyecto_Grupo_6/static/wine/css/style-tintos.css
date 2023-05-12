@@ -145,6 +145,23 @@ header label {
     padding-bottom: 10px;
 }
 
+.section-tabla{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    min-width: 600px;
+}
+.tabla{
+    width: 80vw;
+}
+
+#tabla-columna1,
+#tabla-columna2,
+#tabla-columna3 { 
+    border: 2px solid blue;
+    text-align: left;
+}
+
 .Video {
     display: flex;
     flex-direction: column;
@@ -156,6 +173,8 @@ header label {
     height: 400px;
     border-radius: 9px;
 }
+
+
 
 /*Iconos de Copa Temperatura y Mapa -----------------------*/
 .Copa {

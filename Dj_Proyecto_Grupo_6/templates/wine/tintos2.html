@@ -35,13 +35,13 @@
                 <iframe class="Video-Tinto" src="https://www.youtube.com/embed/_RZg5uCLt3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </section>
-        <section>
-            <table>
+        <section class="section-tabla">
+            <table class="tabla">
                 <thead>
                     <tr>
-                        <th>Marca</th>
-                        <th>Descripci&oacute;n</th>
-                        <th>Precio</th>
+                        <th id="tabla-columna1">Bodega</th>
+                        <th id="tabla-columna2">Descripci&oacute;n</th>
+                        <th id="tabla-columna3">Precio</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,7 +49,7 @@
                     <tr>
                         <td>{{ valor.id_producto.bodega }}</td>
                         <td>{{ valor.id_producto.nombre }}</td>
-                        <td>{{ valor.precio}}</td>
+                        <td style="text-align: right;">{{ valor.precio}} <span>+</span></td>
 
                     </tr>
     

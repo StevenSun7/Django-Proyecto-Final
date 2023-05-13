@@ -2,6 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from datetime import datetime
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
+from django.contrib.auth.views import LoginView
+
+## Modelos
 from .models import Producto, Precio
 
 # Create your views here.
@@ -31,10 +36,19 @@ def espumantes(request):
 def contacto(request):
     return render(request,'wine/contacto.html')
 
+@login_required
 def tintos2(request):
     lista_precios = Precio.objects.select_related('id_producto').all()
     
     return render(request,'wine/tintos2.html', {'precios':lista_precios})
 
 
+def logout_vw(request):
+    logout(request)
+    
 
+
+
+
+class CustomLoginView(LoginView):
+    template_name = 'wine/login.html'

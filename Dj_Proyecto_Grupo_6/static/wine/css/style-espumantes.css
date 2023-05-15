@@ -80,7 +80,7 @@ header label {
 
 .banner-burbujas {
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .video-burbujas {
@@ -88,13 +88,6 @@ header label {
     width: 100%;
     border-bottom: solid 1px #a7976d;
     justify-content: center;
-}
-
-.texto-burbujas{
-    color: #9f8544;
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 3rem;
 }
 
 .banner-nav-section {

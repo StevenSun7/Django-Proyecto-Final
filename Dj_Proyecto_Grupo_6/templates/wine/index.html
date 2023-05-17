@@ -33,7 +33,27 @@
                 <p class="historia">Durante la Edad Media, las tierras (y con ellas los cultivos de vid) pasan a ser propiedad de la Iglesia y los reyes. Así, la elaboración del vino queda circunscrita a monasterios y castillos. En este periodo se hace extensivo el uso de las barricas de madera para almacenar el vino y, de forma casual, aparecen las primeras bodegas. En este periodo se entiende por bodega el lugar para guardar las barricas de vino, valiosa mercancía que había que proteger de los saqueos, por lo que se guardaban en los sótanos de monasterios y castillos. En la Península Ibérica, los Reyes Católicos iban reconquistando territorio a los musulmanes, terrenos en los que se replantaban vides. Tras la Reconquista, se plantan vides en el Camino de Santiago, en las zonas de Rioja y Ribera del Duero. A partir del siglo XII comienzan a plantarse viñedos en Cataluña y en la zona de Jerez. Durante el siglo XV se lleva el vino a las Islas Canarias, datándose el cultivo de la primera vid en el año 1497.</p>
                 <h3>El vino en la Edad Moderna</h3>
                 <p class="historia">Los colonizadores españoles llevaban la vid al Nuevo Mundo y empleaban las materias primas de allí traídas (café, cacao, etc) para comerciar con ellas (en Burdeos, el vino se cambiaba por café, por ejemplo). Mientras, el Renacimiento avanzaba y acababa con el oscurantismo medieval en todos los sentidos. Se abre una nueva etapa en la historia del vino, con el perfeccionamiento en los siglos XVII y XVIII de las técnicas de vinificación. En este periodo, los vinos de Borgoña, Burdeos y Champaña (Francia) adquieren parte de su posterior fama mundial, gracias, en gran medida, a los comerciantes del norte de Europa. Comienzan a utilizarse las botellas de vidrio para conservar el vino y se inventa el tapón de corcho. También en este momento, el monje Dom Pérignon descubre cómo elaborar el vino espumoso en la región de Champagne.</p>
+                <p>{{hoy|date:"d-m-Y h:i:s"}}</p>
             </div>
+            <form id="contact-form" name="contact-form" action="{% url 'inicio' %}" method="POST" novalidate>
+                {% csrf_token %}
+                 {% comment %}{{ contacto_form }} % endcomment %}
+                
+                {% comment %} <table>
+                    {{ contacto_form.as_table }}
+                </table> {% endcomment %}
+
+                {% comment %} <ul>
+                    {{ contacto_form.as_ul }}
+                </ul> {% endcomment %}
+
+                 {{ contacto_form.as_p }} 
+                <div class="text-center text-md-left mt-3">
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </div>
+            </form>
+            <div class="status"></div>
+        </div> 
         </main>
         {% include './footer.html' %}
     </div>

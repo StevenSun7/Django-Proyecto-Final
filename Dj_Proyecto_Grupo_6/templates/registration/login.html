@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% extends './base.html' %}
+{% extends '../wine/base.html' %}
 {% block titulo %} Tintos {% endblock titulo %} 
 {% load static %}
 {% block css %}
@@ -8,14 +8,14 @@
 <link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">
 {% endblock css %}
 {% block contenido %}
-{% include './header-tintos.html' %}
+{% include '../wine/header-tintos.html' %}
 
 <div>
     <p>
         Texto
     </p>
     <h1>Iniciar sesión</h1>
-    <form method="post" action="{% url 'login' %}">
+    <form method="post" >
         {% csrf_token %}
 
     
@@ -25,15 +25,10 @@
         <label for="password">Contraseña:</label>
         <input type="password" name="password" id="password">
         <br>
-        <input type="submit" value="Iniciar sesión">
+        <button type="submit">Iniciar</button>
+        
     </form>
-    {% if error_message %}
-    <p>
-        {{ error_message }}
-    </p>
-    {% else %}
-        <p>TEXTO de prueba</p>
-    {% endif %}
+  
 
 </div>
 

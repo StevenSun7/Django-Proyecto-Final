@@ -99,7 +99,7 @@ li:hover {
 
 .a-login {
     text-decoration: none;
-    color: #F9F9F9;
+    color: #a7976d;
     font-size: large;
 }
 
@@ -178,7 +178,7 @@ li:hover {
 
 @keyframes Galeria2 {
 
-    0%, 30% {background-image: url(/static/img/BodegaNietoSenetinerGalería.jpg);}
+    0%, 30% {background-image: url(/static/img/BodegaNietoSenetinerGaleria.jpg);}
 
     31%, 69% {background-image: url(/static/img/QuesosyCopaDeTinto.jpg);}
 
@@ -197,7 +197,7 @@ li:hover {
 
     0%, 30% {background-image: url(/static/img/SlideBodegaHead.jpg);}
 
-    31%, 69% {background-image: url(/static/img/Viña.jpg);}
+    31%, 69% {background-image: url(/static/img/Vina.jpg);}
 
     70%, 100% {background-image: url(/static/img/BotellaEnMesa.jpg);}
 }
@@ -303,7 +303,7 @@ li:hover {
         height: 100%;
         text-align: center;
         transform: translateX(120%);
-        background-image: url(/static/img/BodegaNietoSenetinerGalería.jpg);
+        background-image: url(/static/img/BodegaNietoSenetinerGaleria.jpg);
         background-size: cover;
         transition: transform 0.5s ease-in;
         flex-direction: column;

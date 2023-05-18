@@ -336,7 +336,7 @@ li:hover {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/static/img/LuigiBoscaViña.png);
+    background-image: url(/static/img/LuigiBoscaVina.png);
     background-size: 145%;
     animation: Bosca-viñedo 10s infinite linear alternate;
 }      

@@ -101,7 +101,7 @@ li:hover {
 
 .a-login {
     text-decoration: none;
-    color: #F9F9F9;
+    color: #a7976d;
     font-size: large;
 }
 
@@ -129,8 +129,8 @@ li:hover {
 .main {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-items: center;
+    /* align-items: center; */
+    /* justify-items: center; */
     text-align: left;
     color: rgb(71, 67, 67);
     font-size: 18px;
@@ -141,17 +141,20 @@ li:hover {
 .div-login {
     width: 30%;
     padding: 40px 30px;
-    background: #dde1e7;
+    background: #2222226d;
     border-radius: 10px;
+    margin-left: 15%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     box-shadow: -3px -3px 7px #ffffff73,
                 2px 2px 5px rgba(94,104,121,0.288);
     }
 
-.div-login .div-text-login {
+.div-text-login {
     font-size: 33px;
     font-weight: 600;
     margin-bottom: 35px;
-    color: #595959;
+    color: rgba(59, 6, 24, 0.845);
     }
 
 .div-campos {
@@ -173,7 +176,7 @@ li:hover {
     border: none;
     font-size: 18px;
     background: #dde1e7;
-    color: #595959;
+    color: #222;
     border-radius: 25px;
     box-shadow: inset 2px 2px 5px #BABECC,
                 inset -5px -5px 10px #ffffff73;
@@ -208,7 +211,7 @@ li:hover {
     }
 .forgot-pass a {
     font-size: 16px;
-    color: #666666;
+    color: rgba(59, 6, 24, 0.845);
     text-decoration: none;
     }
 
@@ -234,19 +237,19 @@ li:hover {
     }
 
 .button:focus {
-    color: #3498db;
+    color: #3f9cdb;
     box-shadow: inset 2px 2px 5px #BABECC,
                 inset -5px -5px 10px #ffffff73;
     }
 
 .sign-up {
     margin: 10px 0;
-    color: #595959;
+    color: rgba(59, 6, 24, 0.845);
     font-size: 16px;
     }
 
 .sign-up a {
-    color: #3498db;
+    color: #973b88;
     text-decoration: none;
     }
     
@@ -312,7 +315,6 @@ li:hover {
 .div-redes > div > a {
     display: flex;
     text-decoration: none;
-    
     font-size: large;
 }
 
@@ -321,7 +323,6 @@ li:hover {
     justify-content: center;
     color: #222;
     margin-top: 1rem;
-    margin-bottom: -7rem;
 }
 
 /*+++++++++++++++++++++++++++++++++ RESPONSI TABLET 768 +++++++++++++++++++++++++++++++++++*/
@@ -335,7 +336,7 @@ li:hover {
         height: 100%;
         text-align: center;
         transform: translateX(120%);
-        background-image: url(/static/img/BodegaNietoSenetinerGalería.jpg);
+        background-image: url(/static/img/BodegaNietoSenetinerII.jpg);
         background-size: cover;
         transition: transform 0.5s ease-in;
         flex-direction: column;

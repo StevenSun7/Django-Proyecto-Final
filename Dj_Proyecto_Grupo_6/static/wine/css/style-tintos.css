@@ -101,7 +101,7 @@ li:hover {
 
 .a-login {
     text-decoration: none;
-    color: #F9F9F9;
+    color: #a7976d;
     font-size: large;
 }
 
@@ -303,7 +303,7 @@ li:hover {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/static/img/ViñedosDragones.jpg);
+    background-image: url(/static/img/VinedosDragones.jpg);
     background-size: 145%;
     animation: san-juan-vinedos 10s infinite linear alternate;
     margin-bottom: 45px;
@@ -352,7 +352,7 @@ li:hover {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/static/img/ViñedosMendoza.jpg);
+    background-image: url(/static/img/VinedosMendoza.jpg);
     background-size: 145%;
     animation: MendozaViñedos 10s infinite linear alternate;
 }
@@ -458,7 +458,7 @@ li:hover {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/static/img/ViñedosNevados.jpg);
+    background-image: url(/static/img/VinedosNevados.jpg);
     background-size: 145%;
     animation: bodegasanhuberto 10s infinite linear alternate;
 }

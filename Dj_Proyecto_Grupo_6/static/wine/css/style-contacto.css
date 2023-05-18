@@ -6,7 +6,11 @@
 }
 
 body {
+<<<<<<< HEAD:Dj_Proyecto_Grupo_6/static/wine/css/style-contacto.css
     background-image: url(/static/img/LuigiBoscaViña.png);
+=======
+    background-image: url(/static/img/LuigiBoscaVina.png);
+>>>>>>> Steven:css/style-contacto.css
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -22,72 +26,113 @@ body {
                             'main main main'
                         'footer footer footer';
 }
-.contenedor .back {
+/* .contenedor .back {
     position: absolute;
     z-index: -2;
-}
-/*---------- HEADER --------------------------------------------*/
+} */
+
+/*-------- HEADER ----------------------------------------------*/
 .header {
     width: 100%;
-    background-color: #222;
-    border-bottom: solid 5px #a7976d;
     position: fixed;
+}
+
+/*----------- MENU ----------------------------------------------*/
+.nombre{
     display: flex;
-    justify-content: center;
-    grid-column-start: 1;
-    grid-column-end: -1;
-}
-
-/*----------- MENU -----------------------------------------------*/
-#btn-menu {
-	display: none;
-}
-
-header label {
-	display: none;
-	width: 50px;
-	height: 60px;
-	padding: 00px;
-    margin-bottom: 59px
-    /* border: 1px solid white; */
-}
-
-.div-menu {
-    display: flex;
-    width: 73%;
-    justify-content: space-around;
     align-items: center;
-}
-
-.html-menu:hover {
-    border-bottom: solid 1.3px #9f8544;
-}
-
-.div-menu > div > a {
-    color: #F9F9F9;
     text-decoration: none;
-    font-size: large;
-
-}
-
-.div-menu > div > a:hover {
     color: #a7976d;
-    transition: all 0.5s;
+    font-size:x-large;
+    font-weight: bold;
 }
 
 .UvasLogo {
-    width: 3rem;
+    width: 2.3rem;
+    margin-right: 1rem;
 }
 
 .UvasLogo:hover {
-    background-color: #a7976d;
-    border-top-left-radius: 3rem;
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 3.5rem;
+    background-color: #222;
+    border-bottom: solid 4px #a7976d    ;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.div-ul {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.ul-nav {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #F9F9F9;
+    font-size: large;
+}
+
+li:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.nav-link:hover {
+    color: #a7976d;
+    border-bottom: 1px solid #9f8544;
+}
+
+.ul-login {
+    display: flex;
+    list-style-type: none;
+}
+
+.a-login {
+    text-decoration: none;
+    color: #a7976d;
+    font-size: large;
+}
+
+.a-login:hover {
+    color: #a7976d;
+    border-bottom: 1px solid #9f8544;
+}
+
+.menu-hamburguesa {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.copa {
+    width: 3rem;
+}
+
+.copa:hover {
+    transform: scale(1.2);
     transition: all 0.5s;
 }
 /*---------- MAIND ----------------------------------------*/
-#btn-menu {
-	display: none
-}
 
 .main {
     min-height: 550px;
@@ -97,9 +142,10 @@ header label {
 .contacto {
     padding-top: 20px;
     text-align: center;
-    font-family: cursive;
-    color: rgb(153, 41, 29);
+    /* font-family: cursive; */
+    color: #594414;
     font-size: 20px;
+    margin-top: 2rem;
 }
 .formulario{
     border-radius: 15px;
@@ -115,13 +161,23 @@ header label {
     width: 500px;
 }   
 label {
-    font-family: cursive;
+    /* font-family: cursive; */
     font-size: 20px;
     font-weight: 300;
-    color: rgb(153, 41, 29);
-    font-style: italic;
+    color: #5e4302;
+    /* font-style: italic; */
 }
 
+.campos-form {
+    width: 58%;
+    height: 3.5%;
+    border: 1px solid #a7976d;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+<<<<<<< HEAD:Dj_Proyecto_Grupo_6/static/wine/css/style-contacto.css
 .campos-form {
     width: 58%;
     height: 3.5%;
@@ -131,6 +187,8 @@ label {
     font-size: 13px;
 }
 
+=======
+>>>>>>> Steven:css/style-contacto.css
 .formulario {
     height: 83%;
 }
@@ -240,43 +298,59 @@ label {
 /*+++++++++++++++++++++++++++++++++ RESPONSI TABLET 768 +++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 @media only screen and (max-width: 768px) {
-    .header {
-        background: rgba(66, 66, 66, 0.9);
+    .div-ul {
         position: fixed;
+        top: 79px;
+        left: 10%;
+        width: 80%;
+        height: 100%;
+        text-align: center;
+        transform: translateX(120%);
+        background-image: url(/static/img/HeaderBarricasMobile.jpg);
+        background-size: cover;
+        transition: transform 0.5s ease-in;
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        margin: 8px;
     }
 
-    .header > label {
+    .ul-nav {
+        margin-top: 2rem;
+    }
+
+    .menu-hamburguesa {
         display: block;
-        position: fixed;
-        background: rgba(66, 66, 66, 0.9);
-        border-bottom: solid 5px #a7976d;
-        width: 100%;
+        width: 4rem;
     }
 
-    #fotoBtn {
-        width: 50px;
-        height: 56px;
+    .div-ul {
+        justify-content: normal;
+        gap: 2rem;
     }
 
-    header .div-menu {
-        width: 100%;
-        display: flex;
-        position: absolute;
-        background: rgba(66, 66, 66, 0.9);
-        margin-top: 60px;
-        margin-left: -200%;
-        align-items: top;
-        padding-bottom: 9rem;
+    .div-ul.show {
+        transform: translateX(0);
     }
 
-    #btn-menu:checked ~ .header > .div-menu {
-        margin-left: -00%;
-        transition: 0.9s;
+    .nav-link {
+        color: #F9F9F9;
+        font-family: cursive;
+        font-size: x-large;
+        border-bottom: 1px solid #9f8544;
     }
 
-    .menu a:hover {
-        color: #a7976d;
-        transform: scale(1.5);
+    .a-login {
+        color: #F9F9F9;
+        font-family: cursive;
+        font-size: x-large;
+        border-bottom: 1px solid #9f8544;
+    }
+
+    .nav-link:hover {
+        transform: scale(1.2);
         transition: all 0.5s;
     }
 }

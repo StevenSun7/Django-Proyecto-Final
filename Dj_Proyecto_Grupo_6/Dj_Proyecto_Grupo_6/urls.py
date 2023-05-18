@@ -20,5 +20,8 @@ from django.urls.conf import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('wine.urls') ),
+<<<<<<< HEAD
     path('prueba/', include('administracion.urls')),
+=======
+>>>>>>> Steven
 ]

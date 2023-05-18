@@ -1,4 +1,5 @@
 {% load static %}
+<<<<<<< HEAD
 <header>
     <input type="checkbox" id="btn-menu">
     <div class="header">
@@ -14,3 +15,25 @@
         </div>
     </div>
 </header>
+=======
+<header class= "header">
+    <nav>
+        <a href="{% url 'inicio' %}" class="nombre"><img src="/static/img/GrapesDoradas.png" alt="Uvas" class="UvasLogo">Wine Club</a>
+        <div class="div-ul">
+            <ul class="ul-nav">
+                <li><a href="{% url 'tintos' %}" class="nav-link">Tintos</a></li>
+                <li><a href="{% url 'blancos' %}" class="nav-link">Blancos</a></li>
+                <li><a href="{% url 'espumantes' %}" class="nav-link">Espumantes</a></li>
+                <li><a href="{% url 'contacto' %}" class="nav-link">Contacto</a></li>
+            </ul>
+            <ul class="ul-login">
+                <li class="login"><a href="{% url 'login' %}" class="a-login">Login</a></li>
+            </ul>
+        </div>
+        <button class="menu-hamburguesa" id="menu-hamburguesa">
+            <ion-icon class="barras" name="menu-outline"><img src="/static/img/CopaDorada.png" alt="" class="copa"></ion-icon>
+        </button>
+    </nav>
+</header>
+<script src="/static/wine/js/script.js"></script>
+>>>>>>> Steven

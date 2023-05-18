@@ -15,19 +15,6 @@ body {
 .main {grid-area: main;}
 .footer {grid-area: footer;}
 
-#btn-menu {
-    display: none;
-}
-
-header label {
-    display: none;
-    width: 50px;
-    height: 60px;
-    padding: 00px;
-    margin-bottom: 59px
-}
-
-
 .contenedor {
     display: grid;
     gap: 7px;
@@ -37,48 +24,109 @@ header label {
                         'footer footer footer';
 }
 
+/*-------- HEADER ----------------------------------------------*/
 .header {
     width: 100%;
-    background-color: #222;
-    border-bottom: solid 3px #a7976d;
     position: fixed;
-    display: flex;
-    justify-content: center;
 }
 
-.div-menu {
+/*----------- MENU ----------------------------------------------*/
+.nombre{
     display: flex;
-    width: 73%;
-    justify-content: space-around;
     align-items: center;
-}
-
-.html-menu:hover {
-    border-bottom: solid 1.3px #9f8544;
-}
-
-.div-menu > div > a {
-    color: #F9F9F9;
     text-decoration: none;
-    font-size: large;
-
-}
-
-.div-menu > div > a:hover {
-    color: #792610;
-    transition: all 0.3s;
+    color: #a7976d;
+    font-size:x-large;
+    font-weight: bold;
 }
 
 .UvasLogo {
-    width: 3rem;
+    width: 2.3rem;
+    margin-right: 1rem;
 }
 
 .UvasLogo:hover {
-    background-color: #a7976d;
-    border-top-left-radius: 3rem;
+    transform: scale(1.2);
     transition: all 0.5s;
 }
 
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 3.5rem;
+    background-color: #222;
+    border-bottom: solid 4px #a7976d    ;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.div-ul {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.ul-nav {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #F9F9F9;
+    font-size: large;
+}
+
+li:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.nav-link:hover {
+    color: #973b88;
+    border-bottom: 1px solid #9f8544;
+}
+
+.ul-login {
+    display: flex;
+    list-style-type: none;
+}
+
+.a-login {
+    text-decoration: none;
+    color: #a7976d;
+    font-size: large;
+}
+
+.a-login:hover {
+    color: #973b88;
+    border-bottom: 1px solid #9f8544;
+}
+
+.menu-hamburguesa {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.copa {
+    width: 3rem;
+}
+
+.copa:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+/*----------- BANNER DE COPAS ----------------------------------------------*/
 .banner {
     display: flex;
     flex-direction: column;
@@ -121,6 +169,7 @@ header label {
 .Top {
     text-decoration: none;
 }
+
 
 /*---- MAIN --------------------------------*/
 .main {
@@ -273,7 +322,11 @@ header label {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
+<<<<<<< HEAD:Dj_Proyecto_Grupo_6/static/wine/css/style-tintos.css
     background-image: url(/static/img/ViñedosDragones.jpg);
+=======
+    background-image: url(/static/img/VinedosDragones.jpg);
+>>>>>>> Steven:css/style-tintos.css
     background-size: 145%;
     animation: san-juan-vinedos 10s infinite linear alternate;
     margin-bottom: 45px;
@@ -322,7 +375,11 @@ header label {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
+<<<<<<< HEAD:Dj_Proyecto_Grupo_6/static/wine/css/style-tintos.css
     background-image: url(/static/img/ViñedosMendoza.jpg);
+=======
+    background-image: url(/static/img/VinedosMendoza.jpg);
+>>>>>>> Steven:css/style-tintos.css
     background-size: 145%;
     animation: MendozaViñedos 10s infinite linear alternate;
 }
@@ -428,7 +485,11 @@ header label {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
+<<<<<<< HEAD:Dj_Proyecto_Grupo_6/static/wine/css/style-tintos.css
     background-image: url(/static/img/ViñedosNevados.jpg);
+=======
+    background-image: url(/static/img/VinedosNevados.jpg);
+>>>>>>> Steven:css/style-tintos.css
     background-size: 145%;
     animation: bodegasanhuberto 10s infinite linear alternate;
 }
@@ -537,41 +598,59 @@ header label {
 /*+++++++++++++++++++++++++++++++++ RESPONSI TABLET 768 +++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 @media only screen and (max-width: 768px) {
-    .header {
-        background: rgba(66, 66, 66, 0.9);
+    .div-ul {
         position: fixed;
+        top: 79px;
+        left: 10%;
+        width: 80%;
+        height: 100%;
+        text-align: center;
+        transform: translateX(120%);
+        background-image: url(/static/img/CopaTintoLuigiBosca.jpg);
+        background-size: cover;
+        transition: transform 0.5s ease-in;
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        margin: 8px;
     }
 
-    .header > label {
+    .ul-nav {
+        margin-top: 2rem;
+    }
+
+    .menu-hamburguesa {
         display: block;
-        position: fixed;
-        background: rgba(66, 66, 66, 0.9);
-        border-bottom: solid 5px #a7976d;
-        width: 100%;
-    }
-    #fotoBtn {
-        width: 50px;
-        height: 56px;
+        width: 4rem;
     }
 
-    header .div-menu {
-        width: 100%;
-        display: flex;
-        position: absolute;
-        background: rgba(66, 66, 66, 0.9);
-        margin-top: 60px;
-        margin-left: -200%;
-        align-items: top;
-        padding-bottom: 9rem;
-    }
-    #btn-menu:checked ~ .header > .div-menu {
-        margin-left: -00%;
-        transition: 0.9s;
+    .div-ul {
+        justify-content: normal;
+        gap: 2rem;
     }
 
-    .menu a:hover {
-        color: #a7976d;
-        transform: scale(1.5);
+    .div-ul.show {
+        transform: translateX(0);
+    }
+
+    .nav-link {
+        color: #F9F9F9;
+        font-family: cursive;
+        font-size: x-large;
+        border-bottom: 1px solid #9f8544;
+    }
+
+    .a-login {
+        color: #F9F9F9;
+        font-family: cursive;
+        font-size: x-large;
+        border-bottom: 1px solid #9f8544;
+    }
+
+    .nav-link:hover {
+        transform: scale(1.2);
         transition: all 0.5s;
     }
 

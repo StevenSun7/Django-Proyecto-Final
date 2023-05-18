@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+<<<<<<< HEAD
 from .models import Categoria
 import html 
 
@@ -21,3 +22,7 @@ def lista(request):
     #texto_final =  html.escape(texto)
     
     return HttpResponse(texto, content_type='text/html')
+=======
+
+
+>>>>>>> Steven

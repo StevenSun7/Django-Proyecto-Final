@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 {% extends './base.html' %}
+<<<<<<< HEAD
 {% block titulo %} Tintos {% endblock titulo %} 
 {% load static %}
 {% block css %}
 <link rel="stylesheet" href="{% static '/wine/css/moviles.css' %}">
+=======
+{% load static %}
+{% block css %}
+>>>>>>> Steven
 <link rel="stylesheet" href="{% static '/wine/css/style-tintos.css' %}">
 <link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">
 {% endblock css %}
@@ -21,7 +26,10 @@
         </div>
     </div>
     <main class="main">
+<<<<<<< HEAD
 
+=======
+>>>>>>> Steven
         <section class="section-tabla">
             <table class="tabla">
                 <thead>
@@ -37,6 +45,7 @@
                         <td>{{ valor.id_producto.bodega }}</td>
                         <td>{{ valor.id_producto.nombre }}</td>
                         <td style="text-align: right;">{{ valor.precio}} <span>+</span></td>
+<<<<<<< HEAD
 
                     </tr>
     
@@ -50,6 +59,13 @@
 
         </section>
         
+=======
+                    </tr>
+                    {% endfor%}
+                </tbody>
+            </table>
+        </section>
+>>>>>>> Steven
     </main>
 </div>
 

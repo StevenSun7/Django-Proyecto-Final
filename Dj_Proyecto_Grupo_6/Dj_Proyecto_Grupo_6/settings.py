@@ -90,8 +90,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'cac23318',
+<<<<<<< HEAD
         'USER': env('USER_BD'),
         'PASSWORD': env('PASSWORD_BD'),
+=======
+        'USER': 'mejor0108',
+        'PASSWORD': 'Nasa##manZana@!',
+>>>>>>> Steven
         'HOST' : '200.58.98.229',
         'PORT': '5432',
         
@@ -152,9 +157,12 @@ STATIC_ROOT = BASE_DIR / 'static_root'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+<<<<<<< HEAD
 
 ########
 ## Gestionamos la session en la base de datos
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 LOGIN_REDIRECT_URL='tintos2.html'
+=======
+>>>>>>> Steven

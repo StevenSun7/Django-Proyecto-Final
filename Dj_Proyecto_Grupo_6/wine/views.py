@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from datetime import datetime
+from .forms import ContactoForm
 
 # Create your views here.
 def index(request):
@@ -28,4 +29,12 @@ def espumantes(request):
     return render(request,'wine/espumantes.html')
 
 def contacto(request):
-    return render(request,'wine/contacto.html')
+    if request.method == 'POST':
+        form = ContactoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'wine/index.html')
+    else:
+        form = ContactoForm()
+
+    return render(request, 'wine/contacto.html', {'form': form})

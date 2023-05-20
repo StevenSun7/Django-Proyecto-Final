@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
@@ -8,12 +7,6 @@ from django.contrib.auth.decorators import login_required
 
 ## Modelos
 from .models import Producto, Precio
-=======
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
-from datetime import datetime
->>>>>>> Steven
 
 # Create your views here.
 def index(request):
@@ -42,13 +35,10 @@ def espumantes(request):
 def contacto(request):
     return render(request,'wine/contacto.html')
 
-<<<<<<< HEAD
 @login_required
 def tintos2(request):
     lista_precios = Precio.objects.select_related('id_producto').all()
     return render(request,'wine/tintos2.html', {'precios':lista_precios})
 
-=======
 def login(request):
     return render(request,'wine/login.html')
->>>>>>> Steven

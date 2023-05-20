@@ -39,6 +39,10 @@ body {
     font-weight: bold;
 }
 
+.imgNombre {
+    width: 57%;
+}
+
 .UvasLogo {
     width: 2.3rem;
     margin-right: 1rem;

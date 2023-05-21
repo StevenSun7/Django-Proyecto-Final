@@ -42,6 +42,7 @@ body{
 
 .imgNombre {
     width: 57%;
+    cursor: pointer;
 }
 
 .UvasLogo {
@@ -133,8 +134,8 @@ li:hover {
 .main {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-items: center; */
+    align-items: center;
+    justify-items: center;
     text-align: left;
     color: rgb(71, 67, 67);
     font-size: 18px;

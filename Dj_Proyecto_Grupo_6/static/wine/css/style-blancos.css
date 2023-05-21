@@ -41,6 +41,7 @@ body {
 
 .imgNombre {
     width: 57%;
+    cursor: pointer;
 }
 
 .UvasLogo {

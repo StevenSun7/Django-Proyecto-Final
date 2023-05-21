@@ -9,5 +9,25 @@
             "name": "cac23318",
             "username": "mejor0108"
         }
-    ]
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#baae8d",
+        "activityBar.background": "#baae8d",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#48776b",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#baae8d",
+        "statusBar.background": "#a7976d",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#8c7d55",
+        "statusBarItem.remoteBackground": "#a7976d",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#a7976d",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#a7976d99",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#a7976d"
 }

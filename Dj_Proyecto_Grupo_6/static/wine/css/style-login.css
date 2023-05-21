@@ -86,7 +86,8 @@ nav {
 .nav-link {
     text-decoration: none;
     color: #F9F9F9;
-    font-size: large;
+    font-size: x-large;
+    font-family: cursive;
 }
 
 li:hover {
@@ -107,7 +108,8 @@ li:hover {
 .a-login {
     text-decoration: none;
     color: #a7976d;
-    font-size: large;
+    font-size: x-large;
+    font-family: cursive;
 }
 
 .a-login:hover {
@@ -242,7 +244,7 @@ li:hover {
     }
 
 .button:focus {
-    color: #3f9cdb;
+    color: rgba(59, 6, 24, 0.845);
     box-shadow: inset 2px 2px 5px #BABECC,
                 inset -5px -5px 10px #ffffff73;
     }

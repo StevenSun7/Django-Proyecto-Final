@@ -29,3 +29,6 @@ def espumantes(request):
 
 def contacto(request):
     return render(request,'wine/contacto.html')
+
+def login(request):
+    return render(request,'wine/login.html')

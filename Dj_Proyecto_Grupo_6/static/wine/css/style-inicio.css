@@ -178,11 +178,7 @@ li:hover {
 
 @keyframes Galeria2 {
 
-<<<<<<< HEAD:Dj_Proyecto_Grupo_6/static/wine/css/style-inicio.css
-    0%, 30% {background-image: url(/static/img/BodegaNietoSenetinerGalería.jpg);}
-=======
     0%, 30% {background-image: url(/static/img/BodegaNietoSenetinerGaleria.jpg);}
->>>>>>> Steven:css/style-inicio.css
 
     31%, 69% {background-image: url(/static/img/QuesosyCopaDeTinto.jpg);}
 
@@ -201,11 +197,7 @@ li:hover {
 
     0%, 30% {background-image: url(/static/img/SlideBodegaHead.jpg);}
 
-<<<<<<< HEAD:Dj_Proyecto_Grupo_6/static/wine/css/style-inicio.css
-    31%, 69% {background-image: url(/static/img/Viña.jpg);}
-=======
     31%, 69% {background-image: url(/static/img/Vina.jpg);}
->>>>>>> Steven:css/style-inicio.css
 
     70%, 100% {background-image: url(/static/img/BotellaEnMesa.jpg);}
 }

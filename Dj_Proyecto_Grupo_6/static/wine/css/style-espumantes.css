@@ -129,11 +129,7 @@ li:hover {
 
 .banner-burbujas {
     width: 100%;
-<<<<<<< HEAD:Dj_Proyecto_Grupo_6/static/wine/css/style-espumantes.css
-    height: 100%;
-=======
     margin-top: 3rem;
->>>>>>> Steven:css/style-espumantes.css
 }
 
 .video-burbujas {
@@ -340,11 +336,7 @@ li:hover {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-<<<<<<< HEAD:Dj_Proyecto_Grupo_6/static/wine/css/style-espumantes.css
-    background-image: url(/static/img/LuigiBoscaViña.png);
-=======
     background-image: url(/static/img/LuigiBoscaVina.png);
->>>>>>> Steven:css/style-espumantes.css
     background-size: 145%;
     animation: Bosca-viñedo 10s infinite linear alternate;
 }      

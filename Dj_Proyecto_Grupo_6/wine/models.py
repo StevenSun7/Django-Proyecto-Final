@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-<<<<<<< HEAD
 
 
 class Categoria(models.Model):
@@ -34,5 +33,3 @@ class Precio(models.Model):
     def __str__(self):
         return str(self.precio)
     
-=======
->>>>>>> Steven

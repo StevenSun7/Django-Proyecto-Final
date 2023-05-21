@@ -324,11 +324,7 @@ li:hover {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-<<<<<<< HEAD:Dj_Proyecto_Grupo_6/static/wine/css/style-blancos.css
-    background-image: url(/static/img/ViñaZucardi.jpg);
-=======
     background-image: url(/static/img/VinaZucardi.jpg);
->>>>>>> Steven:css/style-blancos.css
     background-size: 145%;
     animation: Zuccardi-Barricas 10s infinite linear alternate;
     margin-bottom: 45px;

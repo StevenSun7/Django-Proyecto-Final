@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 {% extends './base.html' %}
-{% block titulo %} Tintos {% endblock titulo %} 
 {% load static %}
 {% block css %}
-<link rel="stylesheet" href="{% static '/wine/css/moviles.css' %}">
 <link rel="stylesheet" href="{% static '/wine/css/style-tintos.css' %}">
 <link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">
 {% endblock css %}
@@ -36,19 +34,11 @@
                         <td>{{ valor.id_producto.bodega }}</td>
                         <td>{{ valor.id_producto.nombre }}</td>
                         <td style="text-align: right;">{{ valor.precio}} <span>+</span></td>
-
                     </tr>
-    
                     {% endfor%}
-
                 </tbody>
-
-
             </table>
-            
-
         </section>
-        
     </main>
 </div>
 

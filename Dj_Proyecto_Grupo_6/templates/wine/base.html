@@ -9,11 +9,10 @@
     </head>
 
     <body>
-
-    {% block contenido %}{% endblock contenido %}
+        {% block header %}{% endblock header %}
         
-    {% include './footer.html' %}
+        {% block contenido %}{% endblock contenido %}
+            
         {% include './footer.html' %}
-
     </body>
 </html>

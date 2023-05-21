@@ -85,8 +85,7 @@ nav {
 .nav-link {
     text-decoration: none;
     color: #F9F9F9;
-    font-size: x-large;
-    font-family: cursive;
+    font-size: large;
 }
 
 li:hover {
@@ -107,8 +106,7 @@ li:hover {
 .a-login {
     text-decoration: none;
     color: #a7976d;
-    font-size: x-large;
-    font-family: cursive;
+    font-size: large;
 }
 
 .a-login:hover {

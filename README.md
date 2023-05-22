@@ -1,3 +1,3 @@
 # En Desarrollo
 
-![imagen](https://github.com/StevenSun7/Django-Proyecto-Final/static/img/imgReadme.png)
+![imgReadme](Dj_Proyecto_Grupo_6/static/img/imgReadme.png)

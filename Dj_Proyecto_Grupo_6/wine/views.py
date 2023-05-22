@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from datetime import datetime
-from django.contrib.auth.decorators import login_required
 
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import LoginView, LogoutView
 
 ## Modelos
 from .models import Producto, Precio
@@ -29,16 +30,20 @@ def tintos(request):
 def blancos(request):
     return render(request,'wine/blancos.html')
 
+
 def espumantes(request):
     return render(request,'wine/espumantes.html')
 
 def contacto(request):
     return render(request,'wine/contacto.html')
 
-@login_required
+@login_required(login_url='/login/')
 def tintos2(request):
     lista_precios = Precio.objects.select_related('id_producto').all()
     return render(request,'wine/tintos2.html', {'precios':lista_precios})
 
-def login(request):
-    return render(request,'wine/login.html')
+class WineLoginView(LoginView):
+    template_name = 'wine/login.html'
+    
+class WineLogoutView(LogoutView):
+    template_name = 'wine/logout.html'

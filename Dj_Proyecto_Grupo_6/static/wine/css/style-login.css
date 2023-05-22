@@ -134,7 +134,10 @@ li:hover {
 .main {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     align-items: center;
+=======
+>>>>>>> Steven
     justify-items: center;
     text-align: left;
     color: rgb(71, 67, 67);
@@ -242,7 +245,11 @@ li:hover {
     }
 
 .button:focus {
+<<<<<<< HEAD
     color: #3f9cdb;
+=======
+    color: rgba(59, 6, 24, 0.845);
+>>>>>>> Steven
     box-shadow: inset 2px 2px 5px #BABECC,
                 inset -5px -5px 10px #ffffff73;
     }

@@ -3,6 +3,12 @@ from django.http import HttpResponse
 from django.template import loader
 from datetime import datetime
 
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import LoginView, LogoutView
+
+## Modelos
+from .models import Producto, Precio
+
 # Create your views here.
 def index(request):
     if(request.GET.get('param')):
@@ -24,11 +30,20 @@ def tintos(request):
 def blancos(request):
     return render(request,'wine/blancos.html')
 
+
 def espumantes(request):
     return render(request,'wine/espumantes.html')
 
 def contacto(request):
     return render(request,'wine/contacto.html')
 
-def login(request):
-    return render(request,'wine/login.html')
+@login_required(login_url='/login/')
+def tintos2(request):
+    lista_precios = Precio.objects.select_related('id_producto').all()
+    return render(request,'wine/tintos2.html', {'precios':lista_precios})
+
+class WineLoginView(LoginView):
+    template_name = 'wine/login.html'
+    
+class WineLogoutView(LogoutView):
+    template_name = 'wine/logout.html'

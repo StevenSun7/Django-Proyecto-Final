@@ -1,12 +1,11 @@
-* {
+*{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
 
-body {
-    background-image: url(/static/img/LuigiBoscaVina.png);
+body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -17,15 +16,13 @@ body {
 
 .contenedor {
     display: grid;
-    gap: 20px;
+    gap: 10px;
+    background-image: url(/static/img/Vina.jpg);
+    background-size: cover;
     grid-template-areas: 'header header header'
                             'main main main'
                         'footer footer footer';
 }
-/* .contenedor .back {
-    position: absolute;
-    z-index: -2;
-} */
 
 /*-------- HEADER ----------------------------------------------*/
 .header {
@@ -98,7 +95,7 @@ li:hover {
 }
 
 .nav-link:hover {
-    color: #792610;
+    color: #973b88;
     border-bottom: 1px solid #9f8544;
 }
 
@@ -114,7 +111,7 @@ li:hover {
 }
 
 .a-login:hover {
-    color: #792610;
+    color: #973b88;
     border-bottom: 1px solid #9f8544;
 }
 
@@ -133,91 +130,150 @@ li:hover {
     transform: scale(1.2);
     transition: all 0.5s;
 }
-/*---------- MAIND ----------------------------------------*/
-
+/*----------- MAIN ----------------------------------------------*/
 .main {
-    min-height: 550px;
-    padding: 2rem;
-    text-align: center;
-}
-.contacto {
-    padding-top: 20px;
-    text-align: center;
-    /* font-family: cursive; */
-    color: #594414;
-    font-size: 20px;
-    margin-top: 2rem;
-}
-.formulario{
-    border-radius: 15px;
-    border: 3px solid #a7976d;
-    background-color: rgba(255, 228, 196, 0.399);
-    padding-top: 5px;
-    text-align: center;
-    margin: 15px auto;
     display: flex;
-    white-space: pre-line;
-    justify-content: center;
-    text-align: center;
-    width: 500px;
-}   
-label {
-    /* font-family: cursive; */
-    font-size: 20px;
-    font-weight: 300;
-    color: #5e4302;
-    /* font-style: italic; */
-}
-
-.campos-form {
-    width: 58%;
-    height: 3.5%;
-    border: 1px solid #a7976d;
-    border-radius: 5px;
-    text-align: center;
+    flex-direction: column;
+<<<<<<< HEAD
+    align-items: center;
+=======
+>>>>>>> Steven
+    justify-items: center;
+    text-align: left;
+    color: rgb(71, 67, 67);
     font-size: 18px;
+    margin-top: 5rem;
 }
 
-.formulario {
-    height: 83%;
-}
+/*--- Contenido del Login -------------------------------------*/
+.div-login {
+    width: 420px;
+    padding: 40px 30px;
+    background: #2222226d;
+    border-radius: 10px;
+    margin-left: 15%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: -3px -3px 7px #ffffff73,
+                2px 2px 5px rgba(94,104,121,0.288);
+    }
 
-.enviar{
-    white-space: normal;
-    height: 30px;
-    width: 375px;
-    margin: auto;
-}
+.div-text-login {
+    font-size: 33px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    color: rgba(59, 6, 24, 0.845);
+    }
 
-.select{
-    font-size: large;
-    text-align: center;
-}
+.div-campos {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    }
 
-.botones{
-    height: inherit;
-    cursor:pointer;
-    margin: 2px;
-    width: 95px;
-    border-radius: 7px;
-    border: 1px solid #a7976d;
-    font-size: 14px;
-    text-align: center;
-}
+.div-campos:nth-child(2) {
+    margin-top: 20px;
+    }
 
-.botones:hover{
-    background: rgb(153, 41, 29);
-    transition: all 0.5s;
-    color:#a7976d
-}
+.div-campos .input {
+    height: 100%;
+    width: 100%;
+    padding-left: 45px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    background: #dde1e7;
+    color: #222;
+    border-radius: 25px;
+    box-shadow: inset 2px 2px 5px #BABECC,
+                inset -5px -5px 10px #ffffff73;
+    }
 
-/*--------- FOOTER -----------------------------------------*/
+.div-campos .input:focus {
+    box-shadow: inset 1px 1px 2px #BABECC,
+                inset -1px -1px 2px #ffffff73;
+    }
+
+.div-campos .span {
+    position: absolute;
+    color: #595959;
+    width: 50px;
+    line-height: 55px;
+    }
+
+.div-campos .label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 45px;
+    pointer-events: none;
+    color: #666666;
+    }
+.div-campos .input:valid ~ label {
+    opacity: 0;
+    }
+.forgot-pass {
+    text-align: left;
+    margin: 10px 0 10px 5px;
+    }
+.forgot-pass a {
+    font-size: 16px;
+    color: rgba(59, 6, 24, 0.845);
+    text-decoration: none;
+    }
+
+.forgot-pass:hover a {
+    text-decoration: underline;
+    }
+
+.button {
+    margin: 15px 0;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: 600;
+    background: #dde1e7;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #595959;
+    box-shadow: 2px 2px 5px #BABECC,
+                -5px -5px 10px #ffffff73;
+    }
+
+.button:focus {
+<<<<<<< HEAD
+    color: #3f9cdb;
+=======
+    color: rgba(59, 6, 24, 0.845);
+>>>>>>> Steven
+    box-shadow: inset 2px 2px 5px #BABECC,
+                inset -5px -5px 10px #ffffff73;
+    }
+
+.sign-up {
+    margin: 10px 0;
+    color: rgba(59, 6, 24, 0.845);
+    font-size: 16px;
+    }
+
+.sign-up a {
+    color: #973b88;
+    text-decoration: none;
+    }
+    
+.sign-up a:hover {
+    text-decoration: underline;
+    }   
+
+/*-------- FOOTER ----------------------------------------------*/
 .footer {
     display: flex;
-    padding: 5rem 0;
     text-align: center;
     margin-bottom: 2%;
-    padding-top: 2%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -240,7 +296,6 @@ label {
     text-decoration: none;
     color: #a7976d;
 }
-
 .div-redes > a:hover {
     transform: scale(1.1);
 }
@@ -272,7 +327,6 @@ label {
 .div-redes > div > a {
     display: flex;
     text-decoration: none;
-
     font-size: large;
 }
 
@@ -281,7 +335,6 @@ label {
     justify-content: center;
     color: #222;
     margin-top: 1rem;
-    margin-bottom: -7rem;
 }
 
 /*+++++++++++++++++++++++++++++++++ RESPONSI TABLET 768 +++++++++++++++++++++++++++++++++++*/
@@ -292,10 +345,10 @@ label {
         top: 79px;
         left: 10%;
         width: 80%;
-        height: 100%;
+        height: 90%;
         text-align: center;
         transform: translateX(120%);
-        background-image: url(/static/img/HeaderBarricasMobile.jpg);
+        background-image: url(/static/img/CopaLlenando.jpg);
         background-size: cover;
         transition: transform 0.5s ease-in;
         flex-direction: column;
@@ -325,14 +378,14 @@ label {
     }
 
     .nav-link {
-        color: #F9F9F9;
+        color: #691d5c;
         font-family: cursive;
         font-size: x-large;
         border-bottom: 1px solid #9f8544;
     }
 
     .a-login {
-        color: #F9F9F9;
+        color: #691d5c;
         font-family: cursive;
         font-size: x-large;
         border-bottom: 1px solid #9f8544;
@@ -342,45 +395,18 @@ label {
         transform: scale(1.2);
         transition: all 0.5s;
     }
+
 }
-/*+++++++++++++++++++++++++++++++++ RESPONSI MOVIL 414 +++++++++++++++++++++++++++++++++++*/
+
+/*+++++++++++++++++++++++++++++++++ RESPONSI TABLET 414 +++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-@media only screen and (max-width: 414px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+
+@media only screen and (max-width: 414px){
+    footer .div-redes{
+        height: 5rem;
+    }
+    footer > .div-redes > a{
+        font-size: 10px;
     }
 
-    .contenedor {
-        display: grid;
-        gap: 7px;
-        grid-template-areas: 'header'
-                            'main'
-                            'footer';
-    }
-
-    .formulario {
-        width: 97%;
-    }
-
-    .select{
-        font-size: 13px;
-    }
-
-    .botones{
-        border-radius: 2px;
-    }
-
-    .div-derechos {
-        margin-bottom: 2rem;
-    }
-
-    .main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
 }

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 {% extends './base.html' %}
-{% block titulo %} blancos {% endblock titulo %} 
 {% load static %}
+<title>{% block titulo %}Blancos{% endblock titulo %}</title>
+
 {% block css %}
-<link rel="stylesheet" href="{% static '/wine/css/moviles.css' %}">
 <link rel="stylesheet" href="{% static '/wine/css/style-blancos.css' %}">
 <link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">   
 {% endblock css %}
-{% block contenido %}
+
+{% block header %}
 {% include './header-blancos.html' %}
+{% endblock header %}
+
+{% block contenido %}
 <div class="contenedor">
     <div class="banner">
         <div class="banner-nav" id="Top">
@@ -66,7 +70,7 @@
     <!--Zuccardi-->
         <div class="Titulo-Zuccardi"><h1 class="Notas-Zuccardi">"Zuccardi Q Chardonnay" - Familia Zuccardi</h1></div>
         <div class="box-Zuccardi1"><a name="Zuccardi"></a>
-            <img src="/static/img/ChardonayQZuccardi300px.png"alt="QChardonnay" class="img-Zuccardi">
+            <img src="/static/img/ChardonayQZuccardi.png"alt="QChardonnay" class="img-Zuccardi">
             <div class="iconosZuccardi">
                 <img src="/static/img/WineGlass.svg"alt="Copa"class="Copa">
                 <img src="/static/img/Termometro.png"alt="Temperatura"class="iconTemp">
@@ -127,5 +131,5 @@
         </div>
     </main>
 </div>
-
 {% endblock contenido %}
+{% comment %} El footer ya lo incluye porque indicamos al inicio del codigo que tome el ejemplo del archivo base.html {% endcomment %}

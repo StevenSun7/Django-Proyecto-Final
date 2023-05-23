@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 {% extends './base.html' %}
-{% block titulo %} blancos {% endblock titulo %} 
 {% load static %}
+<title>{% block titulo %}Espumantes{% endblock titulo %}</title>
+
 {% block css %}
-<link rel="stylesheet" href="{% static '/wine/css/moviles.css' %}">
 <link rel="stylesheet" href="{% static '/wine/css/style-espumantes.css' %}">
 <link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">   
 {% endblock css %}
-{% block contenido %}
+
+<!-- Menu de navegacion -->
+{% block header %}
 {% include './header-espumantes.html' %}
+{% endblock header %}
+
+{% block contenido %}
 <div class="contenedor">
     <div class="banner-burbujas">
         <div class="video-burbujas" id="Top">
@@ -112,3 +117,4 @@
     </main>
 </div>
 {% endblock contenido %}
+{% comment %} El footer ya lo incluye porque indicamos al inicio del codigo que tome el ejemplo del archivo base.html {% endcomment %}

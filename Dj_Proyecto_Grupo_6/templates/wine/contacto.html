@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 {% extends './base.html' %}
-{% block titulo %} blancos {% endblock titulo %} 
 {% load static %}
+<title>{% block titulo %}Contacto{% endblock titulo %}</title>
+
 {% block css %}
-<link rel="stylesheet" href="{% static '/wine/css/moviles.css' %}">
 <link rel="stylesheet" href="{% static '/wine/css/style-contacto.css' %}">
 <link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">  
 {% endblock css %}
-{% block contenido %}
+
+{% block header %}
 {% include './header-contacto.html' %}
+{% endblock header %}
+
+{% block contenido %}
 <main class="main">
     <section class="contacto">
         <h1>Contactános</h1>
@@ -49,6 +53,9 @@
         </form>
     </div>   
 </main>
-
-<script src="/static/wine/js/Corrobora.js"></script>
 {% endblock contenido %}
+
+{% block javascript %}
+<script src="/static/wine/js/Corrobora.js"></script>
+{% endblock javascript %}
+{% comment %} El footer ya lo incluye porque indicamos al inicio del codigo que tome el ejemplo del archivo base.html {% endcomment %}

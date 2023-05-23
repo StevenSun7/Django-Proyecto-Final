@@ -192,24 +192,24 @@ li:hover {
     }
 
 
-    .div-campos #id_password {
-        height: 100%;
-        width: 100%;
-        padding-left: 45px;
-        outline: none;
-        border: none;
-        font-size: 18px;
-        background: #dde1e7;
-        color: #222;
-        border-radius: 25px;
-        box-shadow: inset 2px 2px 5px #BABECC,
-                    inset -5px -5px 10px #ffffff73;
-        }
-    
-    .div-campos #id_password:focus {
-        box-shadow: inset 1px 1px 2px #BABECC,
-                    inset -1px -1px 2px #ffffff73;
-        }
+.div-campos #id_password {
+    height: 100%;
+    width: 100%;
+    padding-left: 45px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    background: #dde1e7;
+    color: #222;
+    border-radius: 25px;
+    box-shadow: inset 2px 2px 5px #BABECC,
+                inset -5px -5px 10px #ffffff73;
+    }
+
+.div-campos #id_password:focus {
+    box-shadow: inset 1px 1px 2px #BABECC,
+                inset -1px -1px 2px #ffffff73;
+    }
 
 .div-campos .span {
     position: absolute;

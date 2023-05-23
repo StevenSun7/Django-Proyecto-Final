@@ -27,6 +27,9 @@ def index(request):
 def tintos(request):
     return render(request,'wine/tintos.html')
 
+# def tintos2(request):
+#     return render(request,'wine/tintos2.html')
+
 def blancos(request):
     return render(request,'wine/blancos.html')
 

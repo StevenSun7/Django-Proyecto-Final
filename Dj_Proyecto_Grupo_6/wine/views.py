@@ -30,7 +30,6 @@ def tintos(request):
 def blancos(request):
     return render(request,'wine/blancos.html')
 
-
 def espumantes(request):
     return render(request,'wine/espumantes.html')
 

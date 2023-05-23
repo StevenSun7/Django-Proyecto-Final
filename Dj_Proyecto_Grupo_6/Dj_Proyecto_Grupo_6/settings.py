@@ -89,11 +89,11 @@ WSGI_APPLICATION = 'Dj_Proyecto_Grupo_6.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cac23318',
-        'USER': 'mejor0108',
-        'PASSWORD': 'Nasa##manZana@!',
-        'HOST' : '200.58.98.229',
-        'PORT': '5432',
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER'),
+        'PASSWORD': env('DATABASE_PASSWORD'),
+        'HOST' : env('DATABASE_HOST'),
+        'PORT': env('DATABASE_PORT'),
         
     }
 }

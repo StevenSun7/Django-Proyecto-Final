@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView, LogoutView
 
 ## Modelos
-from .models import Producto, Precio
+from .models import Producto, Precio, Categoria
 
 # Create your views here.
 def index(request):
@@ -39,7 +39,7 @@ def contacto(request):
 
 @login_required(login_url='/login/')
 def tintos2(request):
-    lista_precios = Precio.objects.select_related('id_producto').all()
+    lista_precios = Producto.objects.filter(id_categoria_id__nombre__contains='Tinto')
     return render(request,'wine/tintos2.html', {'precios':lista_precios})
 
 class WineLoginView(LoginView):

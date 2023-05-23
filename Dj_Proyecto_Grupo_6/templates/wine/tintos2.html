@@ -31,9 +31,9 @@
                 <tbody>
                     {% for valor in precios %}
                     <tr>
-                        <td>{{ valor.id_producto.bodega }}</td>
-                        <td>{{ valor.id_producto.nombre }}</td>
-                        <td style="text-align: right;">{{ valor.precio}} <span>+</span></td>
+                        <td>{{ valor.bodega }}</td>
+                        <td>{{ valor.nombre }}</td>
+                        <td style="text-align: right;">{{ valor.id_precio.precio}} <span>+</span></td>
                     </tr>
                     {% endfor%}
                 </tbody>

@@ -1,44 +1,22 @@
 {
     "workbench.colorCustomizations": {
-<<<<<<< HEAD
-        "activityBar.activeBackground": "#b99f5c",
-        "activityBar.background": "#b99f5c",
+        "activityBar.activeBackground": "#c8b480",
+        "activityBar.background": "#c8b480",
         "activityBar.foreground": "#15202b",
         "activityBar.inactiveForeground": "#15202b99",
-        "activityBarBadge.background": "#d2ece5",
-        "activityBarBadge.foreground": "#15202b",
+        "activityBarBadge.background": "#3a8570",
+        "activityBarBadge.foreground": "#e7e7e7",
         "commandCenter.border": "#15202b99",
-        "sash.hoverBorder": "#b99f5c",
-        "statusBar.background": "#9f8544",
+        "sash.hoverBorder": "#c8b480",
+        "statusBar.background": "#b99f5c",
         "statusBar.foreground": "#15202b",
-        "statusBarItem.hoverBackground": "#7b6735",
-        "statusBarItem.remoteBackground": "#9f8544",
+        "statusBarItem.hoverBackground": "#9e8544",
+        "statusBarItem.remoteBackground": "#b99f5c",
         "statusBarItem.remoteForeground": "#15202b",
-        "titleBar.activeBackground": "#9f8544",
+        "titleBar.activeBackground": "#b99f5c",
         "titleBar.activeForeground": "#15202b",
-        "titleBar.inactiveBackground": "#9f854499",
+        "titleBar.inactiveBackground": "#b99f5c99",
         "titleBar.inactiveForeground": "#15202b99"
     },
-    "peacock.color": "#9f8544"
-=======
-        "activityBar.activeBackground": "#690b2bd7",
-        "activityBar.background": "#690b2bd7",
-        "activityBar.foreground": "#e7e7e7",
-        "activityBar.inactiveForeground": "#e7e7e799",
-        "activityBarBadge.background": "#2f730c",
-        "activityBarBadge.foreground": "#e7e7e7",
-        "commandCenter.border": "#e7e7e799",
-        "sash.hoverBorder": "#690b2bd7",
-        "statusBar.background": "#3b0618d7",
-        "statusBar.foreground": "#e7e7e7",
-        "statusBarItem.hoverBackground": "#690b2bd7",
-        "statusBarItem.remoteBackground": "#3b0618d7",
-        "statusBarItem.remoteForeground": "#e7e7e7",
-        "titleBar.activeBackground": "#3b0618d7",
-        "titleBar.activeForeground": "#e7e7e7",
-        "titleBar.inactiveBackground": "#3b061899",
-        "titleBar.inactiveForeground": "#e7e7e799"
-    },
-    "peacock.color": "rgba(59, 6, 24, 0.845)"
->>>>>>> Steven
+    "peacock.color": "#b99f5c"
 }

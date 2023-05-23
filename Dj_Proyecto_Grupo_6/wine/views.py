@@ -24,8 +24,8 @@ def index(request):
     
     return render(request,'wine/index.html',context)
 
-def tintos(request):
-    return render(request,'wine/tintos.html')
+# def tintos(request):
+#     return render(request,'wine/tintos.html')
 
 def blancos(request):
     return render(request,'wine/blancos.html')
@@ -33,8 +33,8 @@ def blancos(request):
 def espumantes(request):
     return render(request,'wine/espumantes.html')
 
-def contacto(request):
-    return render(request,'wine/contacto.html')
+# def contacto(request):
+#     return render(request,'wine/contacto.html')
 
 #Codigo D. revisar que da error ------------------------------------
 def contacto(request):
@@ -49,10 +49,15 @@ def contacto(request):
     return render(request, 'wine/contacto.html', {'form': contacto_form})
 #---------------------------------------------
 
+# @login_required(login_url='/login/')
+# def tintos2(request):
+#     lista_precios = Precio.objects.select_related('id_producto').all()
+#     return render(request,'wine/tintos2.html', {'precios':lista_precios})
+
 @login_required(login_url='/login/')
-def tintos2(request):
+def tintos(request):
     lista_precios = Precio.objects.select_related('id_producto').all()
-    return render(request,'wine/tintos2.html', {'precios':lista_precios})
+    return render(request,'wine/tintos.html', {'precios':lista_precios})
 
 class WineLoginView(LoginView):
     template_name = 'wine/login.html'

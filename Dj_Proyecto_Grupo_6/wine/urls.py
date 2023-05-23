@@ -18,7 +18,7 @@ urlpatterns = [
     path('blancos/', views.blancos, name='blancos'),
     path('espumantes/', views.espumantes, name='espumantes'), 
     path('contacto/', views.contacto, name='contacto'), 
-    path('tintos2/', views.tintos2, name='tintos2'),
+    # path('tintos2/', views.tintos2, name='tintos2'),
     path('login/', views.WineLoginView.as_view(), name='login'), 
     path('logout/', views.WineLogoutView.as_view(), name='logout'), 
 ]

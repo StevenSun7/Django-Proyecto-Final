@@ -46,8 +46,9 @@ def vinos(request, parametro):
 
 
 def espumantes(request):
-    lista_precios = Producto.objects.filter(id_categoria_id__agrupado__contains='espumante')
-    return render(request,'wine/tintos2.html', {'precios':lista_precios})
+    # lista_precios = Producto.objects.filter(id_categoria_id__agrupado__contains='espumante')
+    # return render(request,'wine/tintos2.html', {'precios':lista_precios})
+    return render(request,'wine/espumantes.html')
 
 # def contacto(request):
 #     return render(request,'wine/contacto.html')

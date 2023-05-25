@@ -235,6 +235,14 @@ li:hover {
     opacity: 0;
     }
 
+<<<<<<< HEAD
+=======
+.forgot-pass {
+    text-align: left;
+    margin: 10px 0 10px 5px;
+    }
+
+>>>>>>> main
 .forgot-pass a {
     font-size: 16px;
     color: rgba(59, 6, 24, 0.845);

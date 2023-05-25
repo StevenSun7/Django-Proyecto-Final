@@ -3,10 +3,6 @@ from django.http import HttpResponse
 from .models import Categoria
 import html 
 
-def index_admin(request):
-    variable = 'test variable'
-    return render(request, 'administracion/index_admin.html', {'variable':variable})
-
 # Create your views here.
 def lista(request):
     categoria = Categoria.objects.all()

@@ -40,6 +40,11 @@ body{
     font-weight: bold;
 }
 
+.imgNombre {
+    width: 57%;
+    cursor: pointer;
+}
+
 .UvasLogo {
     width: 2.3rem;
     margin-right: 1rem;
@@ -129,8 +134,7 @@ li:hover {
 .main {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-items: center; */
+    justify-items: center;
     text-align: left;
     color: rgb(71, 67, 67);
     font-size: 18px;
@@ -139,7 +143,7 @@ li:hover {
 
 /*--- Contenido del Login -------------------------------------*/
 .div-login {
-    width: 30%;
+    width: 420px;
     padding: 40px 30px;
     background: #2222226d;
     border-radius: 10px;
@@ -187,6 +191,26 @@ li:hover {
                 inset -1px -1px 2px #ffffff73;
     }
 
+
+.div-campos #id_password {
+    height: 100%;
+    width: 100%;
+    padding-left: 45px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    background: #dde1e7;
+    color: #222;
+    border-radius: 25px;
+    box-shadow: inset 2px 2px 5px #BABECC,
+                inset -5px -5px 10px #ffffff73;
+    }
+
+.div-campos #id_password:focus {
+    box-shadow: inset 1px 1px 2px #BABECC,
+                inset -1px -1px 2px #ffffff73;
+    }
+
 .div-campos .span {
     position: absolute;
     color: #595959;
@@ -202,13 +226,20 @@ li:hover {
     pointer-events: none;
     color: #666666;
     }
+
 .div-campos #id_username:valid ~ label {
     opacity: 0;
     }
+
+.div-campos #id_password:valid ~ label {
+    opacity: 0;
+    }
+
 .forgot-pass {
     text-align: left;
     margin: 10px 0 10px 5px;
     }
+
 .forgot-pass a {
     font-size: 16px;
     color: rgba(59, 6, 24, 0.845);
@@ -237,7 +268,7 @@ li:hover {
     }
 
 .button:focus {
-    color: #3f9cdb;
+    color: rgba(59, 6, 24, 0.845);
     box-shadow: inset 2px 2px 5px #BABECC,
                 inset -5px -5px 10px #ffffff73;
     }
@@ -333,10 +364,10 @@ li:hover {
         top: 79px;
         left: 10%;
         width: 80%;
-        height: 100%;
+        height: 90%;
         text-align: center;
         transform: translateX(120%);
-        background-image: url(/static/img/BodegaNietoSenetinerII.jpg);
+        background-image: url(/static/img/CopaLlenando.jpg);
         background-size: cover;
         transition: transform 0.5s ease-in;
         flex-direction: column;

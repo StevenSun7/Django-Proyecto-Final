@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 {% extends './base.html' %}
 {% load static %}
+<title>{% block titulo %}Tintos{% endblock titulo %}</title>
+
 {% block css %}
 <link rel="stylesheet" href="{% static '/wine/css/style-tintos.css' %}">
 <link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">
 {% endblock css %}
-{% block contenido %}
+
+{% block header %}
 {% include './header-tintos.html' %}
+{% endblock header %}
+
+{% block contenido %}
 <div class="contenedor">
     <div class="banner">
         <div class="banner-nav">
@@ -42,3 +48,4 @@
     </main>
 </div>
 {% endblock contenido %}
+{% comment %} El footer ya lo incluye porque indicamos al inicio del codigo que tome el ejemplo del archivo base.html {% endcomment %}

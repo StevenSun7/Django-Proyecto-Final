@@ -16,8 +16,6 @@ class Producto(models.Model):
     conservacion = models.CharField(max_length=250)
     bodega = models.CharField(max_length=100, default='')
     
-
-        
     
 class Precio(models.Model):
     id_precio = models.IntegerField(primary_key=True)

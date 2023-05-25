@@ -7,17 +7,17 @@
         function checkEnviar() {
             //valido el nombre
             if (document.comprobacion.apellido.value.length  == 0) {
-                alert("Ingrese su apellido por favor")
+                alert("Ingresar Apellido por favor")
                 document.comprobacion.apellido.focus()
                 return 0
             }
             if (document.comprobacion.nombre.value.length  == 0) {
-                alert("Ingrese su nombre")
+                alert("Ingres Nombre por favor.")
                 document.comprobacion.nombre.focus()
                 return 0
             }
             if (document.comprobacion.email.value.length  == 0) {
-                alert("Ingrese su E-Mail para contactarnos")
+                alert("Ingrese Mail por favor.")
                 document.comprobacion.email.focus()
                 return 0
             }
@@ -29,11 +29,11 @@
                 return 0
             }
             if (document.comprobacion.consulta.selectedIndex == 0) {
-                alert("Por favor, seleccione la razon de su consulta.")
+                alert("Seleccione una de las opciones consulta.")
                 document.comprobacion.consulta.focus()
                 return 0
             }
-            alert("Muchas gracias por enviar el formulario")
+            alert("Muchas gracias. El formulario fue enviado con exito.")
             document.comprobacion.submit()
         }
         
@@ -41,7 +41,7 @@
             valor = parseInt(valor)
             //Compruebo si es un valor numérico
             if (isNaN(valor)) {
-                alert("Ingresar el numero telefonico sin espacios")
+                alert("El campo de teléfono debe contener solo números sin espacios")
                     document.comprobacion.tel.focus()
                 return ""
             } else {

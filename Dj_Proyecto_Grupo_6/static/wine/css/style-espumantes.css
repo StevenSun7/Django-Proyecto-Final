@@ -39,6 +39,11 @@ body {
     font-weight: bold;
 }
 
+.imgNombre {
+    width: 57%;
+    cursor: pointer;
+}
+
 .UvasLogo {
     width: 2.3rem;
     margin-right: 1rem;
@@ -139,6 +144,11 @@ li:hover {
     justify-content: center;
 }
 
+.video-B {
+    display: flex;
+    width: 100%;
+}
+
 .banner-nav-section {
     padding: 8px;
     width: 50%;
@@ -186,7 +196,7 @@ li:hover {
     flex-direction: column;
     margin: 3%;
     margin-top: 0px;
-    /* padding-top: 35px; */
+    padding-top: 35px;
 }
 .section-main > h1 {
     padding-bottom: 10px;
@@ -673,14 +683,14 @@ li:hover {
     }
 
     .nav-link {
-        color: #9f8544;
+        color: #3d0312;
         font-family: cursive;
         font-size: x-large;
         border-bottom: 1px solid #9f8544;
     }
 
     .a-login {
-        color: #9f8544;
+        color: #3d0312;
         font-family: cursive;
         font-size: x-large;
         border-bottom: 1px solid #9f8544;
@@ -701,7 +711,11 @@ li:hover {
     }
 
     .banner-burbujas {
-        width: auto;
+        width: 100%;
+    }
+
+    .video-B {
+        margin-top: 1rem;
     }
 
     .banner-nav-section {

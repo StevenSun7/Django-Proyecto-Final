@@ -2,6 +2,12 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from datetime import datetime
+from .forms import ContactoForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import LoginView, LogoutView
+
+## Modelos
+from .models import Producto, Precio 
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView, LogoutView
@@ -43,8 +49,21 @@ def espumantes(request):
     lista_precios = Producto.objects.filter(id_categoria_id__agrupado__contains='espumante')
     return render(request,'wine/tintos2.html', {'precios':lista_precios})
 
+# def contacto(request):
+#     return render(request,'wine/contacto.html')
+
+#Codigo D. revisar que da error ------------------------------------
 def contacto(request):
-    return render(request,'wine/contacto.html')
+    if request.method == 'POST':
+        contacto_form = ContactoForm(request.POST)
+        if contacto_form.is_valid():
+            contacto_form.save()
+            return render(request, 'wine/index.html')
+    else:
+        contacto_form = ContactoForm()
+
+    return render(request, 'wine/contacto.html', {'form': contacto_form})
+#---------------------------------------------
 
 
 class WineLoginView(LoginView):

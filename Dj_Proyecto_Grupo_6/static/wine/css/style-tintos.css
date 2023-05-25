@@ -40,6 +40,11 @@ body {
     font-weight: bold;
 }
 
+.imgNombre {
+    width: 57%;
+    cursor: pointer;
+}
+
 .UvasLogo {
     width: 2.3rem;
     margin-right: 1rem;
@@ -194,6 +199,7 @@ li:hover {
     padding-bottom: 10px;
 }
 
+/*------ Tabla de Vinos ------*/
 .section-tabla{
     width: 100vw;
     display: flex;
@@ -217,6 +223,7 @@ li:hover {
     align-items: center;
 }
 
+/*------- Video vinos ----------------------*/
 .Video-Tinto {
     width: 740px;
     height: 400px;
@@ -594,7 +601,7 @@ li:hover {
         height: 100%;
         text-align: center;
         transform: translateX(120%);
-        background-image: url(/static/img/CopaTintoLuigiBosca.jpg);
+        background-image: url(/static/img/CopaLlenando.jpg);
         background-size: cover;
         transition: transform 0.5s ease-in;
         flex-direction: column;

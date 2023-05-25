@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-    {% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static '/wine/css/style-login.css' %}">
-    <link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">
-    <title>Vinos y Espumantes Recomendados</title>
-</head>
+{% extends './base.html' %}
+{% load static %}
+<title>{% block titulo %}Login{% endblock titulo %}</title>
+    
+{% block css %}
+<link rel="stylesheet" href="{% static '/wine/css/style-login.css' %}">
+<link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">
+{% endblock css %}
 
-<body>
-<!-- Menu de Inicio -->
-{% include '../wine/header-login.html' %}
+<!-- Menu de navegacion -->
+{% block header %}
+{% include './header-login.html' %}
+{% endblock header %}
+
 {% block contenido %}
-    <div class="contenedor">
-        <main class="main">
-            <div class="div-login">
-                <div class="div-text-login">
-                    LogOut
-                </div>
-               <p>
-                Gracias por utilizar nuestro servicio Online de compras. Lo esperamos pronto
-               </p>
-               <!--TODO : agregar un botón o timer para direccionar a INDEX-->
-            </div>
-            <div class="">
-                <p>{{hoy|date:"d-m-Y h:i:s"}}</p>
-            </div>
-        </main>
-    </div>
-    {% endblock contenido %}
-    {% include '../wine/footer.html' %}
-</body>
-</html>
+<div class="contenedor">
+    <main class="main">
+        <div class="div-login">
+            <div class="div-text-login">
+                LogOut
+            </div class="textLogout">
+            <p>
+            Gracias por ser miembro de Wine Club.
+            Recuerda no conducir si disfrutaste una copa de vino.
+            Te esperamos pronto. Salud!
+            </p>
+            <!--TODO : agregar un botón o timer para direccionar a INDEX-->
+        </div>
+        <div class="">
+            <p>{{hoy|date:"d-m-Y h:i:s"}}</p>
+        </div>
+    </main>
+</div>
+{% endblock contenido %}
+{% comment %} El footer ya lo incluye porque indicamos al inicio del codigo que tome el ejemplo del archivo base.html {% endcomment %}

@@ -2,6 +2,7 @@ from django.urls import path, include
 
 from . import views
 
+#CODIGO DE MAURICIO:
 urlpatterns = [
     path('', views.index, name='inicio'),
     ##

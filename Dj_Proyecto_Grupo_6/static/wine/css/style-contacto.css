@@ -43,6 +43,11 @@ body {
     font-weight: bold;
 }
 
+.imgNombre {
+    width: 57%;
+    cursor: pointer;
+}
+
 .UvasLogo {
     width: 2.3rem;
     margin-right: 1rem;
@@ -93,7 +98,7 @@ li:hover {
 }
 
 .nav-link:hover {
-    color: #a7976d;
+    color: #792610;
     border-bottom: 1px solid #9f8544;
 }
 
@@ -109,7 +114,7 @@ li:hover {
 }
 
 .a-login:hover {
-    color: #a7976d;
+    color: #792610;
     border-bottom: 1px solid #9f8544;
 }
 

@@ -38,6 +38,11 @@ body{
     font-weight: bold;
 }
 
+.imgNombre {
+    width: 57%;
+    cursor: pointer;
+}
+
 .UvasLogo {
     width: 2.3rem;
     margin-right: 1rem;
@@ -88,7 +93,7 @@ li:hover {
 }
 
 .nav-link:hover {
-    color: #973b88;
+    color: #691d5c;
     border-bottom: 1px solid #9f8544;
 }
 
@@ -104,7 +109,7 @@ li:hover {
 }
 
 .a-login:hover {
-    color: #973b88;
+    color: #691d5c;
     border-bottom: 1px solid #9f8544;
 }
 
@@ -303,10 +308,15 @@ li:hover {
         height: 100%;
         text-align: center;
         transform: translateX(120%);
-        background-image: url(/static/img/BodegaNietoSenetinerGaleria.jpg);
-        background-size: cover;
+        background-image: url(/static/img/CopaTintoLuigiBosca.jpg);
+        background-size: 115%;
+        animation: CopaTinto 10s infinite linear alternate;
         transition: transform 0.5s ease-in;
         flex-direction: column;
+    }
+    @keyframes CopaTinto {
+        from {background-position: bottom left;}
+        to {background-position: top right;}
     }
     
     nav ul {
@@ -333,14 +343,14 @@ li:hover {
     }
 
     .nav-link {
-        color: #691d5c;
+        color: #F9F9F9;
         font-family: cursive;
         font-size: x-large;
         border-bottom: 1px solid #9f8544;
     }
 
     .a-login {
-        color: #691d5c;
+        color: #F9F9F9;
         font-family: cursive;
         font-size: x-large;
         border-bottom: 1px solid #9f8544;

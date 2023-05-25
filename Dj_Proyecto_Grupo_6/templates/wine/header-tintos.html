@@ -10,6 +10,7 @@
                 <li><a href="{% url 'contacto' %}" class="nav-link">Contacto</a></li>
             </ul>
             <ul class="ul-login">
+                {% csrf_token %}
                 <li class="login">{% if user.is_authenticated %}
                     <a href="/logout/" class="a-login">LogOut</a>
                 {% else %}

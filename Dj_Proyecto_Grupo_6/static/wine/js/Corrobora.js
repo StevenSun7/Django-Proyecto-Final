@@ -41,7 +41,7 @@
             valor = parseInt(valor)
             //Compruebo si es un valor numérico
             if (isNaN(valor)) {
-                alert("Ingresar el numero telefonico sin espacios")
+                alert("El campo de teléfono debe contener solo números sin espacios")
                     document.comprobacion.tel.focus()
                 return ""
             } else {

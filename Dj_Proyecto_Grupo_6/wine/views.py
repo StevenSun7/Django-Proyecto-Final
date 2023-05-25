@@ -24,23 +24,28 @@ def index(request):
     
     return render(request,'wine/index.html',context)
 
-def tintos(request):
-    return render(request,'wine/tintos.html')
-
-def blancos(request):
-    return render(request,'wine/blancos.html')
+@login_required(login_url='/login/')
+def vinos(request, parametro):
+    
+    filtro = 'tinto'
+    if parametro =='blanco' :
+        filtro = 'blanco'
+    
+    lista_precios = Producto.objects.filter(id_categoria_id__agrupado__contains=filtro)
+    
+    if parametro == 'blanco':
+        return render(request,'wine/blancos.html', {'precios':lista_precios})
+    else:
+        return render(request,'wine/tintos.html', {'precios':lista_precios})
 
 
 def espumantes(request):
-    return render(request,'wine/espumantes.html')
+    lista_precios = Producto.objects.filter(id_categoria_id__agrupado__contains='espumante')
+    return render(request,'wine/tintos2.html', {'precios':lista_precios})
 
 def contacto(request):
     return render(request,'wine/contacto.html')
 
-@login_required(login_url='/login/')
-def tintos2(request):
-    lista_precios = Producto.objects.filter(id_categoria_id__nombre__contains='Tinto')
-    return render(request,'wine/tintos2.html', {'precios':lista_precios})
 
 class WineLoginView(LoginView):
     template_name = 'wine/login.html'

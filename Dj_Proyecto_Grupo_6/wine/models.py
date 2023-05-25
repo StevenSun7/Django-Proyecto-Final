@@ -4,9 +4,15 @@ from django.db import models
 
 
 class Categoria(models.Model):
+    OPCIONES = [
+        ('tinto','TINTO'),
+        ('blanco','BLANCO'),
+        ('espumante','ESPUMANTE')
+    ]
     id_categoria = models.IntegerField(primary_key=True)
     nombre =  models.CharField(max_length=50)
     descripcion = models.CharField(max_length=250)
+    agrupado = models.CharField(max_length=50, choices=OPCIONES,default='tinto')
         
     
 class Precio(models.Model):

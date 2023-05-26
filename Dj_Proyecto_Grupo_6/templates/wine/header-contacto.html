@@ -4,8 +4,8 @@
         <a href="{% url 'inicio' %}" class="nombre"><img src="/static/img/GrapesRojas.png" alt="Uvas" class="UvasLogo"><img src="/static/img/NombredelWineClub.png" alt="Wine Club" class="imgNombre"></a>
         <div class="div-ul">
             <ul class="ul-nav">
-                <li><a href="{% url 'tintos' %}" class="nav-link">Tintos</a></li>
-                <li><a href="{% url 'blancos' %}" class="nav-link">Blancos</a></li>
+                <li><a href="{% url 'vinos' parametro='tinto' %}" class="nav-link">Tintos</a></li>
+                <li><a href="{% url 'vinos' parametro='banco' %}" class="nav-link">Blancos</a></li>
                 <li><a href="{% url 'espumantes' %}" class="nav-link">Espumantes</a></li>
                 <li><a href="{% url 'contacto' %}" class="nav-link">Contacto</a></li>
             </ul>

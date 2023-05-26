@@ -6,3 +6,7 @@ urlpatterns = [
     path('lista/', views.lista, name='lista'),
 ]
 
+urlpatterns = [
+    path('lista/', views.lista, name='lista'),
+    
+]

@@ -217,6 +217,25 @@ li:hover {
     margin-left: 3rem;
 } 
 
+/*------ Tabla de Vinos ------*/
+.section-tabla{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    min-width: 600px;
+}
+.tabla{
+    width: 80vw;
+}
+
+#tabla-columna1,
+#tabla-columna2,
+#tabla-columna3 { 
+    border: 2px solid #7b8213;
+    text-align: left;
+}
+
+
 /*Iconos de Copa Temperatura y Mapa -----------------------*/
 .Copa {
     width: 4rem;

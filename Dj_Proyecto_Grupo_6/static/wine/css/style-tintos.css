@@ -213,7 +213,7 @@ li:hover {
 #tabla-columna1,
 #tabla-columna2,
 #tabla-columna3 { 
-    border: 2px solid blue;
+    border: 2px solid rgba(59, 6, 24, 0.845);
     text-align: left;
 }
 
@@ -229,6 +229,8 @@ li:hover {
     height: 400px;
     border-radius: 9px;
 }
+
+
 
 /*Iconos de Copa Temperatura y Mapa -----------------------*/
 .Copa {

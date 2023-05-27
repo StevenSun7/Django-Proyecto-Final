@@ -145,7 +145,7 @@ li:hover {
     align-items: center;
     align-content: center;
     justify-content: center;
-    width: 75%;
+    width: 70%;
     border-bottom: solid 1px #7b8213;
 }
 
@@ -164,7 +164,7 @@ li:hover {
 
 .banner-nav-section {
     padding: 8px;
-    width: 70%;
+    width: 50%;
     height: 25px;
     margin: auto;
     display: flex;

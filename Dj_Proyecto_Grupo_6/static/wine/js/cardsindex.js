@@ -21,8 +21,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
 			const posY = event.pageY - centerY;
 			const x = remap(posX, rect.width / 2, angle);
 			const y = remap(posY, rect.height / 2, angle);
-			e.dataset.rotateX = x;
-			e.dataset.rotateY = -y;
+			e.dataset.rotateX = -x;
+			e.dataset.rotateY = y;
 		});
 
 		e.addEventListener("mouseout", (event) => {

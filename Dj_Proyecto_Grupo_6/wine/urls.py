@@ -8,7 +8,7 @@ urlpatterns = [
     path('blancos/', views.blancos, name='blancos'),
     path('espumantes/', views.espumantes, name='espumantes'), 
     path('contacto/', views.contacto, name='contacto'), 
-    # path('tintos_login/', views.tintos_login, name='tintos_login'),
+    path('tintos_cards/', views.tintos_cards, name='tintos_cards'),
     path('login/', views.WineLoginView.as_view(), name='login',), 
     path('logout/', views.WineLogoutView.as_view(), name='logout'), 
 ]

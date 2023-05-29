@@ -186,7 +186,6 @@ li:hover {
     grid-template-rows: repeat(12, auto);
     border-top: solid 2px #a7976d;
     font-size: 18px;
-    margin-top: 2rem;
 }
 .section-main {
     color: rgb(71, 67, 67);
@@ -327,7 +326,7 @@ li:hover {
     text-align: center;
     justify-content: center;
     border-top: solid 1px #a7976d;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .box-LuigiBosca1 {

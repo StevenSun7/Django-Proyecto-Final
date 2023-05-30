@@ -5,6 +5,7 @@
 
 {% block css %}
 <link rel="stylesheet" href="{% static '/wine/css/style-blancos.css' %}">
+<link rel="stylesheet" href="{% static '/wine/css/style-tintos-cards.css' %}">
 <link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">   
 {% endblock css %}
 
@@ -67,68 +68,40 @@
             </div>
             </article>
         </section>
-    <!--Zuccardi-->
-        <div class="Titulo-Zuccardi"><h1 class="Notas-Zuccardi">"Zuccardi Q Chardonnay" - Familia Zuccardi</h1></div>
-        <div class="box-Zuccardi1"><a name="Zuccardi"></a>
-            <img src="/static/img/ChardonayQZuccardi.png"alt="QChardonnay" class="img-Zuccardi">
-            <div class="iconosZuccardi">
-                <img src="/static/img/WineGlass.svg"alt="Copa"class="Copa">
-                <img src="/static/img/Termometro.png"alt="Temperatura"class="iconTemp">
-                <a href="https://www.google.com/mapsembedpb=!1m18!1m12!1m3!1d10613114923526354!2d-6922709533387734!3d-337710418596214!2m3!1f0!f0!3f0!3m2!1i1024!2i768!4f131!3m3!1m2!1s0x967c163807edf24f%A0xd6f143d49784e077!2sZccardi%20-%20Valle%20de%20Uco!5e0!3m!1ses-419!2sar!4v164744584824!5m2!1ses-419!2sar"target="_blank"><img src="/static/img/Mapa.png"alt="Map"class="iconMap"></a>
+        <section class="wrapper">
+            {% for valor in precios %}
+            {% if forloop.counter0|divisibleby:3 %}
+            <div class="row">
+              {% endif %}
+      
+            <div class="card">
+              <div class="image">
+                <img src="/static/img/Boheme.png" class="imgcard1" />
+              </div>
+              <span class="productname">{{ valor.nombre }}</span>
+              <span class="author">{{ valor.bodega }}</span>
+              <span class="rating">
+                <i class="fas fa-star">⭐️</i>
+                <i class="fas fa-star">⭐️</i>
+                <i class="fas fa-star">⭐️</i>
+                <i class="fas fa-star">⭐️</i>
+                <i class="fas fa-star"></i>
+              </span>
+              <span class="description"
+                >Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                do...</span
+              >
+              <span class="beforePrice">{{ valor.id_precio.precio}}</span>
+              <span class="nowPrice">{{ valor.id_precio.desc_xcaja}}</span>
+              <button>Add to cart</button>
             </div>
-        </div>
-        <div class="box-Zuccardi2">
-            <div class="img-back-Zuccardi"></div>
-            <div class="text-Zuccardi">
-                <h3>Notas de degustación:</h3>
-                <p><b>Color: </b> Amarillo verdoso brillante deintensidadmedio</p>
-                <p><b>Aroma: </b> Reminiscencia de aromas de frutasmaduras,cítricos y frutas tropicales. Se puedenencontrar en estevino notas de duraznos blancos, pera,vainilla y algunasespecias.</p>
-                <p><b>Sabor: </b> Sabrosa y fresca entrada en boca,conbuena mineralidad y vibrante desarrollo para luegodarpaso a untuosidad, graso y equilibrado final.</p>
-            </div>
-        </div>
-        <div class="hoja-Zuccardi"><a href='#Top' class="Top"><img src="/static/img/Origin.svg" alt="Hoja" class="hoja"></a>
-        </div>
-    <!--Valbona-->
-        <div class="Titulo-Valbona"><h1>"Moscatel Dulce" - Valbona<h1></div>
-        <div class="box-Valbona1"><a name="Valbona"></a>
-            <div class="img-back-Valbona"></div>
-            <div class="text-Valbona">
-                <h3>Notas de degustación:</h3>
-                <p><b>Color: </b> Amarillo suave con tonalidadesverdosas.<p>
-                <p><b>Aroma: </b> Notas de miel y durazno , tambiénajazmines y azahar.</p>
-                <p><b>Sabor: </b> Buen equilibrio entre acidez y dulce,conuna muy buena untuosidad producida por el azúcarnatural.</p>
-            </div>
-        </div>
-        <div class="hoja-Valbona"><a href='#Top' class="Top"><img src="/static/img/Origin.svg" alt="Hoja" class="hoja"></a></div>
-        <div class="box-Valbona2">
-            <div class="iconosValbona">
-                <img src="/static/img/WineGlass.svg"alt="Copa"class="Copa">
-                <img src="/static/img/Termometro.png"alt="Temperatura"class="iconTemp">
-                <a href="https://www.google.com/mapsembedpb=!1m18!1m12!1m3!1d21767793633429066!2d-684995977846459!3d-31518178708336254!2m3!1f02f0!3f0!3m2!1i1024!2i768!4f131!3m3!1m2!1s0x96816a9fcb7c9adf3A0xa0a1af538e3a8351!2sBdega%20Augusto%20Pulenta!5e0!3m2!1ss-419!2sar!4v166474989048!5m2!1ses-419!2sar"target="_blank"><img src="/static/img/Mapa.png"alt="Map" class="iconMap"></a>
-            </div>
-            <img src="/static/img/MoscatelValbona.jpg"alt="MoscatelDulca Valbona" class="img-Valbona">
-        </div>
-    <!-- Luigi Bosca -->
-        <div class="Titulo-Bosca"><h1>"Sauvignon Blanc" - Luigi Bosca<h1></div>
-        <div class="box-Bosca1"><a name="Luigi Bosca"></a>
-            <img src="/static/img/SuavignonBlancLuigiBosca.png"alt="Bosca Suavignon Blanc" class="img-Bosca">
-            <div class="iconosBosca">
-                <img src="/static/img/WineGlass.svg"alt="Copa"class="Copa">
-                <img src="/static/img/Termometro.png"alt="Temperatura"class="iconTemp">
-                <a href="https://www.google.com/mapsembedpb=!1m18!1m12!1m3!1d10706029983130684!2d-6899379733628551!3d-33013413824440356!2m3!1f!2f0!3f0!3m2!1i1024!2i768!4f131!3m3!1m2!1s0x967e753251ff0f5%3A0xac511fb6a24d038c!2sBdega%20Luigi%20Bosca%20-%20Familia20Arizu!5e0!3m2!1ses419!2sar!4v1664744262973!5m2!1ses-419!2ar"target="_blank"><img src="/static/img/Mapa.png"alt="Map" class="iconMap"></a>
-            </div>
-        </div>
-        <div class="box-Bosca2">
-            <div class="img-back-Bosca"></div>
-            <div class="text-Bosca">
-                <h3>Notas de degustación:</h3>
-                <p><b>Color: </b> Amarillo verdoso con reflejosplateados.<p>
-                <p><b>Aroma: </b> A frutas tropicales, hierbas yminerales.<p>
-                <p><b>Sabor: </b> Refrescante acidez. Aterciopeladoconlargo final en boca.</p>
-            </div>
-        </div>
-        <div class="hoja-Bosca"><a href='#Top' class="Top"><img src="/static/img/Origin.svg" alt="Hoja" class="hoja"></a>
-        </div>
+      
+            {% if forloop.counter0|add:"1"|divisibleby:3 %}
+          </div>
+          {% endif %}
+      
+            {% endfor %}
+          </section>        
     </main>
 </div>
 {% endblock contenido %}

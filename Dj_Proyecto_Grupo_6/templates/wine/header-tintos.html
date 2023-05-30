@@ -10,8 +10,14 @@
                 <li><a href="{% url 'contacto' %}" class="nav-link">Contacto</a></li>
             </ul>
             <ul class="ul-login">
-                <li class="login"><a href="{% url 'login' %}" class="a-login">Login</a></li>
+                {% csrf_token %}
+                <li class="login">{% if user.is_authenticated %}
+                    <a href="/logout/" class="a-login">LogOut</a>
+                {% else %}
+                    <a href="/login/" class="a-login">Login</a>
+                {% endif %}</li>
             </ul>
+            
         </div>
         <button class="menu-hamburguesa" id="menu-hamburguesa">
             <ion-icon class="barras" name="menu-outline"><img src="/static/img/CopaMorado.png" alt="" class="copa"></ion-icon>

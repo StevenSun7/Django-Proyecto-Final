@@ -147,7 +147,7 @@ li:hover {
 
 .banner-nav-section {
     padding: 8px;
-    width: 50%;
+    width: 70%;
     height: 25px;
     margin: auto;
     display: flex;
@@ -156,7 +156,7 @@ li:hover {
     background-color: rgba(59, 6, 24, 0.845);
     border-end-start-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin-top: -1px;
+    margin-top: -0.03rem;
 
 }
 
@@ -199,12 +199,31 @@ li:hover {
     padding-bottom: 10px;
 }
 
+/*------ Tabla de Vinos ------*/
+.section-tabla{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    min-width: 600px;
+}
+.tabla{
+    width: 80vw;
+}
+
+#tabla-columna1,
+#tabla-columna2,
+#tabla-columna3 { 
+    border: 2px solid blue;
+    text-align: left;
+}
+
 .Video {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/*------- Video vinos ----------------------*/
 .Video-Tinto {
     width: 740px;
     height: 400px;

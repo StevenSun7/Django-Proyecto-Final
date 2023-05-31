@@ -8,7 +8,6 @@ class Categoria(models.Model):
     nombre =  models.CharField(max_length=50)
     descripcion = models.CharField(max_length=250)
     
-    
 class Producto(models.Model):
     id_producto =  models.IntegerField(primary_key=True,unique=True)
     id_categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT)
@@ -30,7 +29,7 @@ class Precio(models.Model):
     def __str__(self):
         return str(self.precio)
     
-#Modelo D. Formulario
+#Formulario HTML Contacto
 class contacto (models.Model):
     contacto = models.IntegerField (primary_key= True)
     apellido = models.CharField (max_length= 100)

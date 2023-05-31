@@ -1,13 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from datetime import datetime
 from .forms import ContactoForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView, LogoutView
-
-## Modelos
-from .models import Producto, Precio 
+from .models import Producto, Precio, Categoria
 
 # Create your views here.
 def index(request):
@@ -36,10 +34,7 @@ def blancos(request):
 def espumantes(request):
     return render(request,'wine/espumantes.html')
 
-# def contacto(request):
-#     return render(request,'wine/contacto.html')
 
-#Codigo D. revisar que da error ------------------------------------
 def contacto(request):
     if request.method == 'POST':
         contacto_form = ContactoForm(request.POST)
@@ -58,12 +53,24 @@ def contacto(request):
 #     return render(request,'wine/tintos2.html', {'precios':lista_precios})
 
 @login_required(login_url='/login/')
-# def login(request):
-#     lista_precios = Precio.objects.select_related('id_producto').all()
-#     return render(request,'wine/tintos_login.html', {'precios':lista_precios})
-def login(request):
-    lista_precios = Precio.objects.select_related('id_producto').all()
-    return render(request,'wine/tintos_login.html', {'precios':lista_precios})
+def vinos(request, parametro):
+    
+    filtro = 'tinto'
+    if parametro =='blanco' :
+        filtro = 'blanco'
+    
+    lista_precios = Producto.objects.filter(id_categoria_id__agrupado__contains=filtro)
+    
+    if parametro == 'blanco':
+        return render(request,'wine/blancos.html', {'precios':lista_precios})
+    else:
+        return render(request,'wine/tintos.html', {'precios':lista_precios})
+
+
+def espumantes(request):
+    # lista_precios = Producto.objects.filter(id_categoria_id__agrupado__contains='espumante')
+    # return render(request,'wine/tintos2.html', {'precios':lista_precios})
+    return render(request,'wine/espumantes.html')
 
 class WineLoginView(LoginView):
     template_name = 'wine/login.html'

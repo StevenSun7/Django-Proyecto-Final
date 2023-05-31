@@ -38,6 +38,35 @@
             <p>La temperatura siempre es un factor fundamental a la hora de disfrutar de nuestras bebidas preferidas y los espumantes no son la excepción. Se recomienda servir bien frнo, a una temperatura de entre 5 y 8°, para evitar que pierdan sus matices aromáticos y su finura, por lo que debemos guardarlo en la heladera unas 4 o 5 horas antes de consumirlo en nuestras celebraciones.</p>
             <br>
             <p>El espumante es un producto muy versátil que puede acompañar tanto carnes, como pescados o pastas. Funciona como aperitivo, se puede disfrutar con postres y es el compañero ideal del sushi. A toda hora y en cualquier lugar. Para acompañar con carnes, se recomiendan espumantes con mayor estructura y más complejos y para comidas con carnes blancas, un excelente compañero puede ser un Brut Rosé. Para postres helados, tartas de frutas y chocolates, recomendamos disfrutar junto con un Grand Cuvée Extra Brut, que cautiva con su perfecta combinación entre aromas a levaduras, pan tostado, frutas confitadas y flores blancas.</p>
+            <div class="wrapper">
+                {% for valor in precios %}
+                {% if forloop.counter0|divisibleby:4 %}
+                <div class="row">
+                {% endif %}
+                <div class="card">
+                    <div class="image">
+                    <img src="/static/img/Boheme.png" class="imgcard1" />
+                    </div>
+                    <span class="productname">{{ valor.nombre }}</span>
+                    <span class="author">{{ valor.bodega }}</span>
+                    <span class="rating">
+                    <i class="fas fa-star">⭐️</i>
+                    <i class="fas fa-star">⭐️</i>
+                    <i class="fas fa-star">⭐️</i>
+                    <i class="fas fa-star">⭐️</i>
+                    <i class="fas fa-star"></i>
+                    </span>
+                    <span class="description">Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do...</span>
+                    <span class="beforePrice">{{ valor.id_precio.precio}}</span>
+                    <span class="nowPrice">{{ valor.id_precio.desc_xcaja}}</span>
+                    <button>Add to cart</button>
+                </div>
+                {% if forloop.counter0|add:"1"|divisibleby:4 %}
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
         </section>
         <!-- Trapiche -->
         <div class="Titulo-Trapiche"><h1 class="Notas-Trapiche">"Extra Brut" - Bodega Trapiche</h1></div>

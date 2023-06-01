@@ -4,7 +4,6 @@
 
 {% block css %}
 <link rel="stylesheet" href="{% static '/wine/css/style-contacto.css' %}">
-<link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">  
 {% endblock css %}
 
 {% block header %}
@@ -22,23 +21,23 @@
         {% csrf_token %}
         <form name="comprobacion">
             <legend></legend>
-            <label for="apellido" class="datos-form">Apellido: </label>
+            <label for="apellido" class="datos">Apellido: </label>
+            <input type="text" class="campos" size=auto id="apellido" name="apellido" required placeholder="Ingrese su Apellido ...">
             {{ form.apellido  }}
-            {% comment %} <input type="text" class="campos-form" size=auto id="apellido" name="apellido" required placeholder="Ingrese su Apellido ..."> {% endcomment %}
 
-            <label for="nombre" class="datos-form">Nombre:</label>
+            <label for="nombre" class="datos">Nombre:</label>
+            <input type="text" class="campos" size=auto id="nombre" name="nombre" required placeholder="Ingrese su Nombre ...">
             {{ form.nombre }}           
-            {% comment %} <input type="text" class="campos-form" size=auto id="nombre" name="nombre" required placeholder="Ingrese su Nombre ..."> {% endcomment %}
 
-            <label for="email" class="datos-form">Mail de contacto:</label>
-            {{ form.mail }}
-            {% comment %} <input type="email" class="campos-form" name="email" required placeholder="email@dominio.com"> {% endcomment %}
+            <label for="email" class="datos">Mail de contacto:</label>
+            <input type="email" class="campos" name="email" required placeholder="email@dominio.com">
+            {{ form.email }}
 
-            <label for="telefono" class="datos-form">Ingrese Telefono de Contacto:</label>
+            <label for="telefono" class="datos">Ingrese Telefono de Contacto:</label>
+            <input type="tel" class="campos" size="15" maxlength="14" id="tel" name="tel" required placeholder="+(xx) xx xxx xxxx">
             {{ form.telefono }}
-            {% comment %} <input type="tel" class="campos-form" size="15" maxlength="14" id="tel" name="tel" required placeholder="+(xx) xx xxx xxxx"> {% endcomment %}
 
-            <label for="motivoconsulta" class="datos-form">Motivo de la Consulta:</label>                    
+            <label for="motivoconsulta" class="datos">Motivo de la Consulta:</label>                    
             <select class="select" name="consulta" id="mconsulta">
                 <option value="0">Seleccione</option>   
                 <option value="1">Precios</option>   
@@ -47,7 +46,7 @@
                 <option value="4">Solicitar contacto directo</option>   
             </select>
 
-            <label for="conmentarios" class="datos-form">Deje sus comentarios:</label>
+            <label for="conmentarios" class="datos">Deje sus comentarios:</label>
             <textarea cols="40" rows="10" name="comentario" placeholder="Escriba su comentario"></textarea>
 
             <section class="enviar">

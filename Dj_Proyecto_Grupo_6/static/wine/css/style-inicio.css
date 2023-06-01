@@ -238,9 +238,34 @@ li:hover {
 
 .h2-cards {
     font-size: 1.25rem;
+    cursor: pointer;
     font-weight: 700;
     margin-bottom: 0.5rem;
     text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+}
+
+.link-cardT, .link-cardB, .link-cardE {
+    text-decoration: none;
+    color: #F9F9F9;
+    font-size: large;
+}
+
+.link-cardT:hover {
+    color: #691d5c;
+    border-bottom: 1px solid #9f8544;
+    transform: scale(1.2);
+}
+
+.link-cardB:hover {
+    color: #7b8213;
+    border-bottom: 1px solid #9f8544;
+    transform: scale(1.2);
+}
+
+.link-cardE:hover {
+    color: #a7976d;
+    border-bottom: 1px solid #9f8544;
+    transform: scale(1.2);
 }
 
 .p-cards {

@@ -49,7 +49,7 @@ class Stock(models.Model):
 # TODO : Merge Modelos de contacto
 # TODO : Modelo Carrito 
 #Modelo D. Formulario
-class contacto (models.Model):
+class  contacto (models.Model):
     contacto = models.AutoField (primary_key= True)
     apellido = models.CharField (max_length= 100)
     nombre = models.CharField (max_length= 100)

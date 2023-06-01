@@ -1,7 +1,7 @@
 from django.urls import path, include
 from . import views
 
-#CODIGO DE MAURICIO:
+#VISTAS PARAMETRIZADAS:
 urlpatterns = [
     path('', views.index, name='inicio'),
     

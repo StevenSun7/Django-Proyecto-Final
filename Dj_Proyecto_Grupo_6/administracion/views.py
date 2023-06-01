@@ -11,6 +11,7 @@ def lista(request):
     
     for categ in categoria:
         texto = texto + f"<tr><td>{categ.id_categoria}</td><td>{categ.nombre} </td><td>{categ.descripcion} </td></tr>"
-        texto = texto + "</table>"
+        
+    texto = texto + "</table>"
     
     return HttpResponse(texto, content_type='text/html')

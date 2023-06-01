@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 {% extends './base.html' %}
 {% load static %}
 <title>{% block titulo %}Contacto{% endblock titulo %}</title>
@@ -24,16 +23,20 @@
         <form name="comprobacion">
             <legend></legend>
             <label for="apellido" class="datos-form">Apellido: </label>
-            <input type="text" class="campos-form" size=auto id="apellido" name="apellido" required placeholder="Ingrese su Apellido ...">
+            {{ form.apellido  }}
+            {% comment %} <input type="text" class="campos-form" size=auto id="apellido" name="apellido" required placeholder="Ingrese su Apellido ..."> {% endcomment %}
 
-            <label for="nombre" class="datos-form">Nombre:</label>            
-            <input type="text" class="campos-form" size=auto id="nombre" name="nombre" required placeholder="Ingrese su Nombre ...">
+            <label for="nombre" class="datos-form">Nombre:</label>
+            {{ form.nombre }}           
+            {% comment %} <input type="text" class="campos-form" size=auto id="nombre" name="nombre" required placeholder="Ingrese su Nombre ..."> {% endcomment %}
 
             <label for="email" class="datos-form">Mail de contacto:</label>
-            <input type="email" class="campos-form" name="email" required placeholder="email@dominio.com">
+            {{ form.mail }}
+            {% comment %} <input type="email" class="campos-form" name="email" required placeholder="email@dominio.com"> {% endcomment %}
 
             <label for="telefono" class="datos-form">Ingrese Telefono de Contacto:</label>
-            <input type="tel" class="campos-form" size="15" maxlength="14" id="tel" name="tel" required placeholder="+(xx) xx xxx xxxx">
+            {{ form.telefono }}
+            {% comment %} <input type="tel" class="campos-form" size="15" maxlength="14" id="tel" name="tel" required placeholder="+(xx) xx xxx xxxx"> {% endcomment %}
 
             <label for="motivoconsulta" class="datos-form">Motivo de la Consulta:</label>                    
             <select class="select" name="consulta" id="mconsulta">

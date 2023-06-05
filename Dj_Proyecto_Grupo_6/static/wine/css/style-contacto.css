@@ -169,7 +169,7 @@ label {
     /* font-style: italic; */
 }
 
-#id_apellido, #id_nombre, #id_email, #id_telefono {
+.input #id_apellido, #id_nombre, #id_email, #id_telefono {
     width: 58%;
     height: 3.5%;
     border: 1px solid #a7976d;

@@ -22,19 +22,19 @@
         <form name="comprobacion">
             <legend></legend>
             <label for="apellido" class="datos">Apellido: </label>
-            <input type="text" class="campos" size=auto id="apellido" name="apellido" required placeholder="Ingrese su Apellido ...">
+            {% comment %} <input type="text" class="campos" size=auto id="apellido" name="apellido" required placeholder="Ingrese su Apellido ..."> {% endcomment %}
             {{ form.apellido  }}
 
             <label for="nombre" class="datos">Nombre:</label>
-            <input type="text" class="campos" size=auto id="nombre" name="nombre" required placeholder="Ingrese su Nombre ...">
+            {% comment %} <input type="text" class="campos" size=auto id="nombre" name="nombre" required placeholder="Ingrese su Nombre ..."> {% endcomment %}
             {{ form.nombre }}           
 
             <label for="email" class="datos">Mail de contacto:</label>
-            <input type="email" class="campos" name="email" required placeholder="email@dominio.com">
+            {% comment %} <input type="email" class="campos" name="email" required placeholder="email@dominio.com"> {% endcomment %}
             {{ form.email }}
 
             <label for="telefono" class="datos">Ingrese Telefono de Contacto:</label>
-            <input type="tel" class="campos" size="15" maxlength="14" id="tel" name="tel" required placeholder="+(xx) xx xxx xxxx">
+            {% comment %} <input type="tel" class="campos" size="15" maxlength="14" id="tel" name="tel" required placeholder="+(xx) xx xxx xxxx"> {% endcomment %}
             {{ form.telefono }}
 
             <label for="motivoconsulta" class="datos">Motivo de la Consulta:</label>                    

@@ -28,7 +28,6 @@ class Precio(models.Model):
         return str(self.precio)
     
     
-    
 class Producto(models.Model):
     id_producto =  models.IntegerField(primary_key=True,unique=True)
     id_categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT)
@@ -46,10 +45,7 @@ class Stock(models.Model):
     id_producto = models.OneToOneField(Producto, on_delete=models.CASCADE)
     cantidad = models.PositiveBigIntegerField()
     
-    
 
-# TODO : Merge Modelos de contacto
-# TODO : Modelo Carrito 
 #Modelo D. Formulario
 class contacto (models.Model):
     contacto = models.AutoField (primary_key= True)

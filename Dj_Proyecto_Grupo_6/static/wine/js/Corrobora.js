@@ -21,11 +21,11 @@
                 document.comprobacion.email.focus()
                 return 0
             }
-            tel = document.comprobacion.tel.value
+            tel = document.comprobacion.telefono.value
             tel = validarTel(tel)
-            document.comprobacion.tel.value = tel
+            document.comprobacion.telefono.value = tel
             if (tel == "") {
-                document.comprobacion.tel.focus()
+                document.comprobacion.telefono.focus()
                 return 0
             }
             if (document.comprobacion.consulta.selectedIndex == 0) {
@@ -42,7 +42,7 @@
             //Compruebo si es un valor numérico
             if (isNaN(valor)) {
                 alert("El campo de teléfono debe contener solo números sin espacios")
-                    document.comprobacion.tel.focus()
+                    document.comprobacion.telefono.focus()
                 return ""
             } else {
                 return valor

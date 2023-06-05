@@ -1,7 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
-
 # Create your models here.
+
+
 class Categoria(models.Model):
     OPCIONES = [
         ('tinto','TINTO'),
@@ -44,12 +45,13 @@ class Producto(models.Model):
 class Stock(models.Model):
     id_producto = models.OneToOneField(Producto, on_delete=models.CASCADE)
     cantidad = models.PositiveBigIntegerField()
-
+    
+    
 
 # TODO : Merge Modelos de contacto
 # TODO : Modelo Carrito 
 #Modelo D. Formulario
-class  contacto (models.Model):
+class contacto (models.Model):
     contacto = models.AutoField (primary_key= True)
     apellido = models.CharField (max_length= 100)
     nombre = models.CharField (max_length= 100)

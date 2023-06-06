@@ -31,19 +31,23 @@ function checkEnviar() {
         document.comprobacion.consulta.focus()
         return 0
     }
-    alert("Muchas gracias. El formulario fue enviado con exito.")
     document.comprobacion.submit()
+    alert("Muchas gracias. El formulario fue enviado con exito.")
 }
 
 function validarTel(valor) {
-    valor = parseInt(valor)
-    //Compruebo si es un valor numérico
+    valor = parseInt(valor);
+    // Comprueba si es un valor numérico
     if (isNaN(valor)) {
-        alert("El campo de teléfono debe contener solo números sin espacios")
-            document.comprobacion.telefono.focus()
-        return ""
+        alert("El campo de teléfono debe contener solo números sin espacios");
+        document.comprobacion.telefono.focus();
+        return "";
+    } else if (valor.toString().length < 10) {
+        alert("El teléfono debe tener al menos 10 dígitos");
+        document.comprobacion.telefono.focus();
+        return "";
     } else {
-        return valor
+        return valor;
     }
 }
 

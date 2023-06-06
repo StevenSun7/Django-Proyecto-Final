@@ -169,7 +169,7 @@ label {
     /* font-style: italic; */
 }
 
-.campos-form {
+.input, #id_apellido, #id_nombre, #id_email, #id_telefono {
     width: 58%;
     height: 3.5%;
     border: 1px solid #a7976d;
@@ -177,6 +177,15 @@ label {
     text-align: center;
     font-size: 18px;
 }
+
+/* .campos {
+    width: 58%;
+    height: 3.5%;
+    border: 1px solid #a7976d;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+} */
 
 .formulario {
     height: 83%;

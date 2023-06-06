@@ -42,6 +42,7 @@ function validarTel(valor) {
         alert("El campo de teléfono debe contener solo números sin espacios");
         document.comprobacion.telefono.focus();
         return "";
+    // Comprueba si colocan 10 dígitos
     } else if (valor.toString().length < 10) {
         alert("El teléfono debe tener al menos 10 dígitos");
         document.comprobacion.telefono.focus();
@@ -50,35 +51,3 @@ function validarTel(valor) {
         return valor;
     }
 }
-
-
-
-// function validateForm() {
-//     var apellido = document.forms["comprobacion"]["id_apellido"].value;
-//     var nombre = document.forms["comprobacion"]["id_nombre"].value;
-//     var email = document.forms["comprobacion"]["id_email"].value;
-//     var telefono = document.forms["comprobacion"]["id_telefono"].value;
-
-//     if (apellido === "") {
-//         alert("Por favor, ingrese su apellido.");
-//         return false;
-//         }
-//     if (nombre === "") {
-//         alert("Por favor, ingrese su nombre.");
-//         return false;
-//         }
-//     if (email === "") {
-//         alert("Por favor, ingrese su correo electrónico.");
-//         return false;
-//         }
-//     if (telefono === "") {
-//         alert("Por favor, ingrese su número de teléfono.");
-//         return false;
-//         }
-//     }
-
-
-
-
-
-

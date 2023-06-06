@@ -13,11 +13,8 @@ class Categoria(models.Model):
     nombre =  models.CharField(max_length=50)
     descripcion = models.CharField(max_length=250)
     agrupado = models.CharField(max_length=50, choices=OPCIONES,default='tinto')
-<<<<<<< HEAD
-=======
     def __str__(self):
         return  self.nombre
->>>>>>> Steven
         
     
 class Precio(models.Model):
@@ -45,15 +42,11 @@ class Producto(models.Model):
         return self.nombre
 
 
-<<<<<<< HEAD
-
-=======
 class Stock(models.Model):
     id_producto = models.OneToOneField(Producto, on_delete=models.CASCADE)
     cantidad = models.PositiveBigIntegerField()
     
     
->>>>>>> Steven
 
 # TODO : Merge Modelos de contacto
 # TODO : Modelo Carrito 

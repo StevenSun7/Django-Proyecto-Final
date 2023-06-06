@@ -19,10 +19,10 @@
         <p>Salud !!! 🍷</p>
     </section> 
     <div class="formulario">
-        {% csrf_token %}
-        <form name="comprobacion">
+        <form method="post" name="comprobacion">
+            {% csrf_token %}
             <legend></legend>
-            <label for="apellido" class="datos">Apellido: </label>
+            <label for="apellido" class="datos-form">Apellido: </label>
             {{ form.apellido  }}
 
             <label for="nombre" class="datos">Nombre:</label>

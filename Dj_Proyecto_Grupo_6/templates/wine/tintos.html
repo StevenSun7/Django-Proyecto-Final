@@ -53,42 +53,43 @@
             <p>En esta sección encontrarás tres varietales que consideramos interesantes para todos aquellos que quieran disfrutar de momentos 
             inolvidables acompañados de sabores, y aromas.</p>
             <br>
-            
+            <article class="art-video">
             <div class="Video">
                 <h3>Tips para servir el vino</h3>
                 <iframe class="Video-Tinto" src="https://www.youtube.com/embed/_RZg5uCLt3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-        </section>
-        <section class="wrapper">
-            {% for valor in precios %}
-            {% if forloop.counter0|divisibleby:4 %}
-            <div class="row">
-            {% endif %}
-            <div class="card">
-                <div class="image">
-                <img src="/static/img/Boheme.png" class="imgcard1" />
+            </article>
+            <section class="wrapper">
+                {% for valor in precios %}
+                {% if forloop.counter0|divisibleby:4 %}
+                <div class="row">
+                {% endif %}
+                <div class="card">
+                    <div class="image">
+                    <img src="/static/img/Boheme.png" class="imgcard1" />
+                    </div>
+                    <span class="productname">{{ valor.nombre }}</span><br>
+                    <span class="author">{{ valor.bodega }}</span><br>
+                    {% comment %} <span class="rating">
+                    <i class="fas fa-star">⭐️</i>
+                    <i class="fas fa-star">⭐️</i>
+                    <i class="fas fa-star">⭐️</i>
+                    <i class="fas fa-star">⭐️</i>
+                    <i class="fas fa-star"></i>
+                    </span> {% endcomment %}
+                    <span class="description">Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do...</span><br>
+                    <span class="beforePrice">{{ valor.id_precio.precio}}</span>
+                    <span class="nowPrice">{{ valor.id_precio.desc_xcaja}}</span>
+                    <button>Add to cart</button>
                 </div>
-                <span class="productname">{{ valor.nombre }}</span>
-                <span class="author">{{ valor.bodega }}</span>
-                <span class="rating">
-                <i class="fas fa-star">⭐️</i>
-                <i class="fas fa-star">⭐️</i>
-                <i class="fas fa-star">⭐️</i>
-                <i class="fas fa-star">⭐️</i>
-                <i class="fas fa-star"></i>
-                </span>
-                <span class="description">Lorem ipsum dolor sit amet consectetur adipiscing elit sed
-                do...</span>
-                <span class="beforePrice">{{ valor.id_precio.precio}}</span>
-                <span class="nowPrice">{{ valor.id_precio.desc_xcaja}}</span>
-                <button>Add to cart</button>
-            </div>
-            {% if forloop.counter0|add:"1"|divisibleby:4 %}
-            </div>
-            {% endif %}
-            {% endfor %}
+                {% if forloop.counter0|add:"1"|divisibleby:4 %}
+                </div>
+                {% endif %}
+                {% endfor %}
+            </section>
         </section>
-    <!-- Dragones -->
+        <!-- Dragones -->
         <div class="Titulo-Dragones"><h1 class="Notas-Dragones">"Los Dragones" - Bodega Los Dragones</h1></div>
         <div class="box-Dragones1"><a name="Los Dragones"></a>
             <img src="{% static '/img/SyrahDragones.jpg' %}" alt="Los Dragones"  class="img-Dragones">
@@ -99,14 +100,23 @@
             </div>
             <div class="hoja-Dragones"><a href='#Top' class="Top"><img src="{% static '/img/Origin.svg' %}" alt="Hoja" class="hoja"></a>
             </div>
+<<<<<<< HEAD
         <!-- Catena -->
             <div class="Titulo-Catena"><h1>"Catena Zapata Malbec" - Bodega Catena Zapata</h1></div>
+=======
+        </div>
+        <div class="hoja-Dragones"><a href='#Top' class="Top"><img src="{% static '/img/Origin.svg' %}" alt="Hoja" class="hoja"></a>
+        </div>
+        <!-- Catena -->
+        <div class="Titulo-Catena"><h1>"Catena Zapata Malbec" - Bodega Catena Zapata</h1></div>
+>>>>>>> Steven
             <div class="box-Catena1"><a name="Catena Zapata"></a>
                 <div class="img-back-Catena"></div>
                 <div class="text-Catena">
                     <h3>Notas de degustación:</h3>
                     <p>Este Malbec presenta un profundo e intenso color violeta. Su aroma remite a cassis, moca, clavo de olor y marcadas notas terrosas. Elaborado en la region de Mendoza, es el compañero ideal para platos con carnes rojas.</p>
                 </div>
+<<<<<<< HEAD
             </div>
             <div class="hoja-Catena"><a href='#Top' class="Top"><img src="{% static '/img/Origin.svg' %}" alt="Hoja" class="hoja"></a></div>
             <div class="box-Catena2">
@@ -126,6 +136,26 @@
                     <img src="{% static '/img//Termometro.png' %}" alt="Temperatura" class="iconTemp">
                     <a href="https://goo.gl/maps/H63c1XuojHq4vFt17" target="_blank"><img src="{% static '/img/Mapa.png' %}" alt="Map" class="iconMap"></a>
                 </div>
+=======
+        </div>
+        <div class="hoja-Catena"><a href='#Top' class="Top"><img src="{% static '/img/Origin.svg' %}" alt="Hoja" class="hoja"></a></div>
+        <div class="box-Catena2">
+            <div class="iconosCatena">
+                <img src="{% static '/img/WineGlass.svg' %}" alt="Copa" class="Copa">
+                <img src="{% static '/img/Termometro.png' %}" alt="Temperatura" class="iconTemp">
+                <a href="https://goo.gl/maps/gZ2kKacec97sNiLv7" target="_blank"><img src="{% static '/img/Mapa.png' %}" alt="Map" class="iconMap"></a>
+            </div>
+            <img src="{% static '/img/MalbecCatena.jpg' %}" alt="Luigi Bosca Extra Brut" class="img-Catena">
+        </div>
+        <!-- San Huberto -->
+        <div class="Titulo-Huberto"><h1>"Nina" de Bodega San Huberto</h1></div>
+        <div class="box-Huberto1"><a name="San Huberto"></a>
+            <img src="{% static '/img/Nina.jpg' %}" alt="Nina San Huberto" class="img-Huberto">
+            <div class="iconosHuberto">
+                <img src="{% static '/img/WineGlass.svg' %}" alt="Copa" class="Copa">
+                <img src="{% static '/img//Termometro.png' %}" alt="Temperatura" class="iconTemp">
+                <a href="https://goo.gl/maps/H63c1XuojHq4vFt17" target="_blank"><img src="{% static '/img/Mapa.png' %}" alt="Map" class="iconMap"></a>
+>>>>>>> Steven
             </div>
             <div class="box-Huberto2">
                 <div class="img-back-Huberto"></div>

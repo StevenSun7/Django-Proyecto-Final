@@ -55,7 +55,7 @@ class contacto (models.Model):
     contacto = models.AutoField (primary_key= True)
     apellido = models.CharField (max_length= 100)
     nombre = models.CharField (max_length= 100)
-    email = models.EmailField (max_length= 20)    
+    email = models.EmailField (max_length= 30)    
     telefono = models.CharField (max_length= 100)
     consulta = models.BooleanField (default= False)
     comentario = models.TextField (blank=True)

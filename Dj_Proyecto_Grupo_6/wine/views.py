@@ -5,14 +5,6 @@ from datetime import datetime
 from .forms import ContactoForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView, LogoutView
-
-## Modelos
-from .models import Producto, Precio 
-
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.views import LoginView, LogoutView
-
-## Modelos
 from .models import Producto, Precio, Categoria
 
 # Create your views here.
@@ -30,6 +22,7 @@ def index(request):
     
     return render(request,'wine/index.html',context)
 
+# Login --------------------------------------------
 @login_required(login_url='/login/')
 def vinos(request, parametro):
     
@@ -44,16 +37,11 @@ def vinos(request, parametro):
     else:
         return render(request,'wine/tintos.html', {'precios':lista_precios})
 
-
+# Espumantes ----------------------------------------
 def espumantes(request):
-    # lista_precios = Producto.objects.filter(id_categoria_id__agrupado__contains='espumante')
-    # return render(request,'wine/tintos2.html', {'precios':lista_precios})
     return render(request,'wine/espumantes.html')
 
-# def contacto(request):
-#     return render(request,'wine/contacto.html')
-
-#Codigo D. revisar que da error ------------------------------------
+# Contacto ------------------------------------------
 def contacto(request):
     if request.method == 'POST':
         contacto_form = ContactoForm(request.POST)
@@ -62,10 +50,8 @@ def contacto(request):
             return render(request, 'wine/index.html')
     else:
         contacto_form = ContactoForm()
-
     return render(request, 'wine/contacto.html', {'form': contacto_form})
 #---------------------------------------------
-
 
 class WineLoginView(LoginView):
     template_name = 'wine/login.html'

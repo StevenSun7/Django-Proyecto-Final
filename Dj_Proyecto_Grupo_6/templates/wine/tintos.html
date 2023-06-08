@@ -5,7 +5,7 @@
 
 {% block css %}
 <link rel="stylesheet" href="{% static '/wine/css/style-tintos.css' %}">
-<link rel="stylesheet" href="{% static '/wine/css/style-tintos-cards.css' %}">
+{% comment %} <link rel="stylesheet" href="{% static '/wine/css/style-tintos-cards.css' %}"> {% endcomment %}
 {% endblock css %}
 
 {% block header %}
@@ -46,7 +46,7 @@
                 {% endif %}
                 <div class="card">
                     <div class="image">
-                    <img src="/static/img/Boheme.png" class="imgcard1" />
+                    <img src="/static/img/MalbecCatena.jpg" class="imgcard1" />
                     </div>
                     <span class="productname">{{ valor.nombre }}</span><br>
                     <span class="author">{{ valor.bodega }}</span><br>

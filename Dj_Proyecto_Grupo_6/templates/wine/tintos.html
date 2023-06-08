@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 {% extends './base.html' %}
-{% block titulo %} Tintos {% endblock titulo %} 
 {% load static %}
+<title>{% block titulo %}Tintos{% endblock titulo %}</title>
+
 {% block css %}
-<link rel="stylesheet" href="{% static '/wine/css/moviles.css' %}">
 <link rel="stylesheet" href="{% static '/wine/css/style-tintos.css' %}">
-<link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">
 {% endblock css %}
-{% block contenido %}
+
+{% block header %}
 {% include './header-tintos.html' %}
+{% endblock header %}
+
+{% block contenido %}
 <div class="contenedor">
     <div class="banner">
         <div class="banner-nav">
@@ -29,13 +32,42 @@
             <p>En esta sección encontrarás tres varietales que consideramos interesantes para todos aquellos que quieran disfrutar de momentos 
             inolvidables acompañados de sabores, y aromas.</p>
             <br>
-            
+            <article class="art-video">
             <div class="Video">
                 <h3>Tips para servir el vino</h3>
                 <iframe class="Video-Tinto" src="https://www.youtube.com/embed/_RZg5uCLt3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
+            </article>
+            <section class="wrapper">
+                {% for valor in precios %}
+                {% if forloop.counter0|divisibleby:4 %}
+                <div class="row">
+                {% endif %}
+                <div class="card">
+                    <div class="image">
+                    <img src="{% static '/img/MalbecCatena.png' %}" class="imgcard1" />
+                    </div>
+                    <span class="productname">{{ valor.nombre }}</span>
+                    <span class="author">{{ valor.bodega }}</span>
+                    {% comment %} <span class="rating">
+                    <i class="fas fa-star">⭐️</i>
+                    <i class="fas fa-star">⭐️</i>
+                    <i class="fas fa-star">⭐️</i>
+                    <i class="fas fa-star">⭐️</i>
+                    <i class="fas fa-star"></i>
+                    </span> {% endcomment %}
+                    <span class="description">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do...</span>
+                    <span class="beforePrice">{{ valor.id_precio.precio}}</span>
+                    <span class="nowPrice">{{ valor.id_precio.desc_xcaja}}</span>
+                    <button>Add to cart</button>
+                </div>
+                {% if forloop.counter0|add:"1"|divisibleby:4 %}
+                </div>
+                {% endif %}
+                {% endfor %}
+            </section>
         </section>
-    <!-- Dragones -->
+        <!-- Dragones -->
         <div class="Titulo-Dragones"><h1 class="Notas-Dragones">"Los Dragones" - Bodega Los Dragones</h1></div>
         <div class="box-Dragones1"><a name="Los Dragones"></a>
             <img src="{% static '/img/SyrahDragones.jpg' %}" alt="Los Dragones"  class="img-Dragones">
@@ -54,14 +86,14 @@
         </div>
         <div class="hoja-Dragones"><a href='#Top' class="Top"><img src="{% static '/img/Origin.svg' %}" alt="Hoja" class="hoja"></a>
         </div>
-    <!-- Catena -->
-    <div class="Titulo-Catena"><h1>"Catena Zapata Malbec" - Bodega Catena Zapata</h1></div>
-        <div class="box-Catena1"><a name="Catena Zapata"></a>
-            <div class="img-back-Catena"></div>
-            <div class="text-Catena">
-                <h3>Notas de degustación:</h3>
-                <p>Este Malbec presenta un profundo e intenso color violeta. Su aroma remite a cassis, moca, clavo de olor y marcadas notas terrosas. Elaborado en la region de Mendoza, es el compañero ideal para platos con carnes rojas.</p>
-            </div>
+        <!-- Catena -->
+        <div class="Titulo-Catena"><h1>"Catena Zapata Malbec" - Bodega Catena Zapata</h1></div>
+            <div class="box-Catena1"><a name="Catena Zapata"></a>
+                <div class="img-back-Catena"></div>
+                <div class="text-Catena">
+                    <h3>Notas de degustación:</h3>
+                    <p>Este Malbec presenta un profundo e intenso color violeta. Su aroma remite a cassis, moca, clavo de olor y marcadas notas terrosas. Elaborado en la region de Mendoza, es el compañero ideal para platos con carnes rojas.</p>
+                </div>
         </div>
         <div class="hoja-Catena"><a href='#Top' class="Top"><img src="{% static '/img/Origin.svg' %}" alt="Hoja" class="hoja"></a></div>
         <div class="box-Catena2">
@@ -70,9 +102,9 @@
                 <img src="{% static '/img/Termometro.png' %}" alt="Temperatura" class="iconTemp">
                 <a href="https://goo.gl/maps/gZ2kKacec97sNiLv7" target="_blank"><img src="{% static '/img/Mapa.png' %}" alt="Map" class="iconMap"></a>
             </div>
-            <img src="{% static '/img/MalbecCatena.jpg' %}" alt="Luigi Bosca Extra Brut" class="img-Catena">
+            <img src="{% static '/img/MalbecCatena.png' %}" alt="Luigi Bosca Extra Brut" class="img-Catena">
         </div>
-    <!-- San Huberto -->
+        <!-- San Huberto -->
         <div class="Titulo-Huberto"><h1>"Nina" de Bodega San Huberto</h1></div>
         <div class="box-Huberto1"><a name="San Huberto"></a>
             <img src="{% static '/img/Nina.jpg' %}" alt="Nina San Huberto" class="img-Huberto">
@@ -93,5 +125,5 @@
         </div>
     </main>
 </div>
-
 {% endblock contenido %}
+{% comment %} El footer ya lo incluye porque indicamos al inicio del codigo que tome el ejemplo del archivo base.html {% endcomment %}

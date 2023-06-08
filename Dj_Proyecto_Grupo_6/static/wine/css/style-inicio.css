@@ -25,60 +25,109 @@ body{
 /*-------- HEADER ----------------------------------------------*/
 .header {
     width: 100%;
-    background-color: #222;
-    border-bottom: solid 3px #a7976d;
     position: fixed;
-    display: flex;
-    justify-content: center;
 }
 
 /*----------- MENU ----------------------------------------------*/
-#btn-menu {
-    display: none;
-}
-
-header label {
-    display: none;
-    width: 50px;
-    height: 60px;
-    padding: 00px;
-    margin-bottom: 59px
-    /* border: 1px solid white; */
-}
-
-.div-menu {
+.nombre{
     display: flex;
-    width: 73%;
-    justify-content: space-around;
     align-items: center;
-}
-
-.html-menu:hover {
-    border-bottom: solid 1.3px #9f8544;
-}
-
-.div-menu > div > a {
-    color: #F9F9F9;
     text-decoration: none;
-    font-size: large;
-
+    color: #a7976d;
+    font-size:x-large;
+    font-weight: bold;
 }
 
-.div-menu > div > a:hover {
-    color: #a7976d;
-    transition: all 0.5s;
+.imgNombre {
+    width: 57%;
+    cursor: pointer;
 }
 
 .UvasLogo {
-    width: 3rem;
+    width: 2.3rem;
+    margin-right: 1rem;
 }
 
 .UvasLogo:hover {
-    background-color: #a7976d;
-    border-top-left-radius: 3rem;
+    transform: scale(1.2);
     transition: all 0.5s;
 }
 
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 3.5rem;
+    background-color: #222;
+    border-bottom: solid 4px #a7976d    ;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.div-ul {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.ul-nav {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #F9F9F9;
+    font-size: large;
+}
+
+li:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.nav-link:hover {
+    color: #691d5c;
+    border-bottom: 1px solid #9f8544;
+}
+
+.ul-login {
+    display: flex;
+    list-style-type: none;
+}
+
+.a-login {
+    text-decoration: none;
+    color: #a7976d;
+    font-size: large;
+}
+
+.a-login:hover {
+    color: #691d5c;
+    border-bottom: 1px solid #9f8544;
+}
+
+.menu-hamburguesa {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.copa {
+    width: 3rem;
+}
+
+.copa:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
 /*----------- MAIN ----------------------------------------------*/
 .main {
     display: flex;
@@ -91,98 +140,154 @@ header label {
     border-top: solid 1px #251041;
 }
 
+.img-barricas {
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px #251041;
+}
+
 .img-barricas > img {
     display: flex;
     align-items: center;
+    object-fit: cover;
+    max-height: 500px;
     width: 100%;
-    margin-bottom: 10px;
+    border-bottom: solid 1px #251041;
 }
 
 /*-------- BANNER ----------------------------------------------*/
-.galeria {
+/*---- Banner de Cards -----*/
+.banner-cards {
     display: flex;
+    align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 350px;
+    flex-wrap: wrap;
+    gap: 6rem;
+    height: 100%;
+    padding-top: 1.3rem;
 }
 
-.div-img1 {
-    height: 345px;
-    width: 33.3%;
-    background-size: 100% 100%;
-    animation: Galeria1 10s infinite;
-    border: solid 3px #251041;
+.card {
+    position: relative;
+    height: 21rem;
+    width: 20rem;
+    color: #ffffff;
+    perspective: 50rem;
+}
+.card .shadow {
+    position: absolute;
+    inset: 0;
+    background: var(--img);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    filter: blur(2rem) saturate(0.9);
+    box-shadow: 0 -1.5rem 2rem -0.5rem rgba(0, 0, 0, 0.7);
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 2rem, -2rem);
+}
+.card .image {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent 40%), var(--img);
+    background-size: cover;
+    background-position: center;
+    -webkit-mask-image: var(--img);
+    mask-image: var(--img);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+.card .image.background {
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 0rem);
 }
 
-@keyframes Galeria1 {
-    0%, 30% {background-image: url(/static/img/LaBodegaHome.jpg);}
-
-    31%, 69% {background-image: url(/static/img/TonelesCadus.jpg);}
-
-    70%, 100% { background-image: url(/static/img/BodegaNietoSenetiner.jpg);}
+.card .image.cutout {
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 4rem) scale(0.92);
+    z-index: 3;
+}
+.card .text-cards {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    inset: 0;
+    padding: 3.5rem;
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 6rem);
+    z-index: 4;
+}
+.card::after, .card::before {
+    content: "";
+    position: absolute;
+    inset: 1.2rem;
+    border: #a7976d 0.2rem solid;
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 2rem);
+}
+.card::before {
+    z-index: 4;
+}
+.card.border-left-behind::before {
+    border-left: transparent;
+}
+.card.border-right-behind::before {
+    border-right: transparent;
+}
+.card.border-bottom-behind::before {
+    border-bottom: transparent;
 }
 
-.div-img2 {
-    height: 345px;
-    width: 33.3%;
-    background-size: 100% 100%;
-    animation: Galeria2 15s infinite;
-    border: solid 3px #251041;
-    border-left: 1px;
-    border-right: 1px;
+.h2-cards {
+    font-size: 1.25rem;
+    cursor: pointer;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
 }
 
-@keyframes Galeria2 {
-
-    0%, 30% {background-image: url(/static/img/BodegaNietoSenetinerGalería.jpg);}
-
-    31%, 69% {background-image: url(/static/img/QuesosyCopaDeTinto.jpg);}
-
-    70%, 100% {background-image: url(/static/img/BodegaNietoSenetinerII.jpg);}
+.link-cardT, .link-cardB, .link-cardE {
+    text-decoration: none;
+    color: #F9F9F9;
+    font-size: large;
 }
 
-.div-img3 {
-    height: 345px;
-    width: 33.3%;
-    background-size: 100% 100%;
-    animation: Galeria3 7s infinite;
-    border: solid 3px #251041;
+.link-cardT:hover {
+    color: #691d5c;
+    border-bottom: 1px solid #9f8544;
+    transform: scale(1.2);
 }
 
-@keyframes Galeria3 {
-
-    0%, 30% {background-image: url(/static/img/SlideBodegaHead.jpg);}
-
-    31%, 69% {background-image: url(/static/img/Viña.jpg);}
-
-    70%, 100% {background-image: url(/static/img/BotellaEnMesa.jpg);}
+.link-cardB:hover {
+    color: #7b8213;
+    border-bottom: 1px solid #9f8544;
+    transform: scale(1.2);
 }
+
+.link-cardE:hover {
+    color: #a7976d;
+    border-bottom: 1px solid #9f8544;
+    transform: scale(1.2);
+}
+
+.p-cards {
+    font-weight: 350;
+    text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+}
+
 
 /*--- Contenido -------------------------------------*/
 
-.texto {
+.reloj {
     display: flex;
     flex-direction: column;
-    margin: 3%;
-    border-top: solid 1px #251041;
+    text-align: center;
 }
-
-.texto, h2, h3 {
-    padding-bottom: 10px;
-}
-
-.historia {
-    padding-bottom: 25px;
-}
-
 
 /*-------- FOOTER ----------------------------------------------*/
 .footer {
     display: flex;
-    padding: 5rem 0;
     text-align: center;
     margin-bottom: 2%;
-    padding-top: 2%;
+    padding-bottom: 2%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -251,40 +356,65 @@ header label {
 /*+++++++++++++++++++++++++++++++++ RESPONSI TABLET 768 +++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 @media only screen and (max-width: 768px) {
-    .header {
-        background: rgba(66, 66, 66, 0.9);
+    .div-ul {
         position: fixed;
-    }   
-    .header > label {
-        display: block;
-        position: fixed;
-        background: rgba(66, 66, 66, 0.9);
-        border-bottom: solid 5px #a7976d;
-        width: 100%;
+        top: 79px;
+        left: 10%;
+        width: 80%;
+        height: 100%;
+        text-align: center;
+        transform: translateX(120%);
+        background-image: url(/static/img/CopaTintoLuigiBosca.jpg);
+        background-size: 115%;
+        animation: CopaTinto 10s infinite linear alternate;
+        transition: transform 0.5s ease-in;
+        flex-direction: column;
     }
-    #fotoBtn{
-        width: 50px;
-        height: 56px;
-    }
-    header .div-menu {
-        width: 100%;
-        display: flex;
-        position: absolute;
-        background: rgba(66, 66, 66, 0.9);
-        margin-top: 60px;
-        margin-left: -200%;
-        align-items: top;
-        padding-bottom: 9rem;
+    @keyframes CopaTinto {
+        from {background-position: bottom left;}
+        to {background-position: top right;}
     }
     
-    #btn-menu:checked ~ .header > .div-menu {
-        margin-left: -00%;
-        transition: 0.9s;
+    nav ul {
+        flex-direction: column;
+        margin: 8px;
     }
-    .menu a:hover {
-        color:#a7976d;
-        transform: scale(1.5);
-        transition: all 0.5s;  
+
+    .ul-nav {
+        margin-top: 2rem;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+        width: 4rem;
+    }
+
+    .div-ul {
+        justify-content: normal;
+        gap: 2rem;
+    }
+
+    .div-ul.show {
+        transform: translateX(0);
+    }
+
+    .nav-link {
+        color: #F9F9F9;
+        font-family: cursive;
+        font-size: x-large;
+        border-bottom: 1px solid #9f8544;
+    }
+
+    .a-login {
+        color: #F9F9F9;
+        font-family: cursive;
+        font-size: x-large;
+        border-bottom: 1px solid #9f8544;
+    }
+
+    .nav-link:hover {
+        transform: scale(1.2);
+        transition: all 0.5s;
     }
 
     .div-img1 {

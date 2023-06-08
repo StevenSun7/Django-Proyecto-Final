@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends './base.html' %}
+{% load static %}
+<title>{% block titulo %}Login{% endblock titulo %}</title>
+    
+{% block css %}
+<link rel="stylesheet" href="{% static '/wine/css/style-login.css' %}">
+{% endblock css %}
+
+<!-- Menu de navegacion -->
+{% block header %}
+{% include './header-login.html' %}
+{% endblock header %}
+
+{% block contenido %}
+<div class="contenedor">
+    <main class="main">
+        <div class="div-login">
+            <div class="div-text-login">
+                LogOut
+            </div class="textLogout">
+            <p>
+            Gracias por ser miembro de Wine Club.
+            Recuerda no conducir si disfrutaste una copa de vino.
+            Te esperamos pronto. Salud!
+            </p>
+            <!--TODO : agregar un botón o timer para direccionar a INDEX-->
+        </div>
+        <div class="">
+            <p>{{hoy|date:"d-m-Y h:i:s"}}</p>
+        </div>
+    </main>
+</div>
+{% endblock contenido %}
+{% comment %} El footer ya lo incluye porque indicamos al inicio del codigo que tome el ejemplo del archivo base.html {% endcomment %}

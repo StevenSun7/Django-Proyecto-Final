@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 {% extends './base.html' %}
-{% block titulo %} blancos {% endblock titulo %} 
 {% load static %}
+<title>{% block titulo %}Contacto{% endblock titulo %}</title>
+
 {% block css %}
-<link rel="stylesheet" href="{% static '/wine/css/moviles.css' %}">
 <link rel="stylesheet" href="{% static '/wine/css/style-contacto.css' %}">
-<link rel="shortcut icon" href="{% static '/favicon/grapes.ico' %}" type="image/x-icon">  
 {% endblock css %}
-{% block contenido %}
+
+{% block header %}
 {% include './header-contacto.html' %}
+{% endblock header %}
+
+{% block contenido %}
 <main class="main">
     <section class="contacto">
         <h1>Contactános</h1>
@@ -16,21 +19,22 @@
         <p>Salud !!! 🍷</p>
     </section> 
     <div class="formulario">
-        <form name="comprobacion">
+        <form method="post" name="comprobacion">
+            {% csrf_token %}
             <legend></legend>
             <label for="apellido" class="datos-form">Apellido: </label>
-            <input type="text" class="campos-form" size=auto id="apellido" name="apellido" required placeholder="Ingrese su Apellido ...">
+            {{ form.apellido  }}
 
-            <label for="nombre" class="datos-form">Nombre:</label>            
-            <input type="text" class="campos-form" size=auto id="nombre" name="nombre" required placeholder="Ingrese su Nombre ...">
+            <label for="nombre" class="datos">Nombre:</label>
+            {{ form.nombre }}           
 
-            <label for="email" class="datos-form">Mail de contacto:</label>
-            <input type="email" class="campos-form" name="email" required placeholder="email@dominio.com">
+            <label for="email" class="datos">Mail de contacto:</label>
+            {{ form.email }}
 
-            <label for="telefono" class="datos-form">Ingrese Telefono de Contacto:</label>
-            <input type="tel" class="campos-form" size="15" maxlength="14" id="tel" name="tel" required placeholder="+(xx) xx xxx xxxx">
+            <label for="telefono" class="datos">Ingrese Telefono de Contacto:</label>
+            {{ form.telefono }}
 
-            <label for="motivoconsulta" class="datos-form">Motivo de la Consulta:</label>                    
+            <label for="motivoconsulta" class="datos">Motivo de la Consulta:</label>                    
             <select class="select" name="consulta" id="mconsulta">
                 <option value="0">Seleccione</option>   
                 <option value="1">Precios</option>   
@@ -39,7 +43,7 @@
                 <option value="4">Solicitar contacto directo</option>   
             </select>
 
-            <label for="conmentarios" class="datos-form">Deje sus comentarios:</label>
+            <label for="conmentarios" class="datos">Deje sus comentarios:</label>
             <textarea cols="40" rows="10" name="comentario" placeholder="Escriba su comentario"></textarea>
 
             <section class="enviar">
@@ -49,5 +53,9 @@
         </form>
     </div>   
 </main>
-<script src="/static/wine/js/Corrobora.js"></script>
 {% endblock contenido %}
+
+{% block javascript %}
+<script src="/static/wine/js/Corrobora.js"></script>
+{% endblock javascript %}
+{% comment %} El footer ya lo incluye porque indicamos al inicio del codigo que tome el ejemplo del archivo base.html {% endcomment %}

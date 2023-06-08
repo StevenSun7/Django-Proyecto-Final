@@ -1,0 +1,22 @@
+{% load static %}
+<header class= "header">
+    <nav>
+        <a href="{% url 'inicio' %}" class="nombre"><img src="/static/img/GrapesMoradas2.png" alt="Uvas" class="UvasLogo"><img src="/static/img/NombredelWineClub.png" alt="Wine Club" class="imgNombre"></a>
+        <div class="div-ul">
+            <ul class="ul-nav">
+                <li><a href="{% url 'vinos' parametro='tinto' %}" class="nav-link">Tintos</a></li>
+                <li><a href="{% url 'vinos' parametro='blanco' %}" class="nav-link">Blancos</a></li>
+                <li><a href="{% url 'espumantes' %}" class="nav-link">Espumantes</a></li>
+                <li><a href="{% url 'contacto' %}" class="nav-link">Contacto</a></li>
+            </ul>
+            <ul class="ul-login">
+                {% csrf_token %}
+                <li class="login"><a href="{% url 'login' %}" class="a-login">Login</a></li>
+            </ul>
+        </div>
+        <button class="menu-hamburguesa" id="menu-hamburguesa">
+            <ion-icon class="barras" name="menu-outline"><img src="/static/img/CopaMorado.png" alt="" class="copa"></ion-icon>
+        </button>
+    </nav>
+</header>
+<script src="/static/wine/js/script.js"></script>

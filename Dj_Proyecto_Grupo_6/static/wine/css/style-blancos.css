@@ -14,19 +14,6 @@ body {
 .main {grid-area: main;}
 .footer {grid-area: footer;}
 
-#btn-menu {
-	display: none;
-}
-
-header label {
-	display: none;
-	width: 50px;
-	height: 60px;
-	padding: 00px;
-    margin-bottom: 59px
-}
-
-
 .contenedor {
     display: grid;
     gap: 7px;
@@ -36,47 +23,114 @@ header label {
                         'footer footer footer';
 }
 
+/*-------- HEADER ----------------------------------------------*/
 .header {
     width: 100%;
-    background-color: #222;
-    border-bottom: solid 3px #a7976d;
     position: fixed;
-    display: flex;
-    justify-content: center;
 }
 
-.div-menu {
+/*----------- MENU ----------------------------------------------*/
+.nombre{
     display: flex;
-    width: 73%;
-    justify-content: space-around;
     align-items: center;
-}
-
-.html-menu:hover {
-    border-bottom: solid 1.3px #9f8544;
-}
-
-.div-menu > div > a {
-    color: #F9F9F9;
     text-decoration: none;
-    font-size: large;
-    
+    color: #a7976d;
+    font-size:x-large;
+    font-weight: bold;
 }
 
-.div-menu > div > a:hover {
-    color: #7b8213;
-    transition: all 0.3s;
+.imgNombre {
+    width: 57%;
+    cursor: pointer;
 }
 
 .UvasLogo {
-    width: 3rem;
+    width: 2.3rem;
+    margin-right: 1rem;
 }
 
 .UvasLogo:hover {
-    background-color: #a7976d;
-    border-top-left-radius:  3rem;
+    transform: scale(1.2);
     transition: all 0.5s;
 }
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 3.5rem;
+    background-color: #222;
+    border-bottom: solid 4px #a7976d    ;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.div-ul {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.ul-nav {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #F9F9F9;
+    font-size: large;
+}
+
+li:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.nav-link:hover {
+    color: #7b8213;
+    border-bottom: 1px solid #9f8544;
+}
+
+.ul-login {
+    display: flex;
+    list-style-type: none;
+}
+
+.a-login {
+    text-decoration: none;
+    color: #a7976d;
+    font-size: large;
+}
+
+.a-login:hover {
+    color: #7b8213;
+    border-bottom: 1px solid #9f8544;
+}
+
+.menu-hamburguesa {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.copa {
+    width: 3rem;
+}
+
+.copa:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+/*----------- BANNER DE COPAS ----------------------------------------------*/
 
 .banner {
     display: flex;
@@ -91,7 +145,7 @@ header label {
     align-items: center;
     align-content: center;
     justify-content: center;
-    width: 75%;
+    width: 70%;
     border-bottom: solid 1px #7b8213;
 }
 
@@ -145,7 +199,6 @@ header label {
     grid-template-rows: repeat(12, auto);
     border-top: solid 1px #7b8213;
     font-size: 18px;
-    margin-top: 1rem;
 }
 .section-main {
     color: rgb(71, 67, 67);
@@ -162,6 +215,107 @@ header label {
     margin-right: 3rem;
     margin-left: 3rem;
 } 
+
+/* Cards de vinos -----------------------*/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    }
+
+.row .card {
+    width: 270px;
+    height: 450px;
+    border: 2px solid #7b8213;
+    border-radius: 10px;
+    margin: 1rem;
+    }
+
+.imgcard1 {
+    display: flex;
+    width: 32%;
+}
+.imgcard2 {
+    display: flex;
+    width: 32%;
+}
+.imgcard3 {
+    display: flex;
+    width: 21%;
+}
+.imgcard4 {
+    display: flex;
+    width: 45%;
+}
+
+.row .card .image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 260px;
+    background-color: rgb(89, 26, 26);
+    background-image: url(/static/img/BodegaNietoSenetiner.jpg);
+    background-size: cover;
+    }
+
+.row .card .productname {
+    float: left;
+    padding: 2px 1px 0 5px;
+    font-weight: bold;
+    }
+
+.row .card .author {
+    float: left; 
+    padding: 6px 0 0 5px;
+    font-size: 14px;
+    color: grey;
+    font-style: italic;
+    }
+
+.row .card .rating {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1px 10px 0 10px; 
+    }
+
+.row .card .rating i:nth-child(-n+4) {
+    color: rgb(100, 12, 12);
+    }
+
+.row .card .description {
+    display: block;
+    padding: 2px 10px 25px 10px;
+    }
+
+.row .card .beforePrice {
+    margin-left: 10px;
+    padding: 5px 10px 5px 10px; 
+    font-weight: bold;
+    /* text-decoration: line-through; */
+    background-color: black;
+    color: white;
+    }
+
+.row .card .nowPrice {
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(111, 15, 15);
+    color: white;
+    font-weight: bold;
+    }
+
+.row .card button {
+    margin-left: 7px;
+    padding: 7px 11px 5px 10px;
+    border: none;
+    background-color: rgb(160, 111, 22);
+    color: white;
+    }
 
 /*Iconos de Copa Temperatura y Mapa -----------------------*/
 .Copa {
@@ -275,7 +429,7 @@ header label {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/static/img/ViñaZucardi.jpg);
+    background-image: url(/static/img/VinaZucardi.jpg);
     background-size: 145%;
     animation: Zuccardi-Barricas 10s infinite linear alternate;
     margin-bottom: 45px;
@@ -535,42 +689,62 @@ header label {
 /*+++++++++++++++++++++++++++++++++ RESPONSI TABLET 768 +++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 @media only screen and (max-width: 768px) {
-    .header {
-        background: rgba(66, 66, 66, 0.9);
+    .div-ul {
         position: fixed;
-    }   
-    .header > label {
-        display: block;
-        position: fixed;
-        background: rgba(66, 66, 66, 0.9);
-        border-bottom: solid 5px #a7976d;
-        width: 100%;
-    }
-    #fotoBtn{
-        width: 50px;
-        height: 56px;
+        top: 79px;
+        left: 10%;
+        width: 80%;
+        height: 100%;
+        text-align: center;
+        transform: translateX(120%);
+        background-image: url(/static/img/BodegaNietoSenetiner.jpg);
+        background-size: cover;
+        transition: transform 0.5s ease-in;
+        flex-direction: column;
     }
     
-    header .div-menu {
-        width: 100%;
-        display: flex;
-        position: absolute;
-        background: rgba(66, 66, 66, 0.9);
-        margin-top: 60px;
-        margin-left: -200%;
-        align-items: top;
-        padding-bottom: 9rem;
+    nav ul {
+        flex-direction: column;
+        margin: 8px;
     }
 
-    #btn-menu:checked ~ .header > .div-menu {
-        margin-left: -00%;
-        transition: 0.9s;
+    .ul-nav {
+        margin-top: 2rem;
     }
-    .menu a:hover {
-        color:#a7976d;
-        transform: scale(1.5);
-        transition: all 0.5s;  
+
+    .menu-hamburguesa {
+        display: block;
+        width: 4rem;
     }
+
+    .div-ul {
+        justify-content: normal;
+        gap: 2rem;
+    }
+
+    .div-ul.show {
+        transform: translateX(0);
+    }
+
+    .nav-link {
+        color: #F9F9F9;
+        font-family: cursive;
+        font-size: x-large;
+        border-bottom: 1px solid #9f8544;
+    }
+
+    .a-login {
+        color: #F9F9F9;
+        font-family: cursive;
+        font-size: x-large;
+        border-bottom: 1px solid #9f8544;
+    }
+
+    .nav-link:hover {
+        transform: scale(1.2);
+        transition: all 0.5s;
+    }
+
     .contenedor {
         display: grid;
         gap: 7px;

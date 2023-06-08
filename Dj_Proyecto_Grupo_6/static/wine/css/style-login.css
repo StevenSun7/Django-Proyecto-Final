@@ -1,0 +1,434 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*-------- MAQUETEO GRID --------------------------------------*/
+.header {grid-area: header;}
+.main {grid-area: main;}
+.footer {grid-area: footer;}
+
+.contenedor {
+    display: grid;
+    gap: 10px;
+    background-image: url(/static/img/Vina.jpg);
+    background-size: cover;
+    grid-template-areas: 'header header header'
+                            'main main main'
+                        'footer footer footer';
+}
+
+/*-------- HEADER ----------------------------------------------*/
+.header {
+    width: 100%;
+    position: fixed;
+}
+
+/*----------- MENU ----------------------------------------------*/
+.nombre{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #a7976d;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+.imgNombre {
+    width: 57%;
+    cursor: pointer;
+}
+
+.UvasLogo {
+    width: 2.3rem;
+    margin-right: 1rem;
+}
+
+.UvasLogo:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 3.5rem;
+    background-color: #222;
+    border-bottom: solid 4px #a7976d    ;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.div-ul {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.ul-nav {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #F9F9F9;
+    font-size: large;
+}
+
+li:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.nav-link:hover {
+    color: #973b88;
+    border-bottom: 1px solid #9f8544;
+}
+
+.ul-login {
+    display: flex;
+    list-style-type: none;
+}
+
+.a-login {
+    text-decoration: none;
+    color: #a7976d;
+    font-size: large;
+}
+
+.a-login:hover {
+    color: #973b88;
+    border-bottom: 1px solid #9f8544;
+}
+
+.menu-hamburguesa {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.copa {
+    width: 3rem;
+}
+
+.copa:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+/*----------- MAIN ----------------------------------------------*/
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: left;
+    color: rgb(71, 67, 67);
+    font-size: 18px;
+    margin-top: 5rem;
+}
+
+/*--- Contenido del Login -------------------------------------*/
+.div-login {
+    width: 420px;
+    padding: 40px 30px;
+    background: #2222226d;
+    border-radius: 10px;
+    margin-left: 15%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: -3px -3px 7px #ffffff73,
+                2px 2px 5px rgba(94,104,121,0.288);
+    }
+
+.div-text-login {
+    font-size: 33px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    color: rgba(59, 6, 24, 0.845);
+    }
+
+.div-campos {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    }
+
+.div-campos:nth-child(2) {
+    margin-top: 20px;
+    }
+
+.div-campos #id_username {
+    height: 100%;
+    width: 100%;
+    padding-left: 45px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    background: #dde1e7;
+    color: #222;
+    border-radius: 25px;
+    box-shadow: inset 2px 2px 5px #BABECC,
+                inset -5px -5px 10px #ffffff73;
+    }
+
+.div-campos #id_username:focus {
+    box-shadow: inset 1px 1px 2px #BABECC,
+                inset -1px -1px 2px #ffffff73;
+    }
+
+
+.div-campos #id_password {
+    height: 100%;
+    width: 100%;
+    padding-left: 45px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    background: #dde1e7;
+    color: #222;
+    border-radius: 25px;
+    box-shadow: inset 2px 2px 5px #BABECC,
+                inset -5px -5px 10px #ffffff73;
+    }
+
+.div-campos #id_password:focus {
+    box-shadow: inset 1px 1px 2px #BABECC,
+                inset -1px -1px 2px #ffffff73;
+    }
+
+.div-campos .span {
+    position: absolute;
+    color: #595959;
+    width: 50px;
+    line-height: 55px;
+    }
+
+.div-campos .label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 45px;
+    pointer-events: none;
+    color: #666666;
+    }
+
+.div-campos #id_username:valid ~ label {
+    opacity: 0;
+    }
+
+.div-campos #id_password:valid ~ label {
+    opacity: 0;
+    }
+
+<<<<<<< HEAD
+=======
+.forgot-pass {
+    text-align: left;
+    margin: 10px 0 10px 5px;
+    }
+
+>>>>>>> main
+.forgot-pass a {
+    font-size: 16px;
+    color: rgba(59, 6, 24, 0.845);
+    text-decoration: none;
+    }
+
+.forgot-pass:hover a {
+    text-decoration: underline;
+    }
+
+.button {
+    margin: 15px 0;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: 600;
+    background: #dde1e7;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #595959;
+    box-shadow: 2px 2px 5px #BABECC,
+                -5px -5px 10px #ffffff73;
+    }
+
+.button:focus {
+    color: rgba(59, 6, 24, 0.845);
+    box-shadow: inset 2px 2px 5px #BABECC,
+                inset -5px -5px 10px #ffffff73;
+    }
+
+.sign-up {
+    margin: 10px 0;
+    color: rgba(59, 6, 24, 0.845);
+    font-size: 16px;
+    }
+
+.sign-up a {
+    color: #973b88;
+    text-decoration: none;
+    }
+    
+.sign-up a:hover {
+    text-decoration: underline;
+    }   
+
+/*-------- FOOTER ----------------------------------------------*/
+.footer {
+    display: flex;
+    text-align: center;
+    margin-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-redes {
+    display: flex;
+    width: 100%;
+    background-color: #222;
+    border-top: solid 4px #a7976d;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-redes > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #a7976d;
+}
+.div-redes > a:hover {
+    transform: scale(1.1);
+}
+
+.logo-instagram,
+.logo-github,
+.logo-twitter,
+.logo-facebook {
+    width: 30%;
+    height: 30%;
+}
+
+.logo-instagram:hover {
+    transform: scale(1.1);
+}
+
+.logo-github:hover {
+    transform: scale(1.1);
+}
+
+.logo-twitter:hover {
+    transform: scale(1.1);
+}
+
+.logo-facebook:hover {
+    transform: scale(1.1);
+}
+
+.div-redes > div > a {
+    display: flex;
+    text-decoration: none;
+    font-size: large;
+}
+
+.derechos {
+    display: flex;
+    justify-content: center;
+    color: #222;
+    margin-top: 1rem;
+}
+
+/*+++++++++++++++++++++++++++++++++ RESPONSI TABLET 768 +++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media only screen and (max-width: 768px) {
+    .div-ul {
+        position: fixed;
+        top: 79px;
+        left: 10%;
+        width: 80%;
+        height: 90%;
+        text-align: center;
+        transform: translateX(120%);
+        background-image: url(/static/img/CopaLlenando.jpg);
+        background-size: cover;
+        transition: transform 0.5s ease-in;
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        margin: 8px;
+    }
+
+    .ul-nav {
+        margin-top: 2rem;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+        width: 4rem;
+    }
+
+    .div-ul {
+        justify-content: normal;
+        gap: 2rem;
+    }
+
+    .div-ul.show {
+        transform: translateX(0);
+    }
+
+    .nav-link {
+        color: #691d5c;
+        font-family: cursive;
+        font-size: x-large;
+        border-bottom: 1px solid #9f8544;
+    }
+
+    .a-login {
+        color: #691d5c;
+        font-family: cursive;
+        font-size: x-large;
+        border-bottom: 1px solid #9f8544;
+    }
+
+    .nav-link:hover {
+        transform: scale(1.2);
+        transition: all 0.5s;
+    }
+
+}
+
+/*+++++++++++++++++++++++++++++++++ RESPONSI TABLET 414 +++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+@media only screen and (max-width: 414px){
+    footer .div-redes{
+        height: 5rem;
+    }
+    footer > .div-redes > a{
+        font-size: 10px;
+    }
+
+}

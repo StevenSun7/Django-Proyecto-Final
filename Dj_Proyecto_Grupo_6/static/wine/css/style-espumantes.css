@@ -14,19 +14,6 @@ body {
 .main {grid-area: main;}
 .footer {grid-area: footer;}
 
-#btn-menu {
-	display: none;
-}
-
-header label {
-	display: none;
-	width: 50px;
-	height: 60px;
-	padding: 00px;
-    margin-bottom: 59px
-}
-
-
 .contenedor {
     display: grid;
     gap: 7px;
@@ -36,51 +23,118 @@ header label {
                         'footer footer footer';
 }
 
+/*-------- HEADER ----------------------------------------------*/
 .header {
     width: 100%;
-    background-color: #222;
-    border-bottom: solid 3px #a7976d;
     position: fixed;
-    display: flex;
-    justify-content: center;
 }
 
-.div-menu {
+/*----------- MENU ----------------------------------------------*/
+.nombre{
     display: flex;
-    width: 73%;
-    justify-content: space-around;
     align-items: center;
-}
-
-.html-menu:hover {
-    border-bottom: solid 1.3px #9f8544;
-}
-
-.div-menu > div > a {
-    color: #F9F9F9;
     text-decoration: none;
-    font-size: large;
-    
+    color: #a7976d;
+    font-size:x-large;
+    font-weight: bold;
 }
 
-.div-menu > div > a:hover {
-    color: #a7976d;
-    transition: all 0.3s;
+.imgNombre {
+    width: 57%;
+    cursor: pointer;
 }
 
 .UvasLogo {
-    width: 3rem;
+    width: 2.3rem;
+    margin-right: 1rem;
 }
 
 .UvasLogo:hover {
-    background-color: #a7976d;
-    border-top-left-radius:  3rem;
+    transform: scale(1.2);
     transition: all 0.5s;
 }
 
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 3.5rem;
+    background-color: #222;
+    border-bottom: solid 4px #a7976d    ;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.div-ul {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.ul-nav {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #F9F9F9;
+    font-size: large;
+}
+
+li:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.nav-link:hover {
+    color: #a7976d;
+    border-bottom: 1px solid #9f8544;
+}
+
+.ul-login {
+    display: flex;
+    list-style-type: none;
+}
+
+.a-login {
+    text-decoration: none;
+    color: #a7976d;
+    font-size: large;
+}
+
+.a-login:hover {
+    color: #a7976d;
+    border-bottom: 1px solid #9f8544;
+}
+
+.menu-hamburguesa {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.copa {
+    width: 3rem;
+}
+
+.copa:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+/*-------- BANNER VIDEO -------------------------------------------*/
+
 .banner-burbujas {
     width: 100%;
-    height: 100%;
+    margin-top: 3rem;
 }
 
 .video-burbujas {
@@ -90,11 +144,9 @@ header label {
     justify-content: center;
 }
 
-.texto-burbujas{
-    color: #9f8544;
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 3rem;
+.video-B {
+    display: flex;
+    width: 100%;
 }
 
 .banner-nav-section {
@@ -134,7 +186,6 @@ header label {
     grid-template-rows: repeat(12, auto);
     border-top: solid 2px #a7976d;
     font-size: 18px;
-    margin-top: 2rem;
 }
 .section-main {
     color: rgb(71, 67, 67);
@@ -144,7 +195,7 @@ header label {
     flex-direction: column;
     margin: 3%;
     margin-top: 0px;
-    /* padding-top: 35px; */
+    padding-top: 35px;
 }
 .section-main > h1 {
     padding-bottom: 10px;
@@ -275,7 +326,7 @@ header label {
     text-align: center;
     justify-content: center;
     border-top: solid 1px #a7976d;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .box-LuigiBosca1 {
@@ -294,7 +345,7 @@ header label {
     width: 50vw;
     height: 30vw;
     border-radius: 10px;
-    background-image: url(/static/img/LuigiBoscaViña.png);
+    background-image: url(/static/img/LuigiBoscaVina.png);
     background-size: 145%;
     animation: Bosca-viñedo 10s infinite linear alternate;
 }      
@@ -593,42 +644,62 @@ header label {
 /*+++++++++++++++++++++++++++++++++ RESPONSI TABLET 768 +++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 @media only screen and (max-width: 768px) {
-    .header {
-        background: rgba(66, 66, 66, 0.9);
+    .div-ul {
         position: fixed;
-    }   
-    .header > label {
-        display: block;
-        position: fixed;
-        background: rgba(66, 66, 66, 0.9);
-        border-bottom: solid 5px #a7976d;
-        width: 100%;
-    }
-    #fotoBtn{
-        width: 50px;
-        height: 56px;
+        top: 79px;
+        left: 10%;
+        width: 80%;
+        height: 100%;
+        text-align: center;
+        transform: translateX(120%);
+        background-image: url(/static/img/Parral.jpg);
+        background-size: cover;
+        transition: transform 0.5s ease-in;
+        flex-direction: column;
     }
     
-    header .div-menu {
-        width: 100%;
-        display: flex;
-        position: absolute;
-        background: rgba(66, 66, 66, 0.9);
-        margin-top: 60px;
-        margin-left: -200%;
-        align-items: top;
-        padding-bottom: 9rem;
+    nav ul {
+        flex-direction: column;
+        margin: 8px;
     }
 
-    #btn-menu:checked ~ .header > .div-menu {
-        margin-left: -00%;
-        transition: 0.9s;
+    .ul-nav {
+        margin-top: 2rem;
     }
-    .menu a:hover {
-        color:#a7976d;
-        transform: scale(1.5);
-        transition: all 0.5s;  
+
+    .menu-hamburguesa {
+        display: block;
+        width: 4rem;
     }
+
+    .div-ul {
+        justify-content: normal;
+        gap: 2rem;
+    }
+
+    .div-ul.show {
+        transform: translateX(0);
+    }
+
+    .nav-link {
+        color: #3d0312;
+        font-family: cursive;
+        font-size: x-large;
+        border-bottom: 1px solid #9f8544;
+    }
+
+    .a-login {
+        color: #3d0312;
+        font-family: cursive;
+        font-size: x-large;
+        border-bottom: 1px solid #9f8544;
+    }
+
+    .nav-link:hover {
+        transform: scale(1.2);
+        transition: all 0.5s;
+    }
+
     .contenedor {
         display: grid;
         gap: 7px;
@@ -639,12 +710,11 @@ header label {
     }
 
     .banner-burbujas {
-        margin-top: 3rem;
+        width: 100%;
     }
 
-    .video-burbujas {
-        text-align: center;
-        justify-content: center;
+    .video-B {
+        margin-top: 1rem;
     }
 
     .banner-nav-section {

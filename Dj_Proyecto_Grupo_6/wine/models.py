@@ -36,22 +36,18 @@ class Producto(models.Model):
     descripcion = models.CharField(max_length=250)
     conservacion = models.CharField(max_length=250)
     bodega = models.CharField(max_length=100, default='')
+    cantidad = models.PositiveBigIntegerField(default=0)
+    imagen = models.CharField(max_length=50, default='img_default.jpg')
     
     def __str__(self):
         return self.nombre
-
-
-class Stock(models.Model):
-    id_producto = models.OneToOneField(Producto, on_delete=models.CASCADE)
-    cantidad = models.PositiveBigIntegerField()
-    
 
 #Modelo D. Formulario
 class contacto (models.Model):
     contacto = models.AutoField (primary_key= True)
     apellido = models.CharField (max_length= 100)
     nombre = models.CharField (max_length= 100)
-    email = models.EmailField (max_length= 20)    
+    email = models.EmailField (max_length= 30)    
     telefono = models.CharField (max_length= 100)
     consulta = models.BooleanField (default= False)
     comentario = models.TextField (blank=True)

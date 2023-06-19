@@ -37,7 +37,7 @@ def vinos(request, parametro):
     if parametro =='blanco' :
         filtro = 'blanco'
     
-    lista_precios = Producto.objects.filter(id_categoria_id__agrupado__exact=filtro)
+    lista_precios = Producto.objects.filter(id_categoria_id__agrupado=filtro).order_by('nombre')[:20]
     
     if parametro == 'blanco':
         return render(request,'wine/blancos.html', {'precios':lista_precios})

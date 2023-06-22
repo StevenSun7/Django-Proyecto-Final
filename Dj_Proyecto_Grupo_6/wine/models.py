@@ -28,7 +28,6 @@ class Precio(models.Model):
         return str(self.precio)
     
     
-    
 class Producto(models.Model):
     id_producto =  models.IntegerField(primary_key=True,unique=True)
     id_categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT)
@@ -37,19 +36,12 @@ class Producto(models.Model):
     descripcion = models.CharField(max_length=250)
     conservacion = models.CharField(max_length=250)
     bodega = models.CharField(max_length=100, default='')
+    cantidad = models.PositiveBigIntegerField(default=0)
+    imagen = models.CharField(max_length=50, default='img_default.png')
     
     def __str__(self):
         return self.nombre
 
-
-class Stock(models.Model):
-    id_producto = models.OneToOneField(Producto, on_delete=models.CASCADE)
-    cantidad = models.PositiveBigIntegerField()
-    
-    
-
-# TODO : Merge Modelos de contacto
-# TODO : Modelo Carrito 
 #Modelo D. Formulario
 class contacto (models.Model):
     contacto = models.AutoField (primary_key= True)

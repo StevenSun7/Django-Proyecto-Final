@@ -5,6 +5,7 @@
 
 {% block css %}
 <link rel="stylesheet" href="{% static '/wine/css/style-tintos.css' %}">
+<link rel="stylesheet" href="{% static '/wine/css/style-tintos-cards.css' %}">
 {% endblock css %}
 
 {% block header %}
@@ -45,18 +46,18 @@
                 {% endif %}
                 <div class="card">
                     <div class="image">
-                    <img src="{% static '/img/MalbecCatena.png' %}" class="imgcard1" />
+                    <img src="{% static '/img/' %}{{ valor.imagen }}" class="imgcard1" />
                     </div>
-                    <span class="productname">{{ valor.nombre }}</span>
-                    <span class="author">{{ valor.bodega }}</span>
-                    {% comment %} <span class="rating">
+                    <span class="productname">{{ valor.nombre }}</span><br>
+                    <span class="author">{{ valor.bodega }}</span><br>
+                    <span class="rating">
                     <i class="fas fa-star">⭐️</i>
                     <i class="fas fa-star">⭐️</i>
                     <i class="fas fa-star">⭐️</i>
                     <i class="fas fa-star">⭐️</i>
                     <i class="fas fa-star"></i>
-                    </span> {% endcomment %}
-                    <span class="description">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do...</span>
+                    </span>
+                    <span class="description"></span><br>
                     <span class="beforePrice">{{ valor.id_precio.precio}}</span>
                     <span class="nowPrice">{{ valor.id_precio.desc_xcaja}}</span>
                     <button>Add to cart</button>
@@ -102,7 +103,7 @@
                 <img src="{% static '/img/Termometro.png' %}" alt="Temperatura" class="iconTemp">
                 <a href="https://goo.gl/maps/gZ2kKacec97sNiLv7" target="_blank"><img src="{% static '/img/Mapa.png' %}" alt="Map" class="iconMap"></a>
             </div>
-            <img src="{% static '/img/MalbecCatena.png' %}" alt="Luigi Bosca Extra Brut" class="img-Catena">
+            <img src="{% static '/img/MalbecCatena.jpg' %}" alt="Luigi Bosca Extra Brut" class="img-Catena">
         </div>
         <!-- San Huberto -->
         <div class="Titulo-Huberto"><h1>"Nina" de Bodega San Huberto</h1></div>

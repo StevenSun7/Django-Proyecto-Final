@@ -46,17 +46,17 @@
                 {% endif %}
                 <div class="card">
                     <div class="image">
-                    <img src="/static/img/Boheme.png" class="imgcard1" />
+                    <img src="{% static '/img/' %}{{ valor.imagen }}" class="imgcard1" />
                     </div>
                     <span class="productname">{{ valor.nombre }}</span><br>
                     <span class="author">{{ valor.bodega }}</span><br>
-                    {% comment %} <span class="rating">
+                    <span class="rating">
                     <i class="fas fa-star">⭐️</i>
                     <i class="fas fa-star">⭐️</i>
                     <i class="fas fa-star">⭐️</i>
                     <i class="fas fa-star">⭐️</i>
                     <i class="fas fa-star"></i>
-                    </span> {% endcomment %}
+                    </span>
                     <span class="description">Lorem ipsum dolor sit amet consectetur adipiscing elit sed
                     do...</span><br>
                     <span class="beforePrice">{{ valor.id_precio.precio}}</span>

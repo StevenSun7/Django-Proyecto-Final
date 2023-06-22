@@ -7,12 +7,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView, LogoutView
 
 ## Modelos
-from .models import Producto, Precio 
-
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.views import LoginView, LogoutView
-
-## Modelos
 from .models import Producto, Precio, Categoria
 
 # Create your views here.
@@ -37,7 +31,7 @@ def vinos(request, parametro):
     if parametro =='blanco' :
         filtro = 'blanco'
     
-    lista_precios = Producto.objects.filter(id_categoria_id__agrupado__exact=filtro)
+    lista_precios = Producto.objects.filter(id_categoria_id__agrupado=filtro).order_by('id_producto')[:20]
     
     if parametro == 'blanco':
         return render(request,'wine/blancos.html', {'precios':lista_precios})
@@ -46,14 +40,9 @@ def vinos(request, parametro):
 
 
 def espumantes(request):
-    # lista_precios = Producto.objects.filter(id_categoria_id__agrupado__contains='espumante')
-    # return render(request,'wine/tintos2.html', {'precios':lista_precios})
     return render(request,'wine/espumantes.html')
 
-# def contacto(request):
-#     return render(request,'wine/contacto.html')
 
-#Codigo D. revisar que da error ------------------------------------
 def contacto(request):
     if request.method == 'POST':
         contacto_form = ContactoForm(request.POST)
@@ -64,7 +53,6 @@ def contacto(request):
         contacto_form = ContactoForm()
 
     return render(request, 'wine/contacto.html', {'form': contacto_form})
-#---------------------------------------------
 
 
 class WineLoginView(LoginView):

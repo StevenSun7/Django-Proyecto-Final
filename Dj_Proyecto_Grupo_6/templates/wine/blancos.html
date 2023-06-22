@@ -73,7 +73,7 @@
                 {% endif %}
                 <div class="card">
                     <div class="image">
-                    <img src="/static/img/Boheme.png" class="imgcard1" />
+                    <img src="{% static '/img/' %}{{ valor.imagen }}" class="imgcard1" />
                     </div>
                     <span class="productname">{{ valor.nombre }}</span><br>
                     <span class="author">{{ valor.bodega }}</span><br>

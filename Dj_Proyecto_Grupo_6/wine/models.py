@@ -37,7 +37,7 @@ class Producto(models.Model):
     conservacion = models.CharField(max_length=250)
     bodega = models.CharField(max_length=100, default='')
     cantidad = models.PositiveBigIntegerField(default=0)
-    imagen = models.CharField(max_length=50, default='img_default.jpg')
+    imagen = models.CharField(max_length=50, default='img_default.png')
     
     def __str__(self):
         return self.nombre

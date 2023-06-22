@@ -75,17 +75,16 @@
                     <div class="image">
                     <img src="{% static '/img/' %}{{ valor.imagen }}" class="imgcard1" />
                     </div>
-                    <span class="productname">{{ valor.nombre }}</span><br>
-                    <span class="author">{{ valor.bodega }}</span><br>
-                    <span class="description">Lorem ipsum dolor sit amet consectetur adipiscing elit sed
-                        do...</span><br>
+                    <span class="productname">{{ valor.nombre }}</span>
+                    <span class="author">{{ valor.bodega }}</span>
+                    <span class="description"></span>
                     <span class="rating">
                     <i class="fas fa-star">⭐️</i>
                     <i class="fas fa-star">⭐️</i>
                     <i class="fas fa-star">⭐️</i>
                     <i class="fas fa-star">⭐️</i>
                     <i class="fas fa-star"></i>
-                    </span><br>
+                    </span>
                     <span class="beforePrice">{{ valor.id_precio.precio}}</span>
                     <span class="nowPrice">{{ valor.id_precio.desc_xcaja}}</span>
                     <button>Add to cart</button>

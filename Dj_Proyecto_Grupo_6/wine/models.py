@@ -1,8 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+
 # Create your models here.
-
-
 class Categoria(models.Model):
     OPCIONES = [
         ('tinto','TINTO'),
@@ -42,7 +41,7 @@ class Producto(models.Model):
     def __str__(self):
         return self.nombre
 
-#Modelo D. Formulario
+#Modelo Formulario
 class contacto (models.Model):
     contacto = models.AutoField (primary_key= True)
     apellido = models.CharField (max_length= 100)

@@ -10,7 +10,6 @@ def lista(request):
     
     texto = "<table><tr><th>Categoria</th><th>nombre</th><th>descripcion</th></tr>"
     
-    
     for categ in categoria:
         texto = texto + f"<tr><td>{categ.id_categoria}</td><td>{categ.nombre} </td><td>{categ.descripcion} </td></tr>"
         

@@ -24,6 +24,7 @@ def index(request):
     
     return render(request,'wine/index.html',context)
 
+
 @login_required(login_url='/login/')
 def vinos(request, parametro):
     
